@@ -14,6 +14,7 @@ use Faker\Generator as Faker;
 */
 
 $factory->define(App\Users::class, function (Faker $faker) {
+	// Génère des données aléatoire
     return [
     	'firstname' => $faker->firstname,
         'lastname' => $faker->lastname,
