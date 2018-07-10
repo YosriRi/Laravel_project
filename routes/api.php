@@ -32,3 +32,4 @@ Route::put('users/{id}', 'UsersController@update');
 
 // Delete a user
 Route::delete('users/{id}', 'UsersController@destroy');
+
