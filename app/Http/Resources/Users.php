@@ -14,15 +14,16 @@ class Users extends JsonResource
      */
     public function toArray($request)
     {
-        // return parent::toArray($request);
+        return parent::toArray($request);
 
-        return [
-            'id' => $this->id,
-            'firstname' => $this->firstname,
-            'lastname' => $this->lastname,
-            'email' => $this->email,
-            'password' => $this->password
-        ];
+        // Préciser les champs à retourner
+        // return [
+        //     'id' => $this->id,
+        //     'firstname' => $this->firstname,
+        //     'lastname' => $this->lastname,
+        //     'email' => $this->email,
+        //     'password' => $this->password
+        // ];
     }
 
     // Ajouter des données dans ma response json

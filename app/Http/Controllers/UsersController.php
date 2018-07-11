@@ -16,7 +16,7 @@ class UsersController extends Controller
      */
     public function index()
     {
-        $users = Users::paginate(10);
+        $users = Users::paginate();
 
         return UsersResource::collection($users);
     }
@@ -31,10 +31,17 @@ class UsersController extends Controller
     {
         $users = new Users;
 
-        $users->firstname = $request->input('firstname');
-        $users->lastname = $request->input('lastname');
-        $users->email = $request->input('email');
-        $users->password = $request->input('password');
+        $users->firstname           = $request->input('firstname');
+        $users->lastname            = $request->input('lastname');
+        $users->address             = $request->input('address');
+        $users->phone               = $request->input('phone');
+        $users->sexe                = $request->input('sexe');
+        $users->date_of_birth       = $request->input('date_of_birth');
+        $users->user_or_admin       = $request->input('user_or_admin');
+        $users->question_password   = $request->input('question_password');
+        $users->email               = $request->input('email');
+        $users->alt_email           = $request->input('alt_email');
+        $users->password            = $request->input('password');
 
         if ($users->save()) {
             return new UsersResource($users);
@@ -65,10 +72,17 @@ class UsersController extends Controller
     {
         $users = Users::findOrFail($id);
 
-        $users->firstname = $request->input('firstname');
-        $users->lastname = $request->input('lastname');
-        $users->email = $request->input('email');
-        $users->password = $request->input('password');
+        $users->firstname           = $request->input('firstname');
+        $users->lastname            = $request->input('lastname');
+        $users->address             = $request->input('address');
+        $users->phone               = $request->input('phone');
+        $users->sexe                = $request->input('sexe');
+        $users->date_of_birth       = $request->input('date_of_birth');
+        $users->user_or_admin       = $request->input('user_or_admin');
+        $users->question_password   = $request->input('question_password');
+        $users->email               = $request->input('email');
+        $users->alt_email           = $request->input('alt_email');
+        $users->password            = $request->input('password');
 
         if ($users->save()) {
             return new UsersResource($users);
