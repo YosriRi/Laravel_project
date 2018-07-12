@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Users;
 use App\Http\Resources\Users as UsersResource;
+use Unlu\Laravel\Api\QueryBuilder;
 
 class UsersController extends Controller
 {
@@ -14,11 +15,13 @@ class UsersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $users = Users::paginate();
+        $queryBuilder = new QueryBuilder(new Users, $request);
 
-        return UsersResource::collection($users);
+        return response()->json([
+            'data' => $queryBuilder->build()->paginate()
+        ]);
     }
 
     /**

@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
-use App\Activites;
+use App\Activities;
 use App\Http\Resources\Activities as ActivitiesResource;
+use Unlu\Laravel\Api\QueryBuilder;
 
 class ActivitiesController extends Controller
 {
@@ -14,11 +15,13 @@ class ActivitiesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $activities = Activities::paginate();
+        $queryBuilder = new QueryBuilder(new Activities, $request);
 
-        return ActivitiesResource::collection($activities);
+        return response()->json([
+            'data' => $queryBuilder->build()->paginate()
+        ]);
     }
 
     /**
