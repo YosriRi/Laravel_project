@@ -15,4 +15,4 @@ require('./bootstrap');
 
 require('./components/Example');
 // require('./components/Main');
-// import Main from './components/Main';
+// import Example from './components/Example';

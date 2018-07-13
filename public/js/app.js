@@ -14102,7 +14102,7 @@ __webpack_require__(19);
 
 __webpack_require__(43);
 // require('./components/Main');
-// import Main from './components/Main';
+// import Example from './components/Example';
 
 /***/ }),
 /* 19 */
@@ -36358,39 +36358,71 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var Example = function (_Component) {
     _inherits(Example, _Component);
 
-    function Example() {
+    function Example(props) {
         _classCallCheck(this, Example);
 
-        return _possibleConstructorReturn(this, (Example.__proto__ || Object.getPrototypeOf(Example)).apply(this, arguments));
+        //Initialize the state in the constructor
+        var _this = _possibleConstructorReturn(this, (Example.__proto__ || Object.getPrototypeOf(Example)).call(this, props));
+
+        _this.state = {
+            activities: []
+        };
+
+        axios.get('/api/activities').then(function (response) {
+            // handle success
+            // console.log(response.data.data, 'data');
+            console.log(this.state, 'state');
+            this.state.activities.push(response.data.data);
+        }).catch(function (error) {
+            // handle error
+            console.log(error);
+        }).then(function () {
+            // always executed
+        });
+        return _this;
     }
 
     _createClass(Example, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {}
+    }, {
+        key: 'renderActivities',
+        value: function renderActivities() {
+            // return this.state.activities.map(activity => {
+            //     return (
+            /* When using list you need to specify a key
+             * attribute that is unique for each list item
+            */
+            // <li key={activity.id}>
+            //     { activity.name } 
+            // </li>      
+            //     );
+            // })
+            // console.log(this.state);
+            // console.log(this.state.activities.data, 'data');
+            // console.log(this.state.activities.data.count, 'count');
+            var array = [];
+            console.log(this.activities, 'activities');
+            // for (let i = 0; i < this.state.activities.data.count; i++) {
+            // console.log(this.state.activities[i], i);
+            // array.push(
+            //     <li key='this.state.activities[i]'>
+            //         {this.state.activities[i].name}
+            //     </li>
+            // );
+            // }
+            return array;
+        }
+    }, {
         key: 'render',
         value: function render() {
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
-                { className: 'container' },
+                null,
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { className: 'row justify-content-center' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'div',
-                        { className: 'col-md-8' },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'div',
-                            { className: 'card' },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'div',
-                                { className: 'card-header' },
-                                'Example Component'
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'div',
-                                { className: 'card-body' },
-                                'I\'m an example component!'
-                            )
-                        )
-                    )
+                    'ul',
+                    null,
+                    this.renderActivities()
                 )
             );
         }
