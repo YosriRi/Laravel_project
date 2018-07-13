@@ -5,10 +5,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>arjunphp.com | Laravel 5.6 with React JS</title>
-        <link href="/css/app.css'" rel="stylesheet" type="text/css">
+        <link href="/css/app.css" rel="stylesheet" type="text/css">
     </head>
     <body>
-        <div id="root">qq</div>
+        <div id="example"></div>
         <script src="/js/app.js"></script>
     </body>
 </html>
