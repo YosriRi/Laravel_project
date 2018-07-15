@@ -2,8 +2,8 @@
     <section id="contact" class="footer_widget">
         <div class="container">
             <div class="row">
-                <div class="main_widget">
-                    <div class="col-md-4 col-12">
+
+                    <div class="col-4">
                         <div class="single_widget wow fadeIn" data-wow-duration="800ms">
                             <div class="footer_logo">
                                 <img src="images/footerlogo.png" alt="" />
@@ -39,9 +39,9 @@
                         </div>
                     </div>
 
-                    <div class="col-md-8">
+                    <div class="col-8">
                         <div class="row">
-                            <div class="col-md-7  col-12">
+                            <div class="col-6">
                                 <div class="single_widget wow fadeIn" data-wow-duration="800ms">
                                     <p class="monseratregular">Dernières posts</p>
                                     <span class="separator4"></span>
@@ -78,7 +78,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-5 col-12">
+                            <div class="col-6">
                                 <div class="single_widget wow fadeIn" data-wow-duration="800ms">
                                     <p class="monseratregular">instagram</p>
                                     <span class="separator4"></span>
@@ -120,8 +120,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
             </div>
+
         </div>
     </section>
 

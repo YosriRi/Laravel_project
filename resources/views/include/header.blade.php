@@ -5,7 +5,7 @@
 
 
       <a class="navbar-brand" href="#">
-        <img src="img/logo.png" width="150" height="30" alt="So Extreme">
+        <img src="images/logo.png" width="150" height="30" alt="So Extreme">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
         aria-expanded="false" aria-label="Toggle navigation">
