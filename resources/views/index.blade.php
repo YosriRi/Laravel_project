@@ -14,24 +14,23 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
 
         <!--For Plugins external css-->
-        <link rel="stylesheet" href="css/plugins.css" />
+        <link rel="stylesheet" href="{{ asset('css/plugins.css') }}" />
 
         <!--Theme custom css -->
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
         <!--Theme Responsive css-->
-        <link rel="stylesheet" href="css/responsive.css" />
+        <link rel="stylesheet" href="{{ asset('css/responsive.css') }}" />
 
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     </head>
     <body data-spy="scroll" data-target=".navbar-collapse">
        
-        <div class='preloader'><div class='loaded'>&nbsp;</div></div>
         <div class="culmn">
          
             @include ('include.home');
@@ -51,8 +50,8 @@
             <a href="#"><i class="fa fa-chevron-up"></i></a>
         </div>
 
-        <script src="js/vendor/jquery-1.11.2.min.js"></script>
-        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="{{ asset('js/vendor/jquery.min.js') }}"></script>
+        <script src="{{ asset('js/vendor/bootstrap.min.js') }}"></script>
         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 
         <script src="js/jquery.mixitup.min.js"></script>
