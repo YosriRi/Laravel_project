@@ -49,3 +49,7 @@ Route::put('activities/{id}', 'ActivitiesController@update');
 
 // Delete an activity
 Route::delete('activities/{id}', 'ActivitiesController@destroy');
+
+/************************* CATEGORIES *************************/
+
+Route::resource('category', 'api\categoryController');
