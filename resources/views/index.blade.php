@@ -13,8 +13,9 @@
         <link href="https://fonts.googleapis.com/css?family=Kaushan+Script&amp;subset=latin-ext" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ asset('css/all.css') }}">
 
-        <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
         <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
 
         <!--For Plugins external css-->
@@ -29,17 +30,15 @@
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     </head>
-    <body data-spy="scroll" data-target=".navbar-collapse">
+    <body>
        
         <div class="culmn">
-         
-            @include ('include.home');
            
             @include ('include.header');
-            
-            @include ('include.terrain')
 
-            @include('include.footer');
+            @include ('include.payement');
+
+
 
 
         </div>
