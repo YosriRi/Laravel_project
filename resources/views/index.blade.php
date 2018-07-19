@@ -35,8 +35,9 @@
         <div class="culmn">
            
             @include ('include.header');
+            @include ('include.home');
 
-            @include ('include.payement');
+            @include ('include.reservation');
 
 
 
