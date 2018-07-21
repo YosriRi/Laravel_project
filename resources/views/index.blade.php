@@ -14,8 +14,8 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+        
         <link rel="stylesheet" href="{{ asset('css/all.css') }}">
-
         <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
 
         <!--For Plugins external css-->
@@ -27,20 +27,18 @@
         <!--Theme Responsive css-->
         <link rel="stylesheet" href="{{ asset('css/responsive.css') }}" />
 
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     </head>
     <body>
-       
+
         <div class="culmn">
-           
-            @include ('include.header');
-            @include ('include.home');
-
-            @include ('include.reservation');
-
-
-
+        @include ('include.home');       
+        
+        @include ('include.header');
+ 
+        @include ('include.profile');
 
         </div>
 
