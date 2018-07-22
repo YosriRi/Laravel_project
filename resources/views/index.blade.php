@@ -33,12 +33,9 @@
     </head>
     <body>
 
-        <div class="culmn">
-        @include ('include.home');       
-        
-        @include ('include.header');
- 
-        @include ('include.profile');
+        <div class="culmn">  
+        @include ('include.activite'); 
+
 
         </div>
 

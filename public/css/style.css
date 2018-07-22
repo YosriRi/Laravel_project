@@ -162,7 +162,7 @@ h5 {
 h1 {
     font-size: 4.375rem;
     line-height: 5.5rem;
-    color: #fff;
+    color: rgba(5, 5, 20, 0.863);
 }
 
 h2 {
@@ -302,7 +302,6 @@ ul {
 .overlay {
     background-color: rgba(0, 0, 0, 0.3);
     width: 100%;
-    height: 950px;
 }
 
 .home-overlay {
@@ -362,10 +361,10 @@ Separator
 }
 
 .whiseparator {
-    height: 10px;
-    width: 127px;
-    margin: 20px auto;
-    background: url(../images/whiseparator.png) no-repeat;
+    height: 1px;
+    width: 100%;
+    margin: 10px auto 20px auto;
+    background-color: rgba(170, 170, 170, 0.774);
 }
 
 .separator2 {
@@ -436,7 +435,7 @@ Button
 }
 
 .btn-primary {
-    color: #fff;
+    color: #fff !important;
     background-color: rgb(233, 103, 103);
     border-color: #fff;
     transition: .5s;
@@ -2151,17 +2150,19 @@ select.active+.wSelect {
     color: #909090;
 }
 
-.filter-form__option .form-row p {
-    margin: 0px;
+.filter-form__option p {
+    margin-top: 8px;
+    margin-bottom: 0px;
 }
 
 .filter-form__option .filter-button {
     margin-top: 30px;
-    margin-bottom: 10px;
 }
 
 .filter-form__option .filter-p {
-    margin-top: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    line-height: normal;
 }
 
 .filter-form__block .separator {
@@ -2384,7 +2385,6 @@ select.active+.wSelect {
 /* Cards*/
 
 .card {
-    height: 100%;
     font-weight: 400;
     border-radius: .3rem;
 }
@@ -2696,7 +2696,6 @@ a.waves-light {
 }
 
 .filter-form__block {
-    height: 350px;
     background: rgba(230, 230, 230, 0.651);
     box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.2);
     padding: 8px;
@@ -2999,11 +2998,11 @@ dir {
 }
 
 .main-title {
-    font-size: 18px;
+    text-align: center;
+    font-size: 16px;
     font-weight: normal;
     margin-top: 0px;
     border-bottom: 1px solid #f1f1f1;
-    padding-bottom: 10px;
 }
 
 .profile-company-content .sidebar .sidebar-information .single-category .title {
@@ -3490,7 +3489,15 @@ td {
     box-sizing: border-box;
 }
 
-.carousel-item {
+.bg-image-full {
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+  }
+
+.fullslider .carousel-item {
     height: 100vh;
     min-height: 300px;
     background: no-repeat center center scroll;
@@ -3952,4 +3959,166 @@ ul.authentification li {
 
 .profile {
     margin-top: 30px;
+}
+
+html {
+    height: 100%;
+}
+
+.sidemenu aside {
+    height: 300px;
+    width: 180px;
+    background: #003079;
+}
+
+.sidemenu ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+.sidemenu ul li {
+    list-style-type: none;
+    padding: 10px;
+    overflow: auto;
+    cursor: pointer;
+}
+
+ul li:first-child {
+    border-top: none;
+}
+
+.sidemenu .fa {
+    color: #18a3fc;
+    display: block;
+}
+
+.sidemenu ul li:hover .fa {
+    color: #0f82da;
+}
+
+ul li:hover .linktitle {
+    color: #00468b;
+}
+
+.sidemenu ul li div {
+    float: left;
+}
+
+.icons {
+    padding: 10px;
+}
+
+.linktitle {
+    line-height: 35px;
+    padding-left: 10px;
+}
+
+/* Reponsive menu code */
+
+@media all and (max-width: 600px) {
+    .sidemenu aside {
+        width: 60px;
+        padding: 0px 10px;
+    }
+}
+
+.sidemenu ul li {
+    overflow: hidden;
+    padding: 0px 10px;
+}
+
+.linktitle {
+    position: absolute;
+    z-index: -1;
+    padding: 29px 15px;
+    line-height: 0px;
+    color: #000000;
+}
+
+ul li:hover .linktitle {
+    left: 80px;
+}
+
+.icons {
+    padding: 20px 10px;
+}
+
+.search-card {
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+}
+
+.filter-button {
+    width: 100px;
+    /* margin-top: 20px;
+    margin-bottom: 10px; */
+}
+
+.base-subtitle {
+    display: block;
+    color: #a1a8ab ;
+    font-size: 14px;
+    padding: 7px 0 0;
+}
+
+.base-subtitle span.subtitle {
+    float: left;
+    display: inline;
+    text-align: left !important;
+}
+.base-subtitle span.sub-description{
+    color: rgb(36, 36, 71);
+    margin-bottom: 15px;
+    display: block;
+}
+.sort-block {
+    float: right;
+    display: inline;
+    align-content: right;
+    text-align: right;
+}
+
+.sort-block .text {
+    margin: 0 5px 0 5px;
+    color: #a1a8ab ;
+}
+
+.base-title {
+    color: rgb(24, 31, 51);
+    display: block;
+    font-size: 22px;
+    line-height: 1;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 20px;
+}
+
+.ah-select {
+    display: block;
+    justify-content: space-between;
+    font-size: 12px;
+    position: relative;
+    display: inline-block;
+}
+
+.title-holder {
+    display: block;
+    justify-content: space-between;
+    font-size: 12px;
+    max-width: 100%;
+    width: 100%;
+}
+
+.title-holder select {
+    -webkit-border-radius: 0;
+    border-radius: 4px;
+    border: 1px solid #caced0;
+    background-color: #fff;
+    min-width: 89px;
+    padding: .55em .5em;
+    font-size: inherit;
+    color: inherit;
+    cursor: pointer;
 }
