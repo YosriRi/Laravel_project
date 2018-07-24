@@ -6,12 +6,12 @@
   <div class="col-lg-8">
 
     <!-- Title -->
-    <h1 class="mt-4">Post Title</h1>
+    <h1 class="mt-4">Saut en Parachute</h1>
 
     <!-- Author -->
     <p class="lead">
-      by
-      <a href="#">Start Bootstrap</a>
+      Catégorie:&nbsp;
+      <a href="#">Air</a>
     </p>
 
     <hr>
@@ -22,28 +22,65 @@
     <hr>
 
     <!-- Preview Image -->
-    <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
+    <div class="container-fluid">
+      <div class="row">
+                  
+            <div class="image-block-8 col-sm-8" style="background: url(images/parachute1.JPG) no-repeat center top;background-size:cover;">
+              
+            </div>
+          
+            <div class="col-sm-4">
+            <div class="image-block" style="background: url(images/parachute2.JPG) no-repeat center top;background-size:cover;">
+                       
+            </div>
 
+            <div class="image-block" style="background: url(images/parachute3.png) no-repeat center top;background-size:cover; cursor: pointer;">
+              <a class="img-post"href="#"><p> More pictures  </p></a>
+            </div>
+            </div>
+      </div>
+    </div>
     <hr>
 
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingTwo">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <i class="fa fa-map-signs"></i> Descriptions <i class="fa fa-chevron-down"></i>
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="panel-body">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex 
+                    ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
+                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingThree">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <i class="fa fa-bullseye"></i> Equipements <i class="fa fa-chevron-down"></i>
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <div class="panel-body">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex 
+                    ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
+                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
+                    culpa qui officia deserunt mollit anim id est laborum.
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Post Content -->
-    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</p>
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.</p>
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!</p>
-
-    <blockquote class="blockquote">
-      <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-        <span class="blockquote-footer">Someone famous in
-            <cite title="Source Title">Source Title</cite>
-        </span>
-    </blockquote>
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?</p>
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!</p>
-
+   
     <hr>
 
     <!-- Comments Form -->

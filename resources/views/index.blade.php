@@ -34,8 +34,9 @@
     <body>
 
         <div class="culmn">  
-        @include ('include.activite'); 
 
+        @include ('include.header');
+        @include ('include.activite'); 
 
         </div>
 
