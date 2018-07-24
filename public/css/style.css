@@ -428,15 +428,15 @@ Button
 } */
 
 .btn:hover {
-    background-color: #7caeface;
+    background-color: #f57206ce;
     color: #fff;
     text-decoration: none;
-    border: 1px solid #7caeface;
+    border: 1px solid #f57206ce;
 }
 
 .btn-primary {
     color: #fff !important;
-    background-color: rgb(233, 103, 103);
+    background-color: rgb(228, 160, 82);
     border-color: #fff;
     transition: .5s;
 }
@@ -2652,9 +2652,10 @@ a.waves-light {
 }
 
 .nav_bg {
-    background: #1a3953b6;
+    background-color: #102333b6 !important;
     padding-top: 0px;
     padding-bottom: 0px;
+    margin-top: 0 !important;
 }
 
 .slidecontainer {
@@ -2720,16 +2721,42 @@ section {
 }
 
 .image-block {
-    border: 3px solid white;
+    background-color: black;
+    padding: 0px;
+    margin: 3px;
+    height: 147px;
+    text-align: center;
+    vertical-align: bottom;
+    border: 2px solid #102333b6;
+
+}
+
+.image-block-8 {
     background-color: black;
     padding: 0px;
     margin: 0px;
-    height: 200px;
+    height: 300px;
     text-align: center;
     vertical-align: bottom;
+    border: 2px solid #102333b6;
 }
 
-.image-block>p {
+.image-block>a p {
+    width: 100%;
+    height: 100%;
+    font-weight: normal;
+    font-size: 19px;
+    padding-top: 75px;
+    background-color: rgba(3, 3, 3, 0.0);
+    color: rgba(6, 6, 6, 0.0);
+}
+
+.image-block:hover>a p {
+    background-color: rgba(3, 3, 3, 0.5);
+    color: white;
+}
+
+.image-block-8>a p {
     width: 100%;
     height: 100%;
     font-weight: normal;
@@ -2739,7 +2766,7 @@ section {
     color: rgba(6, 6, 6, 0.0);
 }
 
-.image-block:hover>p {
+.image-block-8:hover>a p {
     background-color: rgba(3, 3, 3, 0.5);
     color: white;
 }
@@ -4121,4 +4148,16 @@ ul li:hover .linktitle {
     font-size: inherit;
     color: inherit;
     cursor: pointer;
+}
+
+a.collapsed:hover {
+    color: #1d1d1d;
+}
+
+a.collapsed {
+    color: #102333b6;
+}
+
+.panel-title {
+    border-bottom: 1px solid rgb(148, 148, 148);
 }
