@@ -14,8 +14,5 @@ require('./bootstrap');
  */
 
 require('./components/header');
-require('./components/Example');
-<<<<<<< Updated upstream
+// require('./components/Example');
 require('./components/crudExample');
-=======
->>>>>>> Stashed changes
