@@ -36344,6 +36344,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(46);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_genkey__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_genkey___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_genkey__);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -36355,63 +36357,65 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
+
 var Example = function (_Component) {
     _inherits(Example, _Component);
 
     function Example(props) {
         _classCallCheck(this, Example);
 
-        //Initialize the state in the constructor
         var _this = _possibleConstructorReturn(this, (Example.__proto__ || Object.getPrototypeOf(Example)).call(this, props));
 
         _this.state = {
             activities: []
         };
-
-        axios.get('/api/activities').then(function (response) {
-            // handle success
-            // console.log(response.data.data, 'data');
-            console.log(this.state, 'state');
-            this.state.activities.push(response.data.data);
-        }).catch(function (error) {
-            // handle error
-            console.log(error);
-        }).then(function () {
-            // always executed
-        });
         return _this;
     }
 
     _createClass(Example, [{
         key: 'componentDidMount',
-        value: function componentDidMount() {}
+        value: function componentDidMount() {
+            var _this2 = this;
+
+            axios.get('/api/activities').then(function (res) {
+                var activities = res.data.data.data;
+                _this2.setState({ activities: activities });
+            });
+        }
     }, {
-        key: 'renderActivities',
-        value: function renderActivities() {
-            // return this.state.activities.map(activity => {
-            //     return (
-            /* When using list you need to specify a key
-             * attribute that is unique for each list item
-            */
-            // <li key={activity.id}>
-            //     { activity.name } 
-            // </li>      
-            //     );
-            // })
-            // console.log(this.state);
-            // console.log(this.state.activities.data, 'data');
-            // console.log(this.state.activities.data.count, 'count');
-            var array = [];
-            console.log(this.activities, 'activities');
-            // for (let i = 0; i < this.state.activities.data.count; i++) {
-            // console.log(this.state.activities[i], i);
-            // array.push(
-            //     <li key='this.state.activities[i]'>
-            //         {this.state.activities[i].name}
-            //     </li>
-            // );
-            // }
-            return array;
+        key: 'handleSubmit',
+        value: function handleSubmit(event) {
+            event.preventDefault();
+            var target = event.target;
+
+            // const activity = {
+            //     name: target.name.value,
+            //     type: target.type.value,
+            //     duration: target.duration.value,
+            //     description: target.description.value,
+            //     date_of_activity: '2018-01-01 20:00:00'
+            // };
+
+            axios.post('/api/activities', {
+                name: target.name.value,
+                type: target.type.value,
+                duration: target.duration.value,
+                description: target.description.value,
+                date_of_activity: '2018-01-01 20:00:00'
+            }).then(function (res) {
+                console.log(res);
+                console.log(res.data);
+            });
+        }
+    }, {
+        key: 'handleDelete',
+        value: function handleDelete(event) {
+            event.preventDefault();
+
+            axios.delete('/api/activities/' + event.target.id.value).then(function (res) {
+                console.log(res);
+                console.log(res.data);
+            });
         }
     }, {
         key: 'render',
@@ -36422,7 +36426,63 @@ var Example = function (_Component) {
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'ul',
                     null,
-                    this.renderActivities()
+                    this.state.activities.map(function (activity) {
+                        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'li',
+                            { key: activity.id },
+                            activity.name,
+                            ' - ',
+                            activity.id
+                        );
+                    })
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'form',
+                    { onSubmit: this.handleSubmit },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'label',
+                        null,
+                        'Name:',
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'text', name: 'name' })
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'label',
+                        null,
+                        'Type:',
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'text', name: 'type' })
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'label',
+                        null,
+                        'Duration:',
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'text', name: 'duration' })
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'label',
+                        null,
+                        'description:',
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'text', name: 'description' })
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'button',
+                        { type: 'submit' },
+                        'Add'
+                    )
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'form',
+                    { onSubmit: this.handleDelete },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'label',
+                        null,
+                        'ID:',
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'text', name: 'id' })
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'button',
+                        { type: 'submit' },
+                        'Delete'
+                    )
                 )
             );
         }
@@ -55844,6 +55904,48 @@ module.exports = camelize;
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 59 */,
+/* 60 */,
+/* 61 */,
+/* 62 */,
+/* 63 */
+/***/ (function(module, exports) {
+
+function genAbc(caps=false) {
+  var array = [];
+  var startIndex = caps ? 65 : 98;
+  var endIndex = caps ? 90 : 123 ;
+
+  for (var y = startIndex; y < endIndex; y++) {
+    array.push(String.fromCharCode(y));
+  }
+  return array;
+}
+
+function genKey(len, upcase) {
+  var abc = upcase ? genAbc(upcase) : genAbc();
+  var key = [];
+  var length = upcase ? len+1 : len;
+
+  for (var y = 0; y < length; y++) {
+    key.push(abc[Math.floor(Math.random() * 27)]);
+  }
+  return key.join('');
+}
+
+function genObj({ array }, len=14, upcase=false) {
+  var newArray = [];
+
+  for (var y = 0; y < array.length; y++) {
+    newArray.push({key: genKey(len, upcase), item: array[y]});
+  }
+  return newArray;
+}
+
+
+module.exports = genObj;
 
 /***/ })
 /******/ ]);
