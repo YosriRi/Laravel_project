@@ -8,7 +8,7 @@
         <link href="/css/app.css" rel="stylesheet" type="text/css">
     </head>
     <body>
-        <div id="example"></div>
+        <div id="crudExample"></div>
         <script src="/js/app.js"></script>
     </body>
 </html>

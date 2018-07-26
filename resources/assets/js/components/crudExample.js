@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import genkey from 'genkey';
 
-export default class Example extends Component {
+export default class CrudExample extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -90,6 +89,6 @@ export default class Example extends Component {
     }
 }
 
-if (document.getElementById('example')) {
-    ReactDOM.render(<Example />, document.getElementById('example'));
+if (document.getElementById('crudExample')) {
+    ReactDOM.render(<CrudExample />, document.getElementById('crudExample'));
 }
