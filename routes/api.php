@@ -12,7 +12,7 @@ use App\Users;
 | routes are loaded by the RouteServiceProvider within a group which
 | is assigned the "api" middleware group. Enjoy building your API!
 |
-*/
+ */
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
@@ -130,3 +130,67 @@ Route::put('sale/{id}', 'SalesController@update');
 
 // Delete a user
 Route::delete('sale/{id}', 'SalesController@destroy');
+
+/************************* GIFTS *************************/
+// Get all users
+Route::get('gifts', 'GiftController@index');
+
+// Get one user
+Route::get('gift/{id}', 'GiftController@show');
+
+// Post a new user
+Route::post('gift', 'GiftController@store');
+
+// Update a user
+Route::put('gift/{id}', 'GiftController@update');
+
+// Delete a user
+Route::delete('gift/{id}', 'GiftController@destroy');
+
+/************************* PROMOTIONS *************************/
+// Get all users
+Route::get('promotions', 'PromotionController@index');
+
+// Get one user
+Route::get('promotion/{id}', 'PromotionController@show');
+
+// Post a new user
+Route::post('promotion', 'PromotionController@store');
+
+// Update a user
+Route::put('promotion/{id}', 'PromotionController@update');
+
+// Delete a user
+Route::delete('promotion/{id}', 'PromotionController@destroy');
+
+/************************* NOTES *************************/
+// Get all users
+Route::get('notes', 'NoteController@index');
+
+// Get one user
+Route::get('note/{id}', 'NoteController@show');
+
+// Post a new user
+Route::post('note', 'NoteController@store');
+
+// Update a user
+Route::put('note/{id}', 'NoteController@update');
+
+// Delete a user
+Route::delete('note/{id}', 'NoteController@destroy');
+
+/************************* PAYEMENTS *************************/
+// Get all users
+Route::get('payements', 'PayementController@index');
+
+// Get one user
+Route::get('payement/{id}', 'PayementController@show');
+
+// Post a new user
+Route::post('payement', 'PayementController@store');
+
+// Update a user
+Route::put('payement/{id}', 'PayementController@update');
+
+// Delete a user
+Route::delete('payement/{id}', 'PayementController@destroy');

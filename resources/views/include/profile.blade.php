@@ -25,13 +25,12 @@
                 <div class="tab-content">
                     <div class="profile-main">
                         <h3>About</h3>
-                        <div class="profile-in">
-                            <div class="media-left">
-                                <div class="img-profile">
-                                    <img src="images/user.jpg" alt="" class="media-object">
-                                </div>
+                        <div class="row profile-in">
+                            <div class="media-left col-xs-12">
+
+                                    <img src="images/user.jpg" alt="" class="img-fluid media-object">
                             </div>
-                            <div class="media-body">
+                            <div class="media-body col-xs-12">
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, mollitia, voluptatibus similique aliquidautem
                                     laudantium sapiente ad enim ipsa modi labo rum accusantium deleniti neque architecto vitae.
@@ -75,158 +74,226 @@
         </div>
         <!-- Photos -->
         <div role="tabpanel" class="tab-pane fade " id="images">
-            <div class="container">
-                <div class="row">
-
-                    <div class="mb-4 col-lg-3 col-md-4 col-xs-6">
-                        <div class="card z-depth-1">
-                            <div class="view">
-                            <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(145).jpg" data-size="1600x1067">
-                                <img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(145).jpg" alt="placeholder" class="img-fluid ">
-                            </a>
-                            </div>
-                            <div class="card-body card-body-cascade">
-                                <a class="robotolight" href="">
-                                    <i class="fa fa-eye"></i>&nbsp;552</a>
-
-                                <a class="robotolight" href="">
-                                    <i class="far fa-comment-dots"></i>&nbsp;17</a>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="mb-4 col-lg-3 col-md-4 col-xs-6">
-                        <div class="card z-depth-1">
-                            <div class="view">
-                                <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(150).jpg" data-size="1600x1067" class="">
-                                <img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(150).jpg" alt="placeholder" class="img-fluid" />
+            <div class="container gallery-container">
+                <div class="gallery-title">
+                    <h4>My Gallery</h4>
+                </div>
+                <hr>
+                <div class="tz-gallery">
+                    <div class="row">
+                        
+                        <div class="mb-4 col-lg-3 col-md-4">
+                            <div class="card z-depth-1">
+                                <div class="view">
+                                <a class="lightbox" href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(145).jpg" data-size="1600x1067">
+                                    <img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(145).jpg" alt="placeholder" class="img-fluid ">
                                 </a>
+                                </div>
+                                <div class="card-title">
+                                    <strong>Card title</strong>
+                                </div>
+                                <div class="card-body card-body-cascade">
+                                    <a class="robotolight" href="">
+                                        <i class="fa fa-eye"></i>&nbsp;552</a>
+
+                                    <a class="robotolight" href="">
+                                        <i class="far fa-comment-dots"></i>&nbsp;17</a>
+                                </div>
+                                <div class="card-footer">
+                                    <p>Note: </p>
+                                    <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                                </div>
                             </div>
-                            <div class="card-body card-body-cascade">
-                                <a class="robotolight" href="">
-                                    <i class="fa fa-eye"></i>&nbsp;552</a>
-                                <a class="robotolight" href="">
-                                    <i class="far fa-comment-dots"></i>&nbsp;17</a>
+
+                        </div>
+
+                        <div class="mb-4 col-lg-3 col-md-4">
+                            <div class="card z-depth-1">
+                                <div class="view">
+                                    <a class="lightbox" href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(150).jpg" data-size="1600x1067" class="">
+                                    <img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(150).jpg" alt="placeholder" class="img-fluid" />
+                                    </a>
+                                </div>
+                                <div class="card-title">
+                                    <strong>Card title</strong>
+                                </div>
+                                <div class="card-body card-body-cascade">
+                                    <a class="robotolight" href="">
+                                        <i class="fa fa-eye"></i>&nbsp;552</a>
+                                    <a class="robotolight" href="">
+                                        <i class="far fa-comment-dots"></i>&nbsp;17</a>
+                                </div>
+                                <div class="card-footer">
+                                    <p>Note: </p>
+                                    <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+
+                        <div class="mb-4 col-lg-3 col-md-4">
+                            <div class="card z-depth-1">
+                                <div class="view">
+                                    <a class="lightbox" href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(152).jpg" data-size="1600x1067">
+                                        <img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(152).jpg" alt="placeholder" class="img-fluid" />
+                                    </a>
+                                </div>
+                                <div class="card-title">
+                                    <strong>Card title</strong>
+                                </div>
+                                <div class="card-body card-body-cascade">
+                                    <a class="robotolight" href="">
+                                        <i class="fa fa-eye"></i>&nbsp;552</a>
+                                    <a class="robotolight" href="">
+                                        <i class="far fa-comment-dots"></i>&nbsp;17</a>
+                                </div>
+                                <div class="card-footer">
+                                    <p>Note: </p>
+                                    <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="mb-4 col-lg-3 col-md-4">
+                            <div class="card z-depth-1">
+                                <div class="view">
+                                    <a class="lightbox" href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(42).jpg" data-size="1600x1067">
+                                        <img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(42).jpg" alt="placeholder" class="img-fluid" />
+                                    </a>
+                                </div>   
+                                <div class="card-title">
+                                    <strong>Card title</strong>
+                                </div>                                                             
+                                <div class="card-body card-body-cascade">
+                                    <a class="robotolight" href="">
+                                        <i class="fa fa-eye"></i>&nbsp;552</a>
+                                    <a class="robotolight" href="">
+                                        <i class="far fa-comment-dots"></i>&nbsp;17</a>
+                                </div>
+                                <div class="card-footer">
+                                    <p>Note: </p>
+                                    <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-4 col-lg-3 col-md-4">
+                            <div class="card z-depth-1">
+                                <div class="view">
+                                    <a class="lightbox" href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(151).jpg" data-size="1600x1067">
+                                        <img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(151).jpg" alt="placeholder" class="img-fluid" />
+                                    </a>
+                                </div>
+                                <div class="card-title">
+                                    <strong>Card title</strong>
+                                </div>
+                                <div class="card-body card-body-cascade">
+                                    <a class="robotolight" href="">
+                                        <i class="fa fa-eye"></i>&nbsp;552</a>
+                                    <a class="robotolight" href="">
+                                        <i class="far fa-comment-dots"></i>&nbsp;17</a>
+                                </div>
+                                <div class="card-footer">
+                                    <p>Note: </p>
+                                    <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-4 col-lg-3 col-md-4">
+                            <div class="card z-depth-1">
+                                <div class="view">
+                                    <a class="lightbox" href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(40).jpg" data-size="1600x1067">
+                                        <img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(40).jpg" alt="placeholder" class="img-fluid" />
+                                    </a>
+                                </div>
+                                <div class="card-title">
+                                    <strong>Card title</strong>
+                                </div>
+                                <div class="card-body card-body-cascade">
+                                    <a class="robotolight" href="">
+                                        <i class="fa fa-eye"></i>&nbsp;552</a>
+                                    <a class="robotolight" href="">
+                                        <i class="far fa-comment-dots"></i>&nbsp;17</a>
+                                </div>
+                                <div class="card-footer">
+                                    <p>Note: </p>
+                                    <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-4 col-lg-3 col-md-4">
+                            <div class="card z-depth-1">
+                                <div class="view">
+                                    <a class="lightbox" href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(148).jpg" data-size="1600x1067">
+                                        <img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(148).jpg" alt="placeholder" class="img-fluid" />
+                                    </a>
+                                </div>
+                                <div class="card-title">
+                                    <strong>Card title</strong>
+                                </div>
+                                <div class="card-body card-body-cascade">
+                                    <a class="robotolight" href="">
+                                        <i class="fa fa-eye"></i>&nbsp;552</a>
+                                    <a class="robotolight" href="">
+                                        <i class="far fa-comment-dots"></i>&nbsp;17</a>
+                                </div>
+                                <div class="card-footer">
+                                    <p>Note: </p>
+                                    <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-4 col-lg-3 col-md-4">
+                            <div class="card z-depth-1">
+                                <div class="view">
+                                    <a class="lightbox" href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(147).jpg" data-size="1600x1067">
+                                        <img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).jpg" alt="placeholder" class="img-fluid" />
+                                    </a>
+                                </div>
+                                <div class="card-title">
+                                    <strong>Card title</strong>
+                                </div>
+                                <div class="card-body card-body-cascade">
+                                    <a class="robotolight" href="">
+                                        <i class="fa fa-eye"></i>&nbsp;552</a>
+                                    <a class="robotolight" href="">
+                                        <i class="far fa-comment-dots"></i>&nbsp;17</a>
+                                </div>
+                                <div class="card-footer">
+                                    <p>Note: </p>
+                                    <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-4 col-lg-3 col-md-4">
+                            <div class="card z-depth-1">
+                                <div class="view">
+                                    <a class="lightbox" href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(149).jpg" data-size="1600x1067">
+                                        <img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(149).jpg" alt="placeholder" class="img-fluid" />
+                                    </a>
+                                </div>
+                                <div class="card-title">
+                                    <strong>Card title</strong>
+                                </div>
+                                <div class="card-body card-body-cascade">
+                                    <a class="robotolight" href="">
+                                        <i class="fa fa-eye"></i>&nbsp;552</a>
+                                    <a class="robotolight" href="">
+                                        <i class="far fa-comment-dots"></i>&nbsp;17</a>
+                                </div>
+                                <div class="card-footer">
+                                    <p>Note: </p>
+                                    <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-
-                    <div class="mb-4 col-lg-3 col-md-4 col-xs-6">
-                        <div class="card z-depth-1">
-                            <div class="view">
-                                <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(152).jpg" data-size="1600x1067">
-                                    <img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(152).jpg" alt="placeholder" class="img-fluid" />
-                                </a>
-                            </div>
-                            <div class="card-body card-body-cascade">
-                                <a class="robotolight" href="">
-                                    <i class="fa fa-eye"></i>&nbsp;552</a>
-                                <a class="robotolight" href="">
-                                    <i class="far fa-comment-dots"></i>&nbsp;17</a>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="mb-4 col-lg-3 col-md-4 col-xs-6">
-                        <div class="card z-depth-1">
-                            <div class="view">
-                                <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(42).jpg" data-size="1600x1067">
-                                    <img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(42).jpg" alt="placeholder" class="img-fluid" />
-                                </a>
-                            </div>
-                            <div class="card-body card-body-cascade">
-                                <a class="robotolight" href="">
-                                    <i class="fa fa-eye"></i>&nbsp;552</a>
-                                <a class="robotolight" href="">
-                                    <i class="far fa-comment-dots"></i>&nbsp;17</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mb-4 col-lg-3 col-md-4 col-xs-6">
-                        <div class="card z-depth-1">
-                            <div class="view">
-                                <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(151).jpg" data-size="1600x1067">
-                                    <img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(151).jpg" alt="placeholder" class="img-fluid" />
-                                </a>
-                            </div>
-                            <div class="card-body card-body-cascade">
-                                <a class="robotolight" href="">
-                                    <i class="fa fa-eye"></i>&nbsp;552</a>
-                                <a class="robotolight" href="">
-                                    <i class="far fa-comment-dots"></i>&nbsp;17</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mb-4 col-lg-3 col-md-4 col-xs-6">
-                        <div class="card z-depth-1">
-                            <div class="view">
-                                <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(40).jpg" data-size="1600x1067">
-                                    <img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(40).jpg" alt="placeholder" class="img-fluid" />
-                                </a>
-                            </div>
-                            <div class="card-body card-body-cascade">
-                                <a class="robotolight" href="">
-                                    <i class="fa fa-eye"></i>&nbsp;552</a>
-                                <a class="robotolight" href="">
-                                    <i class="far fa-comment-dots"></i>&nbsp;17</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mb-4 col-lg-3 col-md-4 col-xs-6">
-                        <div class="card z-depth-1">
-                            <div class="view">
-                                <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(148).jpg" data-size="1600x1067">
-                                    <img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(148).jpg" alt="placeholder" class="img-fluid" />
-                                </a>
-                            </div>
-                            <div class="card-body card-body-cascade">
-                                <a class="robotolight" href="">
-                                    <i class="fa fa-eye"></i>&nbsp;552</a>
-                                <a class="robotolight" href="">
-                                    <i class="far fa-comment-dots"></i>&nbsp;17</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mb-4 col-lg-3 col-md-4 col-xs-6">
-                        <div class="card z-depth-1">
-                            <div class="view">
-                                <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(147).jpg" data-size="1600x1067">
-                                    <img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).jpg" alt="placeholder" class="img-fluid" />
-                                </a>
-                            </div>
-                            <div class="card-body card-body-cascade">
-                                <a class="robotolight" href="">
-                                    <i class="fa fa-eye"></i>&nbsp;552</a>
-                                <a class="robotolight" href="">
-                                    <i class="far fa-comment-dots"></i>&nbsp;17</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mb-4 col-lg-3 col-md-4 col-xs-6">
-                        <div class="card z-depth-1">
-                            <div class="view">
-                                <a href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(149).jpg" data-size="1600x1067">
-                                    <img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(149).jpg" alt="placeholder" class="img-fluid" />
-                                </a>
-                            </div>
-                            <div class="card-body card-body-cascade">
-                                <a class="robotolight" href="">
-                                    <i class="fa fa-eye"></i>&nbsp;552</a>
-                                <a class="robotolight" href="">
-                                    <i class="far fa-comment-dots"></i>&nbsp;17</a>
-                            </div>
-                        </div>
-                    </div>
-
-
                 </div>
             </div>
         </div>
