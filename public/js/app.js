@@ -14152,6 +14152,7 @@ __webpack_require__(21);
  */
 
 __webpack_require__(44);
+// require('./components/Example');
 __webpack_require__(58);
 
 /***/ }),
@@ -55836,55 +55837,144 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
-var Example = function (_Component) {
-    _inherits(Example, _Component);
+var CrudExample = function (_Component) {
+    _inherits(CrudExample, _Component);
 
-    function Example() {
-        _classCallCheck(this, Example);
+    function CrudExample(props) {
+        _classCallCheck(this, CrudExample);
 
-        return _possibleConstructorReturn(this, (Example.__proto__ || Object.getPrototypeOf(Example)).apply(this, arguments));
+        var _this = _possibleConstructorReturn(this, (CrudExample.__proto__ || Object.getPrototypeOf(CrudExample)).call(this, props));
+
+        _this.state = {
+            activities: []
+        };
+        return _this;
     }
 
-    _createClass(Example, [{
+    _createClass(CrudExample, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            var _this2 = this;
+
+            axios.get('/api/activities').then(function (res) {
+                var activities = res.data.data.data;
+                _this2.setState({ activities: activities });
+            });
+        }
+    }, {
+        key: 'handleSubmit',
+        value: function handleSubmit(event) {
+            event.preventDefault();
+            var target = event.target;
+
+            // const activity = {
+            //     name: target.name.value,
+            //     type: target.type.value,
+            //     duration: target.duration.value,
+            //     description: target.description.value,
+            //     date_of_activity: '2018-01-01 20:00:00'
+            // };
+
+            axios.post('/api/activities', {
+                name: target.name.value,
+                type: target.type.value,
+                duration: target.duration.value,
+                description: target.description.value,
+                date_of_activity: '2018-01-01 20:00:00'
+            }).then(function (res) {
+                console.log(res);
+                console.log(res.data);
+            });
+        }
+    }, {
+        key: 'handleDelete',
+        value: function handleDelete(event) {
+            event.preventDefault();
+
+            axios.delete('/api/activities/' + event.target.id.value).then(function (res) {
+                console.log(res);
+                console.log(res.data);
+            });
+        }
+    }, {
         key: 'render',
         value: function render() {
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
-                { className: 'container' },
+                null,
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { className: 'row justify-content-center' },
+                    'ul',
+                    null,
+                    this.state.activities.map(function (activity) {
+                        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'li',
+                            { key: activity.id },
+                            activity.name,
+                            ' - ',
+                            activity.id
+                        );
+                    })
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'form',
+                    { onSubmit: this.handleSubmit },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'div',
-                        { className: 'col-md-8' },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'div',
-                            { className: 'card' },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'div',
-                                { className: 'card-header' },
-                                'Example Component'
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'div',
-                                { className: 'card-body' },
-                                'I\'m an example component!'
-                            )
-                        )
+                        'label',
+                        null,
+                        'Name:',
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'text', name: 'name' })
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'label',
+                        null,
+                        'Type:',
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'text', name: 'type' })
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'label',
+                        null,
+                        'Duration:',
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'text', name: 'duration' })
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'label',
+                        null,
+                        'description:',
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'text', name: 'description' })
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'button',
+                        { type: 'submit' },
+                        'Add'
+                    )
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'form',
+                    { onSubmit: this.handleDelete },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'label',
+                        null,
+                        'ID:',
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'text', name: 'id' })
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'button',
+                        { type: 'submit' },
+                        'Delete'
                     )
                 )
             );
         }
     }]);
 
-    return Example;
+    return CrudExample;
 }(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
 
-/* harmony default export */ __webpack_exports__["default"] = (Example);
+/* harmony default export */ __webpack_exports__["default"] = (CrudExample);
 
 
-if (document.getElementById('example')) {
-    __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Example, null), document.getElementById('example'));
+if (document.getElementById('crudExample')) {
+    __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(CrudExample, null), document.getElementById('crudExample'));
 }
 
 /***/ }),
