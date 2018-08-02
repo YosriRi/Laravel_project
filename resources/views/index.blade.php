@@ -14,7 +14,8 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
-        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+
         <link rel="stylesheet" href="{{ asset('css/all.css') }}">
         <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
 
@@ -34,9 +35,8 @@
     <body>
 
         <div class="culmn">  
-
-        @include ('include.header');
-        @include ('include.activite'); 
+        @include ('include.visualize-photo');
+         
 
         </div>
 
@@ -60,20 +60,10 @@
         <script src="js/gmaps.min.js"></script>
  -->
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
         <script>
-
-                function showmap() {
-                    var mapOptions = {
-                        zoom: 8,
-                        scrollwheel: false,
-                        center: new google.maps.LatLng(-34.397, 150.644),
-                        mapTypeId: google.maps.MapTypeId.ROADMAP
-                    };
-                    var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
-                }
-
+            baguetteBox.run('.tz-gallery');
         </script>
-
 
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
