@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\api;
+namespace App\Http\Controllers;
 
-use app\category;
+use Illuminate\Http\Request;
+use App\Category;
 use App\Http\Requests;
 use App\Http\Resources\Category as CategoryResource;
 use Unlu\Laravel\Api\QueryBuilder;

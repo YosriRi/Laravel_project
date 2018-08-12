@@ -8,7 +8,6 @@ $factory->define(App\Comment::class, function (Faker $faker) {
         'id_user' => $faker->numberBetween($min = 1, $max = 100),
         'id_activity' => $faker->numberBetween($min = 1, $max = 100),
         'id_photos' => $faker->numberBetween($min = 1, $max = 100),
-        'activity_or_photo' => $faker->numberBetween($min = 0, $max = 1),
-
+        'activity_or_photo' => $faker->numberBetween($min = 0, $max = 1)
     ];
 });

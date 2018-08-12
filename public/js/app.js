@@ -55875,12 +55875,12 @@ var CrudExample = function (_Component) {
             //     date_of_activity: '2018-01-01 20:00:00'
             // };
 
-            axios.post('/api/activities', {
-                name: target.name.value,
-                type: target.type.value,
-                duration: target.duration.value,
-                description: target.description.value,
-                date_of_activity: '2018-01-01 20:00:00'
+            axios.post('/api/category', {
+                category_name: target.name.value,
+                description: target.type.value
+                // duration: target.duration.value,
+                // description: target.description.value,
+                // date_of_activity: '2018-01-01 20:00:00'
             }).then(function (res) {
                 console.log(res);
                 console.log(res.data);

@@ -35,7 +35,10 @@
     <body>
 
         <div class="culmn">  
-        @include ('include.visualize-photo');
+        @include ('include.header');
+        @include ('include.home');
+        @include ('include.terrain');
+        @include ('include.footer');
          
 
         </div>
