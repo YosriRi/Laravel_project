@@ -13,6 +13,11 @@ require('./bootstrap');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-require('./components/header');
+// require('./components/header');
 // require('./components/Example');
-require('./components/crudExample');
+// require('./components/crudExample');
+import CrudExample from './components/CrudExample';
+// import Activity from './components/activity/Activity';
+// import Comment from './components/activity/Comment';
+// import Content from './components/activity/Content';
+// import Sidebar from './components/activity/Sidebar';

@@ -35,10 +35,7 @@
     <body>
 
         <div class="culmn">  
-        @include ('include.header');
-        @include ('include.home');
-        @include ('include.terrain');
-        @include ('include.footer');
+        @include ('include.activite');
          
 
         </div>
