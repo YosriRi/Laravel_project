@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
-import Activity from './activity/Activity';
 
 export default class CrudExample extends Component {
     constructor(props) {
@@ -86,7 +85,6 @@ export default class CrudExample extends Component {
                     </label>
                     <button type="submit">Delete</button>
                 </form>
-                <Activity/>
             </div>
         );
     }
