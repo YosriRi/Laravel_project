@@ -34,11 +34,8 @@
     </head>
     <body>
 
-        <div class="culmn">  
-        @include ('include.activite');
-         
-
-        </div>
+        <div id=headerComponent></div>
+        <div id=menuComponent></div>
 
         <!-- START SCROLL TO TOP  -->
 
@@ -67,6 +64,7 @@
 
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+        <script src="/js/app.js"></script>
 
     </body>
 </html>
