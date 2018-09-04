@@ -16,4 +16,7 @@ require('./bootstrap');
 require('./components/CrudExample');
 require('./components/activity/Activity');
 require('./components/header/Header');
-require('./components/header/Menu');
+require('./components/footer/Footer');
+require('./components/home/Home');
+require('./components/login/Login');
+require('./components/other/Other');

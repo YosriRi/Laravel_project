@@ -70,6 +70,20 @@
 "use strict";
 
 
+if (false) {
+  module.exports = require('./cjs/react.production.min.js');
+} else {
+  module.exports = __webpack_require__(45);
+}
+
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
 var bind = __webpack_require__(9);
 var isBuffer = __webpack_require__(26);
 
@@ -374,20 +388,6 @@ module.exports = {
 
 
 /***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-if (false) {
-  module.exports = require('./cjs/react.production.min.js');
-} else {
-  module.exports = __webpack_require__(45);
-}
-
-
-/***/ }),
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -439,7 +439,7 @@ if (false) {
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {
 
-var utils = __webpack_require__(0);
+var utils = __webpack_require__(1);
 var normalizeHeaderName = __webpack_require__(29);
 
 var DEFAULT_CONTENT_TYPE = {
@@ -13548,7 +13548,7 @@ module.exports = function bind(fn, thisArg) {
 "use strict";
 
 
-var utils = __webpack_require__(0);
+var utils = __webpack_require__(1);
 var settle = __webpack_require__(30);
 var buildURL = __webpack_require__(32);
 var parseHeaders = __webpack_require__(33);
@@ -14141,7 +14141,7 @@ module.exports = checkPropTypes;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(20);
-module.exports = __webpack_require__(64);
+module.exports = __webpack_require__(70);
 
 
 /***/ }),
@@ -14166,7 +14166,10 @@ __webpack_require__(21);
 __webpack_require__(44);
 __webpack_require__(58);
 __webpack_require__(62);
-__webpack_require__(63);
+__webpack_require__(64);
+__webpack_require__(66);
+__webpack_require__(75);
+__webpack_require__(77);
 
 /***/ }),
 /* 21 */
@@ -35327,7 +35330,7 @@ module.exports = function(module) {
 "use strict";
 
 
-var utils = __webpack_require__(0);
+var utils = __webpack_require__(1);
 var bind = __webpack_require__(9);
 var Axios = __webpack_require__(27);
 var defaults = __webpack_require__(3);
@@ -35414,7 +35417,7 @@ function isSlowBuffer (obj) {
 
 
 var defaults = __webpack_require__(3);
-var utils = __webpack_require__(0);
+var utils = __webpack_require__(1);
 var InterceptorManager = __webpack_require__(37);
 var dispatchRequest = __webpack_require__(38);
 
@@ -35689,7 +35692,7 @@ process.umask = function() { return 0; };
 "use strict";
 
 
-var utils = __webpack_require__(0);
+var utils = __webpack_require__(1);
 
 module.exports = function normalizeHeaderName(headers, normalizedName) {
   utils.forEach(headers, function processHeader(value, name) {
@@ -35769,7 +35772,7 @@ module.exports = function enhanceError(error, config, code, request, response) {
 "use strict";
 
 
-var utils = __webpack_require__(0);
+var utils = __webpack_require__(1);
 
 function encode(val) {
   return encodeURIComponent(val).
@@ -35842,7 +35845,7 @@ module.exports = function buildURL(url, params, paramsSerializer) {
 "use strict";
 
 
-var utils = __webpack_require__(0);
+var utils = __webpack_require__(1);
 
 // Headers whose duplicates are ignored by node
 // c.f. https://nodejs.org/api/http.html#http_message_headers
@@ -35902,7 +35905,7 @@ module.exports = function parseHeaders(headers) {
 "use strict";
 
 
-var utils = __webpack_require__(0);
+var utils = __webpack_require__(1);
 
 module.exports = (
   utils.isStandardBrowserEnv() ?
@@ -36020,7 +36023,7 @@ module.exports = btoa;
 "use strict";
 
 
-var utils = __webpack_require__(0);
+var utils = __webpack_require__(1);
 
 module.exports = (
   utils.isStandardBrowserEnv() ?
@@ -36080,7 +36083,7 @@ module.exports = (
 "use strict";
 
 
-var utils = __webpack_require__(0);
+var utils = __webpack_require__(1);
 
 function InterceptorManager() {
   this.handlers = [];
@@ -36139,7 +36142,7 @@ module.exports = InterceptorManager;
 "use strict";
 
 
-var utils = __webpack_require__(0);
+var utils = __webpack_require__(1);
 var transformData = __webpack_require__(39);
 var isCancel = __webpack_require__(12);
 var defaults = __webpack_require__(3);
@@ -36232,7 +36235,7 @@ module.exports = function dispatchRequest(config) {
 "use strict";
 
 
-var utils = __webpack_require__(0);
+var utils = __webpack_require__(1);
 
 /**
  * Transform the data for a request or a response
@@ -36398,7 +36401,7 @@ module.exports = function spread(callback) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
@@ -38091,7 +38094,7 @@ if (true) {
 'use strict';
 
 var invariant = __webpack_require__(15);
-var React = __webpack_require__(1);
+var React = __webpack_require__(0);
 var warning = __webpack_require__(17);
 var ExecutionEnvironment = __webpack_require__(48);
 var _assign = __webpack_require__(14);
@@ -55919,7 +55922,7 @@ module.exports = camelize;
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
@@ -55978,7 +55981,7 @@ if (document.getElementById('activityComponent')) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
@@ -56183,7 +56186,7 @@ var Content = function (_Component) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
@@ -56314,7 +56317,7 @@ var Comment = function (_Component) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
@@ -56487,10 +56490,11 @@ var Sidebar = function (_Component) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__SubHeader__ = __webpack_require__(63);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -56498,6 +56502,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
 
 
 
@@ -56516,79 +56521,84 @@ var Header = function (_Component) {
 		value: function render() {
 			return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 				'div',
-				{ 'class': 'toolbar' },
+				null,
 				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 					'div',
-					{ 'class': 'uou-block-1a blog' },
+					{ className: 'toolbar' },
 					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 						'div',
-						{ 'class': 'containerToolbar' },
+						{ className: 'uou-block-1a blog' },
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 							'div',
-							{ 'class': ' language' },
+							{ className: 'containerToolbar' },
 							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-								'a',
-								{ href: '#' },
-								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'images/France-Flag.ico', 'class': 'toggle', alt: 'FR' })
-							),
-							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-								'a',
-								{ href: '#' },
-								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'images/United-Kingdom-Flag.ico', 'class': 'toggle', alt: 'EN' })
-							)
-						),
-						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-							'ul',
-							{ 'class': 'social' },
-							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-								'li',
-								null,
-								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a', { href: '', 'class': 'fa fa-facebook' })
-							),
-							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-								'li',
-								null,
-								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a', { href: '', 'class': 'fa fa-twitter' })
-							),
-							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-								'li',
-								null,
-								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a', { href: '', 'class': 'fa fa-google-plus' })
-							)
-						),
-						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-							'ul',
-							{ 'class': 'authentification' },
-							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-								'li',
-								null,
+								'div',
+								{ className: ' language' },
 								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 									'a',
-									{ href: '#login' },
-									'Login'
+									{ href: '#' },
+									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'images/France-Flag.ico', className: 'toggle', alt: 'FR' })
+								),
+								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+									'a',
+									{ href: '#' },
+									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'images/United-Kingdom-Flag.ico', className: 'toggle', alt: 'EN' })
 								)
 							),
 							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-								'li',
-								null,
+								'ul',
+								{ className: 'social' },
 								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-									'p',
+									'li',
 									null,
-									'|'
+									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a', { href: '', className: 'fa fa-facebook' })
+								),
+								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+									'li',
+									null,
+									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a', { href: '', className: 'fa fa-twitter' })
+								),
+								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+									'li',
+									null,
+									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a', { href: '', className: 'fa fa-google-plus' })
 								)
 							),
 							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-								'li',
-								null,
+								'ul',
+								{ className: 'authentification' },
 								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-									'a',
-									{ href: '#register' },
-									'Register'
+									'li',
+									null,
+									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+										'a',
+										{ href: '#login' },
+										'Login'
+									)
+								),
+								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+									'li',
+									null,
+									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+										'p',
+										null,
+										'|'
+									)
+								),
+								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+									'li',
+									null,
+									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+										'a',
+										{ href: '#register' },
+										'Register'
+									)
 								)
 							)
 						)
 					)
-				)
+				),
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__SubHeader__["a" /* default */], null)
 			);
 		}
 	}]);
@@ -56608,8 +56618,7 @@ if (document.getElementById('headerComponent')) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
@@ -56624,115 +56633,115 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
-var Menu = function (_Component) {
-	_inherits(Menu, _Component);
+var SubHeader = function (_Component) {
+	_inherits(SubHeader, _Component);
 
-	function Menu(props) {
-		_classCallCheck(this, Menu);
+	function SubHeader(props) {
+		_classCallCheck(this, SubHeader);
 
-		return _possibleConstructorReturn(this, (Menu.__proto__ || Object.getPrototypeOf(Menu)).call(this, props));
+		return _possibleConstructorReturn(this, (SubHeader.__proto__ || Object.getPrototypeOf(SubHeader)).call(this, props));
 	}
 
-	_createClass(Menu, [{
+	_createClass(SubHeader, [{
 		key: 'render',
 		value: function render() {
 			return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 				'nav',
-				{ 'class': 'navbar navbar-expand-lg nav_bg navbar-dark' },
+				{ className: 'navbar navbar-expand-lg nav_bg navbar-dark' },
 				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 					'div',
-					{ 'class': 'container' },
+					{ className: 'container' },
 					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 						'a',
-						{ 'class': 'navbar-brand', href: '#' },
+						{ className: 'navbar-brand', href: '#' },
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'images/logo.png', width: '150', height: '30', alt: 'So Extreme' })
 					),
 					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 						'button',
-						{ 'class': 'navbar-toggler', type: 'button', 'data-toggle': 'collapse', 'data-target': '#navbarResponsive', 'aria-controls': 'navbarResponsive', 'aria-expanded': 'false', 'aria-label': 'Toggle navigation' },
-						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { 'class': 'navbar-toggler-icon' })
+						{ className: 'navbar-toggler', type: 'button', 'data-toggle': 'collapse', 'data-target': '#navbarResponsive', 'aria-controls': 'navbarResponsive', 'aria-expanded': 'false', 'aria-label': 'Toggle navigation' },
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { className: 'navbar-toggler-icon' })
 					),
 					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 						'div',
-						{ 'class': 'collapse navbar-collapse', id: 'navbarResponsive' },
+						{ className: 'collapse navbar-collapse', id: 'navbarResponsive' },
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 							'ul',
-							{ 'class': 'navbar-nav ml-auto' },
+							{ className: 'navbar-nav ml-auto' },
 							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 								'li',
-								{ 'class': 'nav-item active' },
+								{ className: 'nav-item active' },
 								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 									'a',
-									{ 'class': 'nav-link', href: '#' },
+									{ className: 'nav-link', href: '#' },
 									'Accueil',
 									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 										'span',
-										{ 'class': 'sr-only' },
+										{ className: 'sr-only' },
 										'(current)'
 									)
 								)
 							),
 							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 								'li',
-								{ 'class': 'nav-item' },
+								{ className: 'nav-item' },
 								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 									'a',
-									{ 'class': 'nav-link', href: '#' },
+									{ className: 'nav-link', href: '#' },
 									'Nos Terrains de jeu'
 								)
 							),
 							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 								'li',
-								{ 'class': 'nav-item' },
+								{ className: 'nav-item' },
 								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 									'a',
-									{ 'class': 'nav-link', href: '#' },
+									{ className: 'nav-link', href: '#' },
 									'Nouveaut\xE9 ! Soufflerie'
 								)
 							),
 							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 								'li',
-								{ 'class': 'nav-item' },
+								{ className: 'nav-item' },
 								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 									'a',
-									{ 'class': 'nav-link', href: '#' },
+									{ className: 'nav-link', href: '#' },
 									'A propos'
 								)
 							),
 							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 								'li',
-								{ 'class': 'nav-item' },
+								{ className: 'nav-item' },
 								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 									'a',
-									{ 'class': 'nav-link', href: '#' },
+									{ className: 'nav-link', href: '#' },
 									'Blog'
 								)
 							),
 							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 								'li',
-								{ 'class': 'nav-item' },
+								{ className: 'nav-item' },
 								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 									'a',
-									{ 'class': 'nav-link', href: '#' },
+									{ className: 'nav-link', href: '#' },
 									'Contact'
 								)
 							),
 							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 								'li',
-								{ 'class': 'nav-item' },
+								{ className: 'nav-item' },
 								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 									'a',
-									{ 'class': 'nav-link', href: '#' },
-									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { 'class': 'fas fa-shopping-cart' })
+									{ className: 'nav-link', href: '#' },
+									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fas fa-shopping-cart' })
 								)
 							),
 							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 								'li',
-								{ 'class': 'nav-item' },
+								{ className: 'nav-item' },
 								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 									'a',
-									{ 'class': 'nav-link', href: '#' },
-									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { 'class': 'fas fa-search' })
+									{ className: 'nav-link', href: '#' },
+									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fas fa-search' })
 								)
 							)
 						)
@@ -56742,21 +56751,2373 @@ var Menu = function (_Component) {
 		}
 	}]);
 
-	return Menu;
+	return SubHeader;
 }(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
 
-/* harmony default export */ __webpack_exports__["default"] = (Menu);
-
-
-if (document.getElementById('menuComponent')) {
-	__WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Menu, null), document.getElementById('menuComponent'));
-}
+/* harmony default export */ __webpack_exports__["a"] = (SubHeader);
 
 /***/ }),
 /* 64 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__SubFooter__ = __webpack_require__(65);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+
+var Footer = function (_Component) {
+	_inherits(Footer, _Component);
+
+	function Footer(props) {
+		_classCallCheck(this, Footer);
+
+		return _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).call(this, props));
+	}
+
+	_createClass(Footer, [{
+		key: 'render',
+		value: function render() {
+			return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+				'div',
+				null,
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					'section',
+					{ id: 'contact', className: 'footer_widget' },
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						'div',
+						{ className: 'container' },
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							'div',
+							{ className: 'row' },
+							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+								'div',
+								{ className: 'col-4' },
+								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+									'div',
+									{ className: 'single_widget wow fadeIn', 'data-wow-duration': '800ms' },
+									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+										'div',
+										{ className: 'footer_logo' },
+										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'images/footerlogo.png', alt: '' })
+									),
+									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+										'p',
+										null,
+										'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
+									),
+									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+										'div',
+										{ className: 'footer_subcribs_area' },
+										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+											'p',
+											{ className: 'monseratregular' },
+											__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+												'strong',
+												null,
+												'15k'
+											),
+											' followers'
+										),
+										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('hr', null),
+										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+											'div',
+											{ className: 'flowus' },
+											__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+												'a',
+												{ href: '', className: 'robotolight' },
+												' Follow Us : '
+											),
+											__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+												'a',
+												{ href: '' },
+												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-facebook' })
+											),
+											__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+												'a',
+												{ href: '' },
+												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-twitter' })
+											),
+											__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+												'a',
+												{ href: '' },
+												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-google-plus' })
+											),
+											__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+												'a',
+												{ href: '' },
+												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-instagram' })
+											),
+											__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+												'a',
+												{ href: '' },
+												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-pinterest-p' })
+											),
+											__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+												'a',
+												{ href: '' },
+												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-youtube' })
+											),
+											__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+												'a',
+												{ href: '' },
+												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-rss' })
+											),
+											__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+												'a',
+												{ href: '' },
+												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-dribbble' })
+											)
+										),
+										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+											'form',
+											{ className: 'navbar-form navbar-left', role: 'search' },
+											__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+												'div',
+												{ className: 'form-group' },
+												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'text', className: 'form-control', placeholder: 'Search' }),
+												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+													'button',
+													{ type: 'submit', className: 'submit_btn' },
+													'Subscribe'
+												)
+											)
+										)
+									)
+								)
+							),
+							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+								'div',
+								{ className: 'col-8' },
+								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+									'div',
+									{ className: 'row' },
+									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+										'div',
+										{ className: 'col-6' },
+										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+											'div',
+											{ className: 'single_widget wow fadeIn', 'data-wow-duration': '800ms' },
+											__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+												'p',
+												{ className: 'monseratregular' },
+												'Derni\xE8res posts'
+											),
+											__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { className: 'separator4' }),
+											__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+												'div',
+												{ className: 'single_widget_blog' },
+												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+													'div',
+													{ className: 'single_widget_img' },
+													__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'images/fb1.jpg', alt: '' })
+												),
+												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+													'div',
+													{ className: 'single_widget_content' },
+													__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+														'p',
+														{ className: 'monseratregular' },
+														'Lorem ipsum dolor sit amet, consectetur adipiscing'
+													),
+													__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+														'p',
+														{ className: 'robotolight' },
+														'Jan 9, 2016'
+													)
+												)
+											),
+											__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+												'div',
+												{ className: 'single_widget_blog' },
+												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+													'div',
+													{ className: 'single_widget_img' },
+													__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'images/fb2.jpg', alt: '' })
+												),
+												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+													'div',
+													{ className: 'single_widget_content' },
+													__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+														'p',
+														{ className: 'monseratregular' },
+														'Lorem ipsum dolor sit amet, consectetur adipiscing'
+													),
+													__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+														'p',
+														{ className: 'robotolight' },
+														'Jan 9, 2018'
+													)
+												)
+											),
+											__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+												'div',
+												{ className: 'single_widget_blog' },
+												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+													'div',
+													{ className: 'single_widget_img' },
+													__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'images/fb3.jpg', alt: '' })
+												),
+												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+													'div',
+													{ className: 'single_widget_content' },
+													__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+														'p',
+														{ className: 'monseratregular' },
+														'Lorem ipsum dolor sit amet, consectetur adipiscing'
+													),
+													__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+														'p',
+														{ className: 'robotolight' },
+														'Jan 9, 2018'
+													)
+												)
+											)
+										)
+									),
+									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+										'div',
+										{ className: 'col-6' },
+										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+											'div',
+											{ className: 'single_widget wow fadeIn', 'data-wow-duration': '800ms' },
+											__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+												'p',
+												{ className: 'monseratregular' },
+												'instagram'
+											),
+											__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { className: 'separator4' }),
+											__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+												'div',
+												{ className: 'footer_gellary' },
+												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+													'div',
+													{ className: 'row' },
+													__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+														'div',
+														{ className: 'col-md-4 col-6 no-padding' },
+														__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'images/fg1.jpg', alt: '' })
+													),
+													__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+														'div',
+														{ className: 'col-md-4 col-6 no-padding' },
+														__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'images/fg2.jpg', alt: '' })
+													),
+													__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+														'div',
+														{ className: 'col-md-4 col-6 no-padding' },
+														__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'images/fg3.jpg', alt: '' })
+													),
+													__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+														'div',
+														{ className: 'col-md-4 col-6 no-padding' },
+														__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'images/fg4.jpg', alt: '' })
+													),
+													__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+														'div',
+														{ className: 'col-md-4 col-6 no-padding' },
+														__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'images/fg5.jpg', alt: '' })
+													),
+													__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+														'div',
+														{ className: 'col-md-4 col-6 no-padding' },
+														__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'images/fg6.jpg', alt: '' })
+													),
+													__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+														'div',
+														{ className: 'col-md-4 col-6 no-padding' },
+														__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'images/fg7.jpg', alt: '' })
+													),
+													__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+														'div',
+														{ className: 'col-md-4 col-6 no-padding' },
+														__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'images/fg8.jpg', alt: '' })
+													),
+													__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+														'div',
+														{ className: 'col-md-4 col-6 no-padding' },
+														__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'images/fg9.jpg', alt: '' })
+													)
+												)
+											)
+										)
+									)
+								)
+							)
+						)
+					)
+				),
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__SubFooter__["a" /* default */], null)
+			);
+		}
+	}]);
+
+	return Footer;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (Footer);
+
+
+if (document.getElementById('footerComponent')) {
+	__WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Footer, null), document.getElementById('footerComponent'));
+}
+
+/***/ }),
+/* 65 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+var SubFooter = function (_Component) {
+    _inherits(SubFooter, _Component);
+
+    function SubFooter(props) {
+        _classCallCheck(this, SubFooter);
+
+        return _possibleConstructorReturn(this, (SubFooter.__proto__ || Object.getPrototypeOf(SubFooter)).call(this, props));
+    }
+
+    _createClass(SubFooter, [{
+        key: 'render',
+        value: function render() {
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'footer',
+                { className: 'page-footer font-small mdb-color pt-4' },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'container text-center text-md-left' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'row text-center text-md-left mt-3 pb-3' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'col-md-3 col-lg-3 col-xl-3 mx-auto mt-3' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'h6',
+                                { className: 'text-uppercase mb-4 font-weight-bold' },
+                                'Company name'
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'p',
+                                null,
+                                'Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+                            )
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('hr', { className: 'w-100 clearfix d-md-none' }),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'col-md-2 col-lg-2 col-xl-2 mx-auto mt-3' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'h6',
+                                { className: 'text-uppercase mb-4 font-weight-bold' },
+                                'Products'
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'p',
+                                null,
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'a',
+                                    { href: '#!' },
+                                    'MDBootstrap'
+                                )
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'p',
+                                null,
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'a',
+                                    { href: '#!' },
+                                    'MDWordPress'
+                                )
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'p',
+                                null,
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'a',
+                                    { href: '#!' },
+                                    'BrandFlow'
+                                )
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'p',
+                                null,
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'a',
+                                    { href: '#!' },
+                                    'Bootstrap Angular'
+                                )
+                            )
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('hr', { className: 'w-100 clearfix d-md-none' }),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'col-md-3 col-lg-2 col-xl-2 mx-auto mt-3' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'h6',
+                                { className: 'text-uppercase mb-4 font-weight-bold' },
+                                'Useful links'
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'p',
+                                null,
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'a',
+                                    { href: '#!' },
+                                    'Your Account'
+                                )
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'p',
+                                null,
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'a',
+                                    { href: '#!' },
+                                    'Become an Affiliate'
+                                )
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'p',
+                                null,
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'a',
+                                    { href: '#!' },
+                                    'Shipping Rates'
+                                )
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'p',
+                                null,
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'a',
+                                    { href: '#!' },
+                                    'Help'
+                                )
+                            )
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('hr', { className: 'w-100 clearfix d-md-none' }),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'col-md-4 col-lg-3 col-xl-3 mx-auto mt-3' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'h6',
+                                { className: 'text-uppercase mb-4 font-weight-bold' },
+                                'Contact'
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'p',
+                                null,
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fas fa-home mr-3' }),
+                                ' New York, NY 10012, US'
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'p',
+                                null,
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fas fa-envelope mr-3' }),
+                                ' info@gmail.com'
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'p',
+                                null,
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fas fa-phone mr-3' }),
+                                ' + 01 234 567 88'
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'p',
+                                null,
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fas fa-print mr-3' }),
+                                ' + 01 234 567 89'
+                            )
+                        )
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('hr', null),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'row d-flex align-items-center' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'col-md-7 col-lg-8' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'p',
+                                { className: 'text-center text-md-left' },
+                                '\xA9 2018 Copyright:'
+                            )
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'col-md-5 col-lg-4 ml-lg-0' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'div',
+                                { className: 'text-center text-md-right' },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'ul',
+                                    { className: 'list-unstyled list-inline' },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'li',
+                                        { className: 'list-inline-item' },
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'a',
+                                            { className: ' btn-sm mx-1' },
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fab fa-facebook-f' })
+                                        )
+                                    ),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'li',
+                                        { className: 'list-inline-item' },
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'a',
+                                            { className: ' btn-sm mx-1' },
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fab fa-twitter' })
+                                        )
+                                    ),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'li',
+                                        { className: 'list-inline-item' },
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'a',
+                                            { className: ' btn-sm mx-1' },
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fab fa-google-plus' })
+                                        )
+                                    ),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'li',
+                                        { className: 'list-inline-item' },
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'a',
+                                            { className: ' btn-sm mx-1' },
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fab fa-linkedin' })
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+
+    return SubFooter;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["a"] = (SubFooter);
+
+/***/ }),
+/* 66 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Slide1__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Slide2__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Slide3__ = __webpack_require__(69);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+
+
+
+var Home = function (_Component) {
+	_inherits(Home, _Component);
+
+	function Home(props) {
+		_classCallCheck(this, Home);
+
+		return _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).call(this, props));
+	}
+
+	_createClass(Home, [{
+		key: 'render',
+		value: function render() {
+			return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+				'div',
+				{ id: 'carouselExampleIndicators', className: 'fullslider carousel slide', 'data-ride': 'carousel' },
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					'ol',
+					{ className: 'carousel-indicators' },
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li', { 'data-target': '#carouselExampleIndicators', 'data-slide-to': '0', className: 'active' }),
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li', { 'data-target': '#carouselExampleIndicators', 'data-slide-to': '1' }),
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li', { 'data-target': '#carouselExampleIndicators', 'data-slide-to': '2' })
+				),
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					'div',
+					{ className: 'carousel-inner', role: 'listbox' },
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Slide1__["a" /* default */], null),
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__Slide2__["a" /* default */], null),
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__Slide3__["a" /* default */], null)
+				),
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					'a',
+					{ className: 'carousel-control-prev', href: '#carouselExampleIndicators', role: 'button', 'data-slide': 'prev' },
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { className: 'carousel-control-prev-icon', 'aria-hidden': 'true' }),
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						'span',
+						{ className: 'sr-only' },
+						'Previous'
+					)
+				),
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					'a',
+					{ className: 'carousel-control-next', href: '#carouselExampleIndicators', role: 'button', 'data-slide': 'next' },
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { className: 'carousel-control-next-icon', 'aria-hidden': 'true' }),
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						'span',
+						{ className: 'sr-only' },
+						'Next'
+					)
+				)
+			);
+		}
+	}]);
+
+	return Home;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (Home);
+
+
+if (document.getElementById('homeComponent')) {
+	__WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Home, null), document.getElementById('homeComponent'));
+}
+
+/***/ }),
+/* 67 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+var Slide1 = function (_Component) {
+  _inherits(Slide1, _Component);
+
+  function Slide1(props) {
+    _classCallCheck(this, Slide1);
+
+    return _possibleConstructorReturn(this, (Slide1.__proto__ || Object.getPrototypeOf(Slide1)).call(this, props));
+  }
+
+  _createClass(Slide1, [{
+    key: 'render',
+    value: function render() {
+      var divStyle = {
+        'backgroundImage': 'url(images/homebg1.jpg)'
+      };
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: 'carousel-item active', style: divStyle },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: 'carousel-caption d-none d-md-block' },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            { className: 'row' },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'form',
+              { className: 'form-wrapper cf' },
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'text', placeholder: 'Search here...', required: true }),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'button',
+                { type: 'submit' },
+                'Search'
+              )
+            )
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'h3',
+            null,
+            'First Slide'
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'p',
+            null,
+            'This is a description for the first slide.'
+          )
+        )
+      );
+    }
+  }]);
+
+  return Slide1;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["a"] = (Slide1);
+
+/***/ }),
+/* 68 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+var Slide2 = function (_Component) {
+  _inherits(Slide2, _Component);
+
+  function Slide2(props) {
+    _classCallCheck(this, Slide2);
+
+    return _possibleConstructorReturn(this, (Slide2.__proto__ || Object.getPrototypeOf(Slide2)).call(this, props));
+  }
+
+  _createClass(Slide2, [{
+    key: 'render',
+    value: function render() {
+      var divStyle = {
+        'backgroundImage': 'url(images/homebg2.jpg)'
+      };
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: 'carousel-item', style: divStyle },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: 'carousel-caption d-none d-md-block' },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            { className: 'container' },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'div',
+              { className: 'row' },
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'div',
+                { className: 'col-md-12' },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  'div',
+                  { className: 'input-group', id: 'adv-search' },
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'text', className: 'form-control', placeholder: 'Search for snippets' }),
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'input-group-btn' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                      'div',
+                      { className: 'btn-group', role: 'group' },
+                      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'dropdown dropdown-lg' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                          'button',
+                          { type: 'button', className: 'btn btn-default dropdown-toggle', 'data-toggle': 'dropdown', 'aria-expanded': 'false' },
+                          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { className: 'caret' })
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                          'div',
+                          { className: 'dropdown-menu dropdown-menu-right', role: 'menu' },
+                          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'form',
+                            { className: 'form-horizontal', role: 'form' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                              'div',
+                              { className: 'form-group' },
+                              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'label',
+                                { htmlFor: 'filter' },
+                                'Filter by'
+                              ),
+                              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'select',
+                                { className: 'form-control' },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                  'option',
+                                  { value: '0' },
+                                  'All Snippets'
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                  'option',
+                                  { value: '1' },
+                                  'Featured'
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                  'option',
+                                  { value: '2' },
+                                  'Most popular'
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                  'option',
+                                  { value: '3' },
+                                  'Top rated'
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                  'option',
+                                  { value: '4' },
+                                  'Most commented'
+                                )
+                              )
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                              'div',
+                              { className: 'form-group' },
+                              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'label',
+                                { htmlFor: 'contain' },
+                                'Author'
+                              ),
+                              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { className: 'form-control', type: 'text' })
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                              'div',
+                              { className: 'form-group' },
+                              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'label',
+                                { htmlFor: 'contain' },
+                                'Contains the words'
+                              ),
+                              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { className: 'form-control', type: 'text' })
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                              'button',
+                              { type: 'submit', className: 'btn btn-primary' },
+                              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'span',
+                                { className: 'glyphicon glyphicon-search', 'aria-hidden': 'true' },
+                                'Search'
+                              )
+                            )
+                          )
+                        )
+                      ),
+                      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'button',
+                        { type: 'button', className: 'btn btn-primary' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                          'span',
+                          { className: 'glyphicon glyphicon-search', 'aria-hidden': 'true' },
+                          'Search'
+                        )
+                      )
+                    )
+                  )
+                )
+              )
+            )
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'h3',
+            null,
+            'Second Slide'
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'p',
+            null,
+            'This is a description for the second slide.'
+          )
+        )
+      );
+    }
+  }]);
+
+  return Slide2;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["a"] = (Slide2);
+
+/***/ }),
+/* 69 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+var Slide3 = function (_Component) {
+		_inherits(Slide3, _Component);
+
+		function Slide3(props) {
+				_classCallCheck(this, Slide3);
+
+				return _possibleConstructorReturn(this, (Slide3.__proto__ || Object.getPrototypeOf(Slide3)).call(this, props));
+		}
+
+		_createClass(Slide3, [{
+				key: 'render',
+				value: function render() {
+						var divStyle = {
+								'backgroundImage': 'url(images/homebg3.jpg)'
+						};
+						return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+								'div',
+								{ className: 'carousel-item', style: divStyle },
+								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+										'div',
+										{ className: 'carousel-caption d-none d-md-block' },
+										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+												'div',
+												{ className: 'container' },
+												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+														'div',
+														{ className: 'row' },
+														__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																'div',
+																{ className: 'filter-form__block center' },
+																__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																		'form',
+																		{ className: '', method: 'post' },
+																		__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																				'p',
+																				{ className: 'filter-form__title' },
+																				'Affinez votre recherche'
+																		),
+																		__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'separator' }),
+																		__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																				'div',
+																				{ className: 'filter-form__option' },
+																				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																						'div',
+																						{ className: 'filter-form__select' },
+																						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																								'div',
+																								{ className: 'form-row' },
+																								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																										'div',
+																										{ className: 'col' },
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'p',
+																												null,
+																												'Categorie'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'select',
+																												{ id: 'catalog-filter', className: 'form-control active', name: 'category_id', style: { width: '256px' } },
+																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																														'option',
+																														{ value: '0' },
+																														'Toutes les activit\xE9s'
+																												),
+																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																														'option',
+																														{ value: '17' },
+																														'Avion'
+																												),
+																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																														'option',
+																														{ value: '165' },
+																														'Deltaplane'
+																												),
+																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																														'option',
+																														{ value: '36' },
+																														'Parapente'
+																												),
+																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																														'option',
+																														{ value: '181' },
+																														'Pilotage de Drone'
+																												),
+																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																														'option',
+																														{ value: '28' },
+																														'Planeur'
+																												),
+																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																														'option',
+																														{ value: '78' },
+																														'Saut \xE0 l\'\xC9lastique'
+																												),
+																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																														'option',
+																														{ value: '67' },
+																														'Saut en Parachute'
+																												),
+																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																														'option',
+																														{ value: '175' },
+																														'Simulateur de chute libre'
+																												),
+																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																														'option',
+																														{ value: '66' },
+																														'Simulateur de vol'
+																												),
+																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																														'option',
+																														{ value: '164' },
+																														'ULM'
+																												),
+																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																														'option',
+																														{ value: '83' },
+																														'Vol avec des Oiseaux'
+																												),
+																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																														'option',
+																														{ value: '69' },
+																														'Vol en H\xE9licopt\xE8re'
+																												),
+																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																														'option',
+																														{ value: '64' },
+																														'Vol en Montgolfi\xE8re'
+																												)
+																										)
+																								),
+																								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																										'div',
+																										{ className: 'col' },
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'p',
+																												null,
+																												'Activit\xE9'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'select',
+																												{ id: 'subcatalog-filter', className: 'form-control active', name: 'subcategory_id', style: { width: '256px' } },
+																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																														'option',
+																														{ value: '0' },
+																														'Sous-cat\xE9gorie'
+																												),
+																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																														'option',
+																														{ value: '150' },
+																														'Saut Parachute Tandem'
+																												),
+																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																														'option',
+																														{ value: '140' },
+																														'Saut d\'initiation'
+																												),
+																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																														'option',
+																														{ value: '145' },
+																														'Stage parachute PAC'
+																												)
+																										)
+																								)
+																						)
+																				),
+																				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																						'div',
+																						{ className: 'form-row' },
+																						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																								'div',
+																								{ className: 'col' },
+																								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																										'p',
+																										null,
+																										'Lieu'
+																								),
+																								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																										'select',
+																										{ id: 'location-filter', className: 'form-control', name: 'filter_location', style: { width: '256px' } },
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: '0' },
+																												'Lieu'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: '-1' },
+																												'France'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: '0' },
+																												'----------------------Regions----------------------'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'r;aquitaine-R5' },
+																												'Aquitaine'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'r;auvergne-R6' },
+																												'Auvergne'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'r;bourgogne-R7' },
+																												'Bourgogne'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'r;bretagne-R8' },
+																												'Bretagne'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'r;centre-R9' },
+																												'Centre'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'r;champagne-ardenne-R10' },
+																												'Champagne-Ardenne'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'r;corse-R11' },
+																												'Corse'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'r;franche-comte-R12' },
+																												'Franche-Comt\xE9'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'r;languedoc-roussillon-R13' },
+																												'Languedoc-Roussillon'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'r;limousin-R14' },
+																												'Limousin'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'r;lorraine-R15' },
+																												'Lorraine'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'r;midi-pyrenees-R16' },
+																												'Midi-Pyr\xE9n\xE9es'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'r;nord-pas-de-calais-R17' },
+																												'Nord-Pas-de-Calais'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'r;normandie-R18' },
+																												'Normandie'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'r;paca-R2' },
+																												'PACA'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'r;pays-de-la-loire-R19' },
+																												'Pays de la Loire'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'r;picardie-R20' },
+																												'Picardie'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'r;poitou-charentes-R21' },
+																												'Poitou-Charentes'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'r;rhone-alpes-R3' },
+																												'Rh\xF4ne-Alpes'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'r;ile-de-france-R1' },
+																												'\xCEle-de-France'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: '0' },
+																												'------------------Departments------------------'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;ain-1' },
+																												'01 - Ain'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;aisne-2' },
+																												'02 - Aisne'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;allier-3' },
+																												'03 - Allier'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;alpes-de-haute-provence-4' },
+																												'04 - Alpes de Haute-Provence'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;hautes-alpes-5' },
+																												'05 - Hautes-Alpes'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;alpes-maritimes-6' },
+																												'06 - Alpes-Maritimes'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;ardeche-7' },
+																												'07 - Ard\xE8che'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;ardennes-8' },
+																												'08 - Ardennes'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;ariege-9' },
+																												'09 - Ari\xE8ge'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;aube-10' },
+																												'10 - Aube'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;aude-11' },
+																												'11 - Aude'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;aveyron-12' },
+																												'12 - Aveyron'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;bouches-du-rhone-13' },
+																												'13 - Bouches-du-Rh\xF4ne'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;calvados-14' },
+																												'14 - Calvados'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;cantal-15' },
+																												'15 - Cantal'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;charente-16' },
+																												'16 - Charente'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;charente-maritime-17' },
+																												'17 - Charente-Maritime'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;cher-18' },
+																												'18 - Cher'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;correze-19' },
+																												'19 - Corr\xE8ze'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;corse-du-sud-20' },
+																												'20 - Corse'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;cote-d-or-21' },
+																												'21 - C\xF4te-d\'Or'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;cotes-d-armor-22' },
+																												'22 - C\xF4tes d\'Armor'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;dordogne-24' },
+																												'24 - Dordogne'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;doubs-25' },
+																												'25 - Doubs'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;drome-26' },
+																												'26 - Dr\xF4me'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;eure-27' },
+																												'27 - Eure'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;eure-et-loir-28' },
+																												'28 - Eure-et-Loir'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;finistere-29' },
+																												'29 - Finist\xE8re'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;gard-30' },
+																												'30 - Gard'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;haute-garonne-31' },
+																												'31 - Haute-Garonne'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;gers-32' },
+																												'32 - Gers'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;gironde-33' },
+																												'33 - Gironde'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;herault-34' },
+																												'34 - H\xE9rault'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;ille-et-vilaine-35' },
+																												'35 - Ille-et-Vilaine'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;indre-et-loire-37' },
+																												'37 - Indre-et-Loire'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;isere-38' },
+																												'38 - Is\xE8re'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;jura-39' },
+																												'39 - Jura'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;landes-40' },
+																												'40 - Landes'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;loir-et-cher-41' },
+																												'41 - Loir-et-Cher'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;loire-42' },
+																												'42 - Loire'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;haute-loire-43' },
+																												'43 - Haute-Loire'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;loire-atlantique-44' },
+																												'44 - Loire-Atlantique'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;loiret-45' },
+																												'45 - Loiret'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;lot-46' },
+																												'46 - Lot'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;lot-et-garonne-47' },
+																												'47 - Lot-et-Garonne'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;lozere-48' },
+																												'48 - Loz\xE8re'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;maine-et-loire-49' },
+																												'49 - Maine-et-Loire'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;manche-50' },
+																												'50 - Manche'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;marne-51' },
+																												'51 - Marne'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;haute-marne-52' },
+																												'52 - Haute-Marne'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;mayenne-53' },
+																												'53 - Mayenne'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;meuse-55' },
+																												'55 - Meuse'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;morbihan-56' },
+																												'56 - Morbihan'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;nievre-58' },
+																												'58 - Ni\xE8vre'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;nord-59' },
+																												'59 - Nord'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;oise-60' },
+																												'60 - Oise'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;orne-61' },
+																												'61 - Orne'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;pas-de-calais-62' },
+																												'62 - Pas-de-Calais'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;puy-de-dome-63' },
+																												'63 - Puy-de-D\xF4me'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;pyrenees-atlantiques-64' },
+																												'64 - Pyr\xE9n\xE9es-Atlantiques'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;hautes-pyrenees-65' },
+																												'65 - Hautes-Pyr\xE9n\xE9es'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;pyrenees-orientales-66' },
+																												'66 - Pyr\xE9n\xE9es-Orientales'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;rhone-69' },
+																												'69 - Rh\xF4ne'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;haute-saone-70' },
+																												'70 - Haute-Sa\xF4ne'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;saone-et-loire-71' },
+																												'71 - Sa\xF4ne-et-Loire'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;savoie-73' },
+																												'73 - Savoie'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;haute-savoie-74' },
+																												'74 - Haute-Savoie'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;seine-maritime-76' },
+																												'76 - Seine-Maritime'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;seine-et-marne-77' },
+																												'77 - Seine-et-Marne'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;deux-sevres-79' },
+																												'79 - Deux-S\xE8vres'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;somme-80' },
+																												'80 - Somme'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;tarn-81' },
+																												'81 - Tarn'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;tarn-et-garonne-82' },
+																												'82 - Tarn-et-Garonne'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;var-83' },
+																												'83 - Var'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;vaucluse-84' },
+																												'84 - Vaucluse'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;vendee-85' },
+																												'85 - Vend\xE9e'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;vienne-86' },
+																												'86 - Vienne'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;haute-vienne-87' },
+																												'87 - Haute-Vienne'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;yonne-89' },
+																												'89 - Yonne'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;essonne-91' },
+																												'91 - Essonne'
+																										)
+																								)
+																						),
+																						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																								'div',
+																								{ className: 'col' },
+																								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																										'p',
+																										null,
+																										'Prix'
+																								),
+																								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																										'b',
+																										{ className: 'f-left' },
+																										'239\xA0\u20AC'
+																								),
+																								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																										'b',
+																										{ className: 'f-right' },
+																										'527\xA0\u20AC'
+																								),
+																								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'range', min: '1', max: '100', value: '50', className: 'slider', id: 'myRange' })
+																						)
+																				),
+																				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																						'button',
+																						{ title: 'go', className: 'btn-orange filter-button', type: 'submit' },
+																						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																								'span',
+																								null,
+																								'GO!'
+																						)
+																				),
+																				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																						'p',
+																						{ className: 'filter-form__num-activites filter-p' },
+																						'61 activit\xE9s trouv\xE9es'
+																				)
+																		)
+																)
+														)
+												)
+										),
+										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+												'h3',
+												null,
+												'Third Slide'
+										),
+										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+												'p',
+												null,
+												'This is a description for the third slide.'
+										)
+								)
+						);
+				}
+		}]);
+
+		return Slide3;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["a"] = (Slide3);
+
+/***/ }),
+/* 70 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 71 */,
+/* 72 */,
+/* 73 */,
+/* 74 */,
+/* 75 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+var Login = function (_Component) {
+  _inherits(Login, _Component);
+
+  function Login(props) {
+    _classCallCheck(this, Login);
+
+    return _possibleConstructorReturn(this, (Login.__proto__ || Object.getPrototypeOf(Login)).call(this, props));
+  }
+
+  _createClass(Login, [{
+    key: 'render',
+    value: function render() {
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: 'container' },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: 'row' },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            { className: 'col-sm-9 col-md-7 col-lg-5 mx-auto' },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'div',
+              { className: 'card card-signin my-5' },
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'div',
+                { className: 'card-body' },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  'h5',
+                  { className: 'card-title text-center' },
+                  'Sign In'
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  'form',
+                  { className: 'form-signin' },
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'form-label-group' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'email', id: 'inputEmailLogin', className: 'form-control', placeholder: 'Email address', required: true, autoFocus: true }),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                      'label',
+                      { htmlFor: 'inputEmailLogin' },
+                      'Email address'
+                    )
+                  ),
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'form-label-group' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'password', id: 'inputPasswordLogin', className: 'form-control', placeholder: 'Password', required: true }),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                      'label',
+                      { htmlFor: 'inputPasswordLogin' },
+                      'Password'
+                    )
+                  ),
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'custom-control custom-checkbox mb-3' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'checkbox', className: 'custom-control-input', id: 'customCheck1' }),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                      'label',
+                      { className: 'custom-control-label', htmlFor: 'customCheck1' },
+                      'Remember password'
+                    )
+                  ),
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'button',
+                    { className: 'btn btn-lg btn-secondary btn-block text-uppercase', type: 'submit' },
+                    'Sign in'
+                  ),
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('hr', { className: 'my-4' }),
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'button',
+                    { className: 'btn btn-lg btn-google btn-block text-uppercase', type: 'submit' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fab fa-google mr-2' }),
+                    ' Sign in with Google'
+                  ),
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'button',
+                    { className: 'btn btn-lg btn-facebook btn-block text-uppercase', type: 'submit' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fab fa-facebook-f mr-2' }),
+                    ' Sign in with Facebook'
+                  )
+                )
+              )
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return Login;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (Login);
+
+
+if (document.getElementById('loginComponent')) {
+  __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Login, null), document.getElementById('loginComponent'));
+}
+
+/***/ }),
+/* 76 */,
+/* 77 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Image__ = __webpack_require__(78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Comment__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Map__ = __webpack_require__(80);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+
+
+
+var Other = function (_Component) {
+	_inherits(Other, _Component);
+
+	function Other(props) {
+		_classCallCheck(this, Other);
+
+		return _possibleConstructorReturn(this, (Other.__proto__ || Object.getPrototypeOf(Other)).call(this, props));
+	}
+
+	_createClass(Other, [{
+		key: 'render',
+		value: function render() {
+			return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+				'div',
+				null,
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					'section',
+					{ id: 'portfolio', className: 'portfolio' },
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						'div',
+						{ className: 'container-fluid' },
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							'div',
+							{ className: 'row' },
+							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+								'div',
+								{ className: 'main_portfolio sections' },
+								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+									'div',
+									{ className: 'head_title text-center' },
+									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+										'h4',
+										{ className: 'subtitle' },
+										'What we do'
+									),
+									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+										'h2',
+										null,
+										'some of our work'
+									),
+									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'separator' }),
+									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+										'p',
+										null,
+										'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
+									)
+								),
+								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Image__["a" /* default */], null)
+							)
+						)
+					)
+				),
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__Comment__["a" /* default */], null),
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__Map__["a" /* default */], null)
+			);
+		}
+	}]);
+
+	return Other;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (Other);
+
+
+if (document.getElementById('otherComponent')) {
+	__WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Other, null), document.getElementById('otherComponent'));
+}
+
+/***/ }),
+/* 78 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+var Image = function (_Component) {
+    _inherits(Image, _Component);
+
+    function Image(props) {
+        _classCallCheck(this, Image);
+
+        return _possibleConstructorReturn(this, (Image.__proto__ || Object.getPrototypeOf(Image)).call(this, props));
+    }
+
+    _createClass(Image, [{
+        key: 'render',
+        value: function render() {
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'div',
+                { className: 'main_portfolio_content text-center' },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'grid' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'grid-item' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'images/pf1.jpg', alt: '' }),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'grid_item_overlay all_overlay' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-picture-o' }),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'p',
+                                { className: 'monseratregular' },
+                                'chute libre indoor'
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'p',
+                                { className: 'robotolight' },
+                                'Lorem ipsum dolor sit'
+                            )
+                        )
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'grid-item' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'images/pf2.jpg', alt: '' }),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'grid_item_overlay all_overlay' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-picture-o' }),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'p',
+                                { className: 'monseratregular' },
+                                'creatively designed'
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'p',
+                                { className: 'robotolight' },
+                                'Lorem ipsum dolor sit'
+                            )
+                        )
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'grid-item' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'images/pf3.jpg', alt: '' }),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'grid_item_overlay all_overlay grid-item--width2-overlay' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-picture-o' }),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'p',
+                                { className: 'monseratregular' },
+                                'creatively designed'
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'p',
+                                { className: 'robotolight' },
+                                'Lorem ipsum dolor sit'
+                            )
+                        )
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'grid-item' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'images/pf4.jpg', alt: '' }),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'grid_item_overlay all_overlay' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-picture-o' }),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'p',
+                                { className: 'monseratregular' },
+                                'creatively designed'
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'p',
+                                { className: 'robotolight' },
+                                'Lorem ipsum dolor sit'
+                            )
+                        )
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'grid-item' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'images/pf5.jpg', alt: '' }),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'grid_item_overlay all_overlay' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-picture-o' }),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'p',
+                                { className: 'monseratregular' },
+                                'creatively designed'
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'p',
+                                { className: 'robotolight' },
+                                'Lorem ipsum dolor sit'
+                            )
+                        )
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'grid-item' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'images/pf6.jpg', alt: '' }),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'grid_item_overlay all_overlay' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-picture-o' }),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'p',
+                                { className: 'monseratregular' },
+                                'creatively designed'
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'p',
+                                { className: 'robotolight' },
+                                'Lorem ipsum dolor sit'
+                            )
+                        )
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'grid-item' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'images/pf7.jpg', alt: '' }),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'grid_item_overlay all_overlay' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-picture-o' }),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'p',
+                                { className: 'monseratregular' },
+                                'creatively designed'
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'p',
+                                { className: 'robotolight' },
+                                'Lorem ipsum dolor sit'
+                            )
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+
+    return Image;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["a"] = (Image);
+
+/***/ }),
+/* 79 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+var Comment = function (_Component) {
+    _inherits(Comment, _Component);
+
+    function Comment(props) {
+        _classCallCheck(this, Comment);
+
+        return _possibleConstructorReturn(this, (Comment.__proto__ || Object.getPrototypeOf(Comment)).call(this, props));
+    }
+
+    _createClass(Comment, [{
+        key: 'render',
+        value: function render() {
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'section',
+                { id: 'comment', className: 'comment' },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'container' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'row' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'col-md-12' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'div',
+                                { className: 'main_comment sections' },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'div',
+                                    { className: 'main_comment_content' },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'div',
+                                        { className: 'single_comment' },
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'div',
+                                            { className: 'row' },
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                'div',
+                                                { className: 'col-md-8 col-md-offset-2' },
+                                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                    'div',
+                                                    { className: 'single_comment_image_left' },
+                                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'images/comment.png', alt: '' })
+                                                ),
+                                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                    'div',
+                                                    { className: 'single_comment_content_right' },
+                                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                        'p',
+                                                        { className: 'robotolight' },
+                                                        '\u201CLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.\u201D'
+                                                    ),
+                                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                        'a',
+                                                        { href: '' },
+                                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                            'h4',
+                                                            null,
+                                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { className: 'separator4' }),
+                                                            ' Jone Doe'
+                                                        )
+                                                    )
+                                                )
+                                            )
+                                        )
+                                    ),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'div',
+                                        { className: 'single_comment' },
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'div',
+                                            { className: 'row' },
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                'div',
+                                                { className: 'col-md-8 col-md-offset-2' },
+                                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                    'div',
+                                                    { className: 'single_comment_image_left' },
+                                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'images/comment.png', alt: '' })
+                                                ),
+                                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                    'div',
+                                                    { className: 'single_comment_content_right' },
+                                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                        'p',
+                                                        { className: 'robotolight' },
+                                                        '\u201CLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.\u201D'
+                                                    ),
+                                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                        'a',
+                                                        { href: '' },
+                                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                            'h4',
+                                                            null,
+                                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { className: 'separator4' }),
+                                                            ' Jone Doe'
+                                                        )
+                                                    )
+                                                )
+                                            )
+                                        )
+                                    ),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'div',
+                                        { className: 'single_comment' },
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'div',
+                                            { className: 'row' },
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                'div',
+                                                { className: 'col-md-8 col-md-offset-2' },
+                                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                    'div',
+                                                    { className: 'single_comment_image_left' },
+                                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'images/comment.png', alt: '' })
+                                                ),
+                                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                    'div',
+                                                    { className: 'single_comment_content_right' },
+                                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                        'p',
+                                                        { className: 'robotolight' },
+                                                        '\u201CLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.\u201D'
+                                                    ),
+                                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                        'a',
+                                                        { href: '' },
+                                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                            'h4',
+                                                            null,
+                                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { className: 'separator4' }),
+                                                            ' Jone Doe'
+                                                        )
+                                                    )
+                                                )
+                                            )
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+
+    return Comment;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["a"] = (Comment);
+
+/***/ }),
+/* 80 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+var Map = function (_Component) {
+  _inherits(Map, _Component);
+
+  function Map(props) {
+    _classCallCheck(this, Map);
+
+    return _possibleConstructorReturn(this, (Map.__proto__ || Object.getPrototypeOf(Map)).call(this, props));
+  }
+
+  _createClass(Map, [{
+    key: 'render',
+    value: function render() {
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'section',
+        { id: 'maps', className: 'maps' },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: 'home-overlay' },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            { className: 'container-fluid' },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'div',
+              { className: 'row' },
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'div',
+                { className: 'main_maps text-center' },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  'div',
+                  { className: 'col-md-12' },
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'map_canvas_icon' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-map-marker', onClick: 'showmap()' }),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                      'h2',
+                      { type: 'button', value: 'Open map', onClick: 'showmap()' },
+                      'Open map'
+                    )
+                  ),
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { id: 'map_canvas' })
+                )
+              )
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return Map;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["a"] = (Map);
 
 /***/ })
 /******/ ]);

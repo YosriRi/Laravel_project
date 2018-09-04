@@ -34,8 +34,12 @@
     </head>
     <body>
 
-        <div id=headerComponent></div>
-        <div id=menuComponent></div>
+        <div class="culumn">  
+            @include ('include.payement');
+        </div>
+
+        <!-- <div id="otherComponent">
+        </div> -->
 
         <!-- START SCROLL TO TOP  -->
 
@@ -64,7 +68,7 @@
 
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-        <script src="/js/app.js"></script>
+        <script src="js/app.js"></script>
 
     </body>
 </html>
