@@ -34,11 +34,11 @@
     </head>
     <body>
 
-        <div class="culumn">  
-            @include ('include.payement');
+        <div class="culumn">
+            @include ('include.activite');
         </div>
 
-        <!-- <div id="otherComponent">
+        <!-- <div id="reservationComponent">
         </div> -->
 
         <!-- START SCROLL TO TOP  -->

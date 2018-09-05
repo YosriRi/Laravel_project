@@ -6,6 +6,7 @@
 <section class="search-result">
     <div class="container">
       <div class="row">
+
         <div class="col-lg-3 col-sm-12">
           <div class="sidebar">
 
@@ -382,6 +383,7 @@
 
                 </div>
               </div>
+              
               <div class="search-card col-lg-4 col-md-6">
                 <div class="card z-depth-1">
 
