@@ -14167,7 +14167,7 @@ __webpack_require__(44);
 __webpack_require__(58);
 __webpack_require__(62);
 __webpack_require__(64);
-__webpack_require__(66);
+__webpack_require__(99);
 __webpack_require__(75);
 __webpack_require__(77);
 __webpack_require__(81);
@@ -14176,6 +14176,7 @@ __webpack_require__(88);
 __webpack_require__(92);
 __webpack_require__(93);
 __webpack_require__(94);
+__webpack_require__(66);
 
 /***/ }),
 /* 21 */
@@ -57345,9 +57346,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Slide1__ = __webpack_require__(67);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Slide2__ = __webpack_require__(68);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Slide3__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Field__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Service__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Description__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Promotion__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ClientLogo__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Client__ = __webpack_require__(109);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Community__ = __webpack_require__(110);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -57355,6 +57360,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
 
 
 
@@ -57363,1105 +57372,45 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 var Home = function (_Component) {
-	_inherits(Home, _Component);
+  _inherits(Home, _Component);
 
-	function Home(props) {
-		_classCallCheck(this, Home);
+  function Home(props) {
+    _classCallCheck(this, Home);
 
-		return _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).call(this, props));
-	}
+    return _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).call(this, props));
+  }
 
-	_createClass(Home, [{
-		key: 'render',
-		value: function render() {
-			return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-				'div',
-				{ id: 'carouselExampleIndicators', className: 'fullslider carousel slide', 'data-ride': 'carousel' },
-				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-					'ol',
-					{ className: 'carousel-indicators' },
-					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li', { 'data-target': '#carouselExampleIndicators', 'data-slide-to': '0', className: 'active' }),
-					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li', { 'data-target': '#carouselExampleIndicators', 'data-slide-to': '1' }),
-					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li', { 'data-target': '#carouselExampleIndicators', 'data-slide-to': '2' })
-				),
-				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-					'div',
-					{ className: 'carousel-inner', role: 'listbox' },
-					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Slide1__["a" /* default */], null),
-					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__Slide2__["a" /* default */], null),
-					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__Slide3__["a" /* default */], null)
-				),
-				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-					'a',
-					{ className: 'carousel-control-prev', href: '#carouselExampleIndicators', role: 'button', 'data-slide': 'prev' },
-					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { className: 'carousel-control-prev-icon', 'aria-hidden': 'true' }),
-					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-						'span',
-						{ className: 'sr-only' },
-						'Previous'
-					)
-				),
-				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-					'a',
-					{ className: 'carousel-control-next', href: '#carouselExampleIndicators', role: 'button', 'data-slide': 'next' },
-					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { className: 'carousel-control-next-icon', 'aria-hidden': 'true' }),
-					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-						'span',
-						{ className: 'sr-only' },
-						'Next'
-					)
-				)
-			);
-		}
-	}]);
+  _createClass(Home, [{
+    key: 'render',
+    value: function render() {
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        null,
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Field__["a" /* default */], null),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__Service__["a" /* default */], null),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__Description__["a" /* default */], null),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__Promotion__["a" /* default */], null),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__ClientLogo__["a" /* default */], null),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__Client__["a" /* default */], null),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__Community__["a" /* default */], null)
+      );
+    }
+  }]);
 
-	return Home;
+  return Home;
 }(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (Home);
 
 
 if (document.getElementById('homeComponent')) {
-	__WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Home, null), document.getElementById('homeComponent'));
+  __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Home, null), document.getElementById('homeComponent'));
 }
 
 /***/ }),
-/* 67 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-
-var Slide1 = function (_Component) {
-  _inherits(Slide1, _Component);
-
-  function Slide1(props) {
-    _classCallCheck(this, Slide1);
-
-    return _possibleConstructorReturn(this, (Slide1.__proto__ || Object.getPrototypeOf(Slide1)).call(this, props));
-  }
-
-  _createClass(Slide1, [{
-    key: 'render',
-    value: function render() {
-      var divStyle = {
-        'backgroundImage': 'url(images/homebg1.jpg)'
-      };
-      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'div',
-        { className: 'carousel-item active', style: divStyle },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'div',
-          { className: 'carousel-caption d-none d-md-block' },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'div',
-            { className: 'row' },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              'form',
-              { className: 'form-wrapper cf' },
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'text', placeholder: 'Search here...', required: true }),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'button',
-                { type: 'submit' },
-                'Search'
-              )
-            )
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'h3',
-            null,
-            'First Slide'
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'p',
-            null,
-            'This is a description for the first slide.'
-          )
-        )
-      );
-    }
-  }]);
-
-  return Slide1;
-}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
-
-/* harmony default export */ __webpack_exports__["a"] = (Slide1);
-
-/***/ }),
-/* 68 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-
-var Slide2 = function (_Component) {
-  _inherits(Slide2, _Component);
-
-  function Slide2(props) {
-    _classCallCheck(this, Slide2);
-
-    return _possibleConstructorReturn(this, (Slide2.__proto__ || Object.getPrototypeOf(Slide2)).call(this, props));
-  }
-
-  _createClass(Slide2, [{
-    key: 'render',
-    value: function render() {
-      var divStyle = {
-        'backgroundImage': 'url(images/homebg2.jpg)'
-      };
-      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'div',
-        { className: 'carousel-item', style: divStyle },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'div',
-          { className: 'carousel-caption d-none d-md-block' },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'div',
-            { className: 'container' },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              'div',
-              { className: 'row' },
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'div',
-                { className: 'col-md-12' },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                  'div',
-                  { className: 'input-group', id: 'adv-search' },
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'text', className: 'form-control', placeholder: 'Search for snippets' }),
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { className: 'input-group-btn' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                      'div',
-                      { className: 'btn-group', role: 'group' },
-                      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'div',
-                        { className: 'dropdown dropdown-lg' },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                          'button',
-                          { type: 'button', className: 'btn btn-default dropdown-toggle', 'data-toggle': 'dropdown', 'aria-expanded': 'false' },
-                          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { className: 'caret' })
-                        ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                          'div',
-                          { className: 'dropdown-menu dropdown-menu-right', role: 'menu' },
-                          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'form',
-                            { className: 'form-horizontal', role: 'form' },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                              'div',
-                              { className: 'form-group' },
-                              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'label',
-                                { htmlFor: 'filter' },
-                                'Filter by'
-                              ),
-                              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'select',
-                                { className: 'form-control' },
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                  'option',
-                                  { value: '0' },
-                                  'All Snippets'
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                  'option',
-                                  { value: '1' },
-                                  'Featured'
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                  'option',
-                                  { value: '2' },
-                                  'Most popular'
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                  'option',
-                                  { value: '3' },
-                                  'Top rated'
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                  'option',
-                                  { value: '4' },
-                                  'Most commented'
-                                )
-                              )
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                              'div',
-                              { className: 'form-group' },
-                              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'label',
-                                { htmlFor: 'contain' },
-                                'Author'
-                              ),
-                              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { className: 'form-control', type: 'text' })
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                              'div',
-                              { className: 'form-group' },
-                              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'label',
-                                { htmlFor: 'contain' },
-                                'Contains the words'
-                              ),
-                              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { className: 'form-control', type: 'text' })
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                              'button',
-                              { type: 'submit', className: 'btn btn-primary' },
-                              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'span',
-                                { className: 'glyphicon glyphicon-search', 'aria-hidden': 'true' },
-                                'Search'
-                              )
-                            )
-                          )
-                        )
-                      ),
-                      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'button',
-                        { type: 'button', className: 'btn btn-primary' },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                          'span',
-                          { className: 'glyphicon glyphicon-search', 'aria-hidden': 'true' },
-                          'Search'
-                        )
-                      )
-                    )
-                  )
-                )
-              )
-            )
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'h3',
-            null,
-            'Second Slide'
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'p',
-            null,
-            'This is a description for the second slide.'
-          )
-        )
-      );
-    }
-  }]);
-
-  return Slide2;
-}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
-
-/* harmony default export */ __webpack_exports__["a"] = (Slide2);
-
-/***/ }),
-/* 69 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-
-var Slide3 = function (_Component) {
-		_inherits(Slide3, _Component);
-
-		function Slide3(props) {
-				_classCallCheck(this, Slide3);
-
-				return _possibleConstructorReturn(this, (Slide3.__proto__ || Object.getPrototypeOf(Slide3)).call(this, props));
-		}
-
-		_createClass(Slide3, [{
-				key: 'render',
-				value: function render() {
-						var divStyle = {
-								'backgroundImage': 'url(images/homebg3.jpg)'
-						};
-						return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-								'div',
-								{ className: 'carousel-item', style: divStyle },
-								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-										'div',
-										{ className: 'carousel-caption d-none d-md-block' },
-										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-												'div',
-												{ className: 'container' },
-												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-														'div',
-														{ className: 'row' },
-														__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																'div',
-																{ className: 'filter-form__block center' },
-																__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																		'form',
-																		{ className: '', method: 'post' },
-																		__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																				'p',
-																				{ className: 'filter-form__title' },
-																				'Affinez votre recherche'
-																		),
-																		__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'separator' }),
-																		__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																				'div',
-																				{ className: 'filter-form__option' },
-																				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																						'div',
-																						{ className: 'filter-form__select' },
-																						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																								'div',
-																								{ className: 'form-row' },
-																								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																										'div',
-																										{ className: 'col' },
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'p',
-																												null,
-																												'Categorie'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'select',
-																												{ id: 'catalog-filter', className: 'form-control active', name: 'category_id', style: { width: '256px' } },
-																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																														'option',
-																														{ value: '0' },
-																														'Toutes les activit\xE9s'
-																												),
-																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																														'option',
-																														{ value: '17' },
-																														'Avion'
-																												),
-																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																														'option',
-																														{ value: '165' },
-																														'Deltaplane'
-																												),
-																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																														'option',
-																														{ value: '36' },
-																														'Parapente'
-																												),
-																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																														'option',
-																														{ value: '181' },
-																														'Pilotage de Drone'
-																												),
-																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																														'option',
-																														{ value: '28' },
-																														'Planeur'
-																												),
-																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																														'option',
-																														{ value: '78' },
-																														'Saut \xE0 l\'\xC9lastique'
-																												),
-																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																														'option',
-																														{ value: '67' },
-																														'Saut en Parachute'
-																												),
-																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																														'option',
-																														{ value: '175' },
-																														'Simulateur de chute libre'
-																												),
-																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																														'option',
-																														{ value: '66' },
-																														'Simulateur de vol'
-																												),
-																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																														'option',
-																														{ value: '164' },
-																														'ULM'
-																												),
-																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																														'option',
-																														{ value: '83' },
-																														'Vol avec des Oiseaux'
-																												),
-																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																														'option',
-																														{ value: '69' },
-																														'Vol en H\xE9licopt\xE8re'
-																												),
-																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																														'option',
-																														{ value: '64' },
-																														'Vol en Montgolfi\xE8re'
-																												)
-																										)
-																								),
-																								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																										'div',
-																										{ className: 'col' },
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'p',
-																												null,
-																												'Activit\xE9'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'select',
-																												{ id: 'subcatalog-filter', className: 'form-control active', name: 'subcategory_id', style: { width: '256px' } },
-																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																														'option',
-																														{ value: '0' },
-																														'Sous-cat\xE9gorie'
-																												),
-																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																														'option',
-																														{ value: '150' },
-																														'Saut Parachute Tandem'
-																												),
-																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																														'option',
-																														{ value: '140' },
-																														'Saut d\'initiation'
-																												),
-																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																														'option',
-																														{ value: '145' },
-																														'Stage parachute PAC'
-																												)
-																										)
-																								)
-																						)
-																				),
-																				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																						'div',
-																						{ className: 'form-row' },
-																						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																								'div',
-																								{ className: 'col' },
-																								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																										'p',
-																										null,
-																										'Lieu'
-																								),
-																								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																										'select',
-																										{ id: 'location-filter', className: 'form-control', name: 'filter_location', style: { width: '256px' } },
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: '0' },
-																												'Lieu'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: '-1' },
-																												'France'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: '0' },
-																												'----------------------Regions----------------------'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'r;aquitaine-R5' },
-																												'Aquitaine'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'r;auvergne-R6' },
-																												'Auvergne'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'r;bourgogne-R7' },
-																												'Bourgogne'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'r;bretagne-R8' },
-																												'Bretagne'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'r;centre-R9' },
-																												'Centre'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'r;champagne-ardenne-R10' },
-																												'Champagne-Ardenne'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'r;corse-R11' },
-																												'Corse'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'r;franche-comte-R12' },
-																												'Franche-Comt\xE9'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'r;languedoc-roussillon-R13' },
-																												'Languedoc-Roussillon'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'r;limousin-R14' },
-																												'Limousin'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'r;lorraine-R15' },
-																												'Lorraine'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'r;midi-pyrenees-R16' },
-																												'Midi-Pyr\xE9n\xE9es'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'r;nord-pas-de-calais-R17' },
-																												'Nord-Pas-de-Calais'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'r;normandie-R18' },
-																												'Normandie'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'r;paca-R2' },
-																												'PACA'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'r;pays-de-la-loire-R19' },
-																												'Pays de la Loire'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'r;picardie-R20' },
-																												'Picardie'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'r;poitou-charentes-R21' },
-																												'Poitou-Charentes'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'r;rhone-alpes-R3' },
-																												'Rh\xF4ne-Alpes'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'r;ile-de-france-R1' },
-																												'\xCEle-de-France'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: '0' },
-																												'------------------Departments------------------'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;ain-1' },
-																												'01 - Ain'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;aisne-2' },
-																												'02 - Aisne'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;allier-3' },
-																												'03 - Allier'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;alpes-de-haute-provence-4' },
-																												'04 - Alpes de Haute-Provence'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;hautes-alpes-5' },
-																												'05 - Hautes-Alpes'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;alpes-maritimes-6' },
-																												'06 - Alpes-Maritimes'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;ardeche-7' },
-																												'07 - Ard\xE8che'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;ardennes-8' },
-																												'08 - Ardennes'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;ariege-9' },
-																												'09 - Ari\xE8ge'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;aube-10' },
-																												'10 - Aube'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;aude-11' },
-																												'11 - Aude'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;aveyron-12' },
-																												'12 - Aveyron'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;bouches-du-rhone-13' },
-																												'13 - Bouches-du-Rh\xF4ne'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;calvados-14' },
-																												'14 - Calvados'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;cantal-15' },
-																												'15 - Cantal'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;charente-16' },
-																												'16 - Charente'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;charente-maritime-17' },
-																												'17 - Charente-Maritime'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;cher-18' },
-																												'18 - Cher'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;correze-19' },
-																												'19 - Corr\xE8ze'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;corse-du-sud-20' },
-																												'20 - Corse'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;cote-d-or-21' },
-																												'21 - C\xF4te-d\'Or'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;cotes-d-armor-22' },
-																												'22 - C\xF4tes d\'Armor'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;dordogne-24' },
-																												'24 - Dordogne'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;doubs-25' },
-																												'25 - Doubs'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;drome-26' },
-																												'26 - Dr\xF4me'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;eure-27' },
-																												'27 - Eure'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;eure-et-loir-28' },
-																												'28 - Eure-et-Loir'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;finistere-29' },
-																												'29 - Finist\xE8re'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;gard-30' },
-																												'30 - Gard'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;haute-garonne-31' },
-																												'31 - Haute-Garonne'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;gers-32' },
-																												'32 - Gers'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;gironde-33' },
-																												'33 - Gironde'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;herault-34' },
-																												'34 - H\xE9rault'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;ille-et-vilaine-35' },
-																												'35 - Ille-et-Vilaine'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;indre-et-loire-37' },
-																												'37 - Indre-et-Loire'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;isere-38' },
-																												'38 - Is\xE8re'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;jura-39' },
-																												'39 - Jura'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;landes-40' },
-																												'40 - Landes'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;loir-et-cher-41' },
-																												'41 - Loir-et-Cher'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;loire-42' },
-																												'42 - Loire'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;haute-loire-43' },
-																												'43 - Haute-Loire'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;loire-atlantique-44' },
-																												'44 - Loire-Atlantique'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;loiret-45' },
-																												'45 - Loiret'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;lot-46' },
-																												'46 - Lot'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;lot-et-garonne-47' },
-																												'47 - Lot-et-Garonne'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;lozere-48' },
-																												'48 - Loz\xE8re'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;maine-et-loire-49' },
-																												'49 - Maine-et-Loire'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;manche-50' },
-																												'50 - Manche'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;marne-51' },
-																												'51 - Marne'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;haute-marne-52' },
-																												'52 - Haute-Marne'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;mayenne-53' },
-																												'53 - Mayenne'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;meuse-55' },
-																												'55 - Meuse'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;morbihan-56' },
-																												'56 - Morbihan'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;nievre-58' },
-																												'58 - Ni\xE8vre'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;nord-59' },
-																												'59 - Nord'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;oise-60' },
-																												'60 - Oise'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;orne-61' },
-																												'61 - Orne'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;pas-de-calais-62' },
-																												'62 - Pas-de-Calais'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;puy-de-dome-63' },
-																												'63 - Puy-de-D\xF4me'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;pyrenees-atlantiques-64' },
-																												'64 - Pyr\xE9n\xE9es-Atlantiques'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;hautes-pyrenees-65' },
-																												'65 - Hautes-Pyr\xE9n\xE9es'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;pyrenees-orientales-66' },
-																												'66 - Pyr\xE9n\xE9es-Orientales'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;rhone-69' },
-																												'69 - Rh\xF4ne'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;haute-saone-70' },
-																												'70 - Haute-Sa\xF4ne'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;saone-et-loire-71' },
-																												'71 - Sa\xF4ne-et-Loire'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;savoie-73' },
-																												'73 - Savoie'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;haute-savoie-74' },
-																												'74 - Haute-Savoie'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;seine-maritime-76' },
-																												'76 - Seine-Maritime'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;seine-et-marne-77' },
-																												'77 - Seine-et-Marne'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;deux-sevres-79' },
-																												'79 - Deux-S\xE8vres'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;somme-80' },
-																												'80 - Somme'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;tarn-81' },
-																												'81 - Tarn'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;tarn-et-garonne-82' },
-																												'82 - Tarn-et-Garonne'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;var-83' },
-																												'83 - Var'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;vaucluse-84' },
-																												'84 - Vaucluse'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;vendee-85' },
-																												'85 - Vend\xE9e'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;vienne-86' },
-																												'86 - Vienne'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;haute-vienne-87' },
-																												'87 - Haute-Vienne'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;yonne-89' },
-																												'89 - Yonne'
-																										),
-																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																												'option',
-																												{ value: 'd;essonne-91' },
-																												'91 - Essonne'
-																										)
-																								)
-																						),
-																						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																								'div',
-																								{ className: 'col' },
-																								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																										'p',
-																										null,
-																										'Prix'
-																								),
-																								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																										'b',
-																										{ className: 'f-left' },
-																										'239\xA0\u20AC'
-																								),
-																								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																										'b',
-																										{ className: 'f-right' },
-																										'527\xA0\u20AC'
-																								),
-																								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'range', min: '1', max: '100', value: '50', className: 'slider', id: 'myRange' })
-																						)
-																				),
-																				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																						'button',
-																						{ title: 'go', className: 'btn-orange filter-button', type: 'submit' },
-																						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																								'span',
-																								null,
-																								'GO!'
-																						)
-																				),
-																				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-																						'p',
-																						{ className: 'filter-form__num-activites filter-p' },
-																						'61 activit\xE9s trouv\xE9es'
-																				)
-																		)
-																)
-														)
-												)
-										),
-										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-												'h3',
-												null,
-												'Third Slide'
-										),
-										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-												'p',
-												null,
-												'This is a description for the third slide.'
-										)
-								)
-						);
-				}
-		}]);
-
-		return Slide3;
-}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
-
-/* harmony default export */ __webpack_exports__["a"] = (Slide3);
-
-/***/ }),
+/* 67 */,
+/* 68 */,
+/* 69 */,
 /* 70 */
 /***/ (function(module, exports) {
 
@@ -62584,6 +61533,2496 @@ var Result = function (_Component) {
 }(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
 
 /* harmony default export */ __webpack_exports__["a"] = (Result);
+
+/***/ }),
+/* 99 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Slide1__ = __webpack_require__(100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Slide2__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Slide3__ = __webpack_require__(102);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+
+
+
+var Home = function (_Component) {
+	_inherits(Home, _Component);
+
+	function Home(props) {
+		_classCallCheck(this, Home);
+
+		return _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).call(this, props));
+	}
+
+	_createClass(Home, [{
+		key: 'render',
+		value: function render() {
+			return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+				'div',
+				{ id: 'carouselExampleIndicators', className: 'fullslider carousel slide', 'data-ride': 'carousel' },
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					'ol',
+					{ className: 'carousel-indicators' },
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li', { 'data-target': '#carouselExampleIndicators', 'data-slide-to': '0', className: 'active' }),
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li', { 'data-target': '#carouselExampleIndicators', 'data-slide-to': '1' }),
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('li', { 'data-target': '#carouselExampleIndicators', 'data-slide-to': '2' })
+				),
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					'div',
+					{ className: 'carousel-inner', role: 'listbox' },
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Slide1__["a" /* default */], null),
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__Slide2__["a" /* default */], null),
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__Slide3__["a" /* default */], null)
+				),
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					'a',
+					{ className: 'carousel-control-prev', href: '#carouselExampleIndicators', role: 'button', 'data-slide': 'prev' },
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { className: 'carousel-control-prev-icon', 'aria-hidden': 'true' }),
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						'span',
+						{ className: 'sr-only' },
+						'Previous'
+					)
+				),
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					'a',
+					{ className: 'carousel-control-next', href: '#carouselExampleIndicators', role: 'button', 'data-slide': 'next' },
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { className: 'carousel-control-next-icon', 'aria-hidden': 'true' }),
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						'span',
+						{ className: 'sr-only' },
+						'Next'
+					)
+				)
+			);
+		}
+	}]);
+
+	return Home;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (Home);
+
+
+if (document.getElementById('homeComponent')) {
+	__WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Home, null), document.getElementById('homeComponent'));
+}
+
+/***/ }),
+/* 100 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+var Slide1 = function (_Component) {
+  _inherits(Slide1, _Component);
+
+  function Slide1(props) {
+    _classCallCheck(this, Slide1);
+
+    return _possibleConstructorReturn(this, (Slide1.__proto__ || Object.getPrototypeOf(Slide1)).call(this, props));
+  }
+
+  _createClass(Slide1, [{
+    key: 'render',
+    value: function render() {
+      var divStyle = {
+        'backgroundImage': 'url(images/homebg1.jpg)'
+      };
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: 'carousel-item active', style: divStyle },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: 'carousel-caption d-none d-md-block' },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            { className: 'row' },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'form',
+              { className: 'form-wrapper cf' },
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'text', placeholder: 'Search here...', required: true }),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'button',
+                { type: 'submit' },
+                'Search'
+              )
+            )
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'h3',
+            null,
+            'First Slide'
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'p',
+            null,
+            'This is a description for the first slide.'
+          )
+        )
+      );
+    }
+  }]);
+
+  return Slide1;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["a"] = (Slide1);
+
+/***/ }),
+/* 101 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+var Slide2 = function (_Component) {
+  _inherits(Slide2, _Component);
+
+  function Slide2(props) {
+    _classCallCheck(this, Slide2);
+
+    return _possibleConstructorReturn(this, (Slide2.__proto__ || Object.getPrototypeOf(Slide2)).call(this, props));
+  }
+
+  _createClass(Slide2, [{
+    key: 'render',
+    value: function render() {
+      var divStyle = {
+        'backgroundImage': 'url(images/homebg2.jpg)'
+      };
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: 'carousel-item', style: divStyle },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: 'carousel-caption d-none d-md-block' },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            { className: 'container' },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'div',
+              { className: 'row' },
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'div',
+                { className: 'col-md-12' },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  'div',
+                  { className: 'input-group', id: 'adv-search' },
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'text', className: 'form-control', placeholder: 'Search for snippets' }),
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'input-group-btn' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                      'div',
+                      { className: 'btn-group', role: 'group' },
+                      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'dropdown dropdown-lg' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                          'button',
+                          { type: 'button', className: 'btn btn-default dropdown-toggle', 'data-toggle': 'dropdown', 'aria-expanded': 'false' },
+                          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { className: 'caret' })
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                          'div',
+                          { className: 'dropdown-menu dropdown-menu-right', role: 'menu' },
+                          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'form',
+                            { className: 'form-horizontal', role: 'form' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                              'div',
+                              { className: 'form-group' },
+                              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'label',
+                                { htmlFor: 'filter' },
+                                'Filter by'
+                              ),
+                              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'select',
+                                { className: 'form-control' },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                  'option',
+                                  { value: '0' },
+                                  'All Snippets'
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                  'option',
+                                  { value: '1' },
+                                  'Featured'
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                  'option',
+                                  { value: '2' },
+                                  'Most popular'
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                  'option',
+                                  { value: '3' },
+                                  'Top rated'
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                  'option',
+                                  { value: '4' },
+                                  'Most commented'
+                                )
+                              )
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                              'div',
+                              { className: 'form-group' },
+                              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'label',
+                                { htmlFor: 'contain' },
+                                'Author'
+                              ),
+                              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { className: 'form-control', type: 'text' })
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                              'div',
+                              { className: 'form-group' },
+                              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'label',
+                                { htmlFor: 'contain' },
+                                'Contains the words'
+                              ),
+                              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { className: 'form-control', type: 'text' })
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                              'button',
+                              { type: 'submit', className: 'btn btn-primary' },
+                              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'span',
+                                { className: 'glyphicon glyphicon-search', 'aria-hidden': 'true' },
+                                'Search'
+                              )
+                            )
+                          )
+                        )
+                      ),
+                      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'button',
+                        { type: 'button', className: 'btn btn-primary' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                          'span',
+                          { className: 'glyphicon glyphicon-search', 'aria-hidden': 'true' },
+                          'Search'
+                        )
+                      )
+                    )
+                  )
+                )
+              )
+            )
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'h3',
+            null,
+            'Second Slide'
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'p',
+            null,
+            'This is a description for the second slide.'
+          )
+        )
+      );
+    }
+  }]);
+
+  return Slide2;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["a"] = (Slide2);
+
+/***/ }),
+/* 102 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+var Slide3 = function (_Component) {
+		_inherits(Slide3, _Component);
+
+		function Slide3(props) {
+				_classCallCheck(this, Slide3);
+
+				return _possibleConstructorReturn(this, (Slide3.__proto__ || Object.getPrototypeOf(Slide3)).call(this, props));
+		}
+
+		_createClass(Slide3, [{
+				key: 'render',
+				value: function render() {
+						var divStyle = {
+								'backgroundImage': 'url(images/homebg3.jpg)'
+						};
+						return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+								'div',
+								{ className: 'carousel-item', style: divStyle },
+								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+										'div',
+										{ className: 'carousel-caption d-none d-md-block' },
+										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+												'div',
+												{ className: 'container' },
+												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+														'div',
+														{ className: 'row' },
+														__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																'div',
+																{ className: 'filter-form__block center' },
+																__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																		'form',
+																		{ className: '', method: 'post' },
+																		__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																				'p',
+																				{ className: 'filter-form__title' },
+																				'Affinez votre recherche'
+																		),
+																		__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'separator' }),
+																		__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																				'div',
+																				{ className: 'filter-form__option' },
+																				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																						'div',
+																						{ className: 'filter-form__select' },
+																						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																								'div',
+																								{ className: 'form-row' },
+																								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																										'div',
+																										{ className: 'col' },
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'p',
+																												null,
+																												'Categorie'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'select',
+																												{ id: 'catalog-filter', className: 'form-control active', name: 'category_id', style: { width: '256px' } },
+																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																														'option',
+																														{ value: '0' },
+																														'Toutes les activit\xE9s'
+																												),
+																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																														'option',
+																														{ value: '17' },
+																														'Avion'
+																												),
+																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																														'option',
+																														{ value: '165' },
+																														'Deltaplane'
+																												),
+																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																														'option',
+																														{ value: '36' },
+																														'Parapente'
+																												),
+																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																														'option',
+																														{ value: '181' },
+																														'Pilotage de Drone'
+																												),
+																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																														'option',
+																														{ value: '28' },
+																														'Planeur'
+																												),
+																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																														'option',
+																														{ value: '78' },
+																														'Saut \xE0 l\'\xC9lastique'
+																												),
+																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																														'option',
+																														{ value: '67' },
+																														'Saut en Parachute'
+																												),
+																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																														'option',
+																														{ value: '175' },
+																														'Simulateur de chute libre'
+																												),
+																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																														'option',
+																														{ value: '66' },
+																														'Simulateur de vol'
+																												),
+																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																														'option',
+																														{ value: '164' },
+																														'ULM'
+																												),
+																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																														'option',
+																														{ value: '83' },
+																														'Vol avec des Oiseaux'
+																												),
+																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																														'option',
+																														{ value: '69' },
+																														'Vol en H\xE9licopt\xE8re'
+																												),
+																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																														'option',
+																														{ value: '64' },
+																														'Vol en Montgolfi\xE8re'
+																												)
+																										)
+																								),
+																								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																										'div',
+																										{ className: 'col' },
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'p',
+																												null,
+																												'Activit\xE9'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'select',
+																												{ id: 'subcatalog-filter', className: 'form-control active', name: 'subcategory_id', style: { width: '256px' } },
+																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																														'option',
+																														{ value: '0' },
+																														'Sous-cat\xE9gorie'
+																												),
+																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																														'option',
+																														{ value: '150' },
+																														'Saut Parachute Tandem'
+																												),
+																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																														'option',
+																														{ value: '140' },
+																														'Saut d\'initiation'
+																												),
+																												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																														'option',
+																														{ value: '145' },
+																														'Stage parachute PAC'
+																												)
+																										)
+																								)
+																						)
+																				),
+																				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																						'div',
+																						{ className: 'form-row' },
+																						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																								'div',
+																								{ className: 'col' },
+																								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																										'p',
+																										null,
+																										'Lieu'
+																								),
+																								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																										'select',
+																										{ id: 'location-filter', className: 'form-control', name: 'filter_location', style: { width: '256px' } },
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: '0' },
+																												'Lieu'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: '-1' },
+																												'France'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: '0' },
+																												'----------------------Regions----------------------'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'r;aquitaine-R5' },
+																												'Aquitaine'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'r;auvergne-R6' },
+																												'Auvergne'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'r;bourgogne-R7' },
+																												'Bourgogne'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'r;bretagne-R8' },
+																												'Bretagne'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'r;centre-R9' },
+																												'Centre'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'r;champagne-ardenne-R10' },
+																												'Champagne-Ardenne'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'r;corse-R11' },
+																												'Corse'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'r;franche-comte-R12' },
+																												'Franche-Comt\xE9'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'r;languedoc-roussillon-R13' },
+																												'Languedoc-Roussillon'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'r;limousin-R14' },
+																												'Limousin'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'r;lorraine-R15' },
+																												'Lorraine'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'r;midi-pyrenees-R16' },
+																												'Midi-Pyr\xE9n\xE9es'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'r;nord-pas-de-calais-R17' },
+																												'Nord-Pas-de-Calais'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'r;normandie-R18' },
+																												'Normandie'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'r;paca-R2' },
+																												'PACA'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'r;pays-de-la-loire-R19' },
+																												'Pays de la Loire'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'r;picardie-R20' },
+																												'Picardie'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'r;poitou-charentes-R21' },
+																												'Poitou-Charentes'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'r;rhone-alpes-R3' },
+																												'Rh\xF4ne-Alpes'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'r;ile-de-france-R1' },
+																												'\xCEle-de-France'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: '0' },
+																												'------------------Departments------------------'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;ain-1' },
+																												'01 - Ain'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;aisne-2' },
+																												'02 - Aisne'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;allier-3' },
+																												'03 - Allier'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;alpes-de-haute-provence-4' },
+																												'04 - Alpes de Haute-Provence'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;hautes-alpes-5' },
+																												'05 - Hautes-Alpes'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;alpes-maritimes-6' },
+																												'06 - Alpes-Maritimes'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;ardeche-7' },
+																												'07 - Ard\xE8che'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;ardennes-8' },
+																												'08 - Ardennes'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;ariege-9' },
+																												'09 - Ari\xE8ge'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;aube-10' },
+																												'10 - Aube'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;aude-11' },
+																												'11 - Aude'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;aveyron-12' },
+																												'12 - Aveyron'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;bouches-du-rhone-13' },
+																												'13 - Bouches-du-Rh\xF4ne'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;calvados-14' },
+																												'14 - Calvados'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;cantal-15' },
+																												'15 - Cantal'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;charente-16' },
+																												'16 - Charente'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;charente-maritime-17' },
+																												'17 - Charente-Maritime'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;cher-18' },
+																												'18 - Cher'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;correze-19' },
+																												'19 - Corr\xE8ze'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;corse-du-sud-20' },
+																												'20 - Corse'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;cote-d-or-21' },
+																												'21 - C\xF4te-d\'Or'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;cotes-d-armor-22' },
+																												'22 - C\xF4tes d\'Armor'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;dordogne-24' },
+																												'24 - Dordogne'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;doubs-25' },
+																												'25 - Doubs'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;drome-26' },
+																												'26 - Dr\xF4me'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;eure-27' },
+																												'27 - Eure'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;eure-et-loir-28' },
+																												'28 - Eure-et-Loir'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;finistere-29' },
+																												'29 - Finist\xE8re'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;gard-30' },
+																												'30 - Gard'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;haute-garonne-31' },
+																												'31 - Haute-Garonne'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;gers-32' },
+																												'32 - Gers'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;gironde-33' },
+																												'33 - Gironde'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;herault-34' },
+																												'34 - H\xE9rault'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;ille-et-vilaine-35' },
+																												'35 - Ille-et-Vilaine'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;indre-et-loire-37' },
+																												'37 - Indre-et-Loire'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;isere-38' },
+																												'38 - Is\xE8re'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;jura-39' },
+																												'39 - Jura'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;landes-40' },
+																												'40 - Landes'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;loir-et-cher-41' },
+																												'41 - Loir-et-Cher'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;loire-42' },
+																												'42 - Loire'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;haute-loire-43' },
+																												'43 - Haute-Loire'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;loire-atlantique-44' },
+																												'44 - Loire-Atlantique'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;loiret-45' },
+																												'45 - Loiret'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;lot-46' },
+																												'46 - Lot'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;lot-et-garonne-47' },
+																												'47 - Lot-et-Garonne'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;lozere-48' },
+																												'48 - Loz\xE8re'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;maine-et-loire-49' },
+																												'49 - Maine-et-Loire'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;manche-50' },
+																												'50 - Manche'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;marne-51' },
+																												'51 - Marne'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;haute-marne-52' },
+																												'52 - Haute-Marne'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;mayenne-53' },
+																												'53 - Mayenne'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;meuse-55' },
+																												'55 - Meuse'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;morbihan-56' },
+																												'56 - Morbihan'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;nievre-58' },
+																												'58 - Ni\xE8vre'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;nord-59' },
+																												'59 - Nord'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;oise-60' },
+																												'60 - Oise'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;orne-61' },
+																												'61 - Orne'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;pas-de-calais-62' },
+																												'62 - Pas-de-Calais'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;puy-de-dome-63' },
+																												'63 - Puy-de-D\xF4me'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;pyrenees-atlantiques-64' },
+																												'64 - Pyr\xE9n\xE9es-Atlantiques'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;hautes-pyrenees-65' },
+																												'65 - Hautes-Pyr\xE9n\xE9es'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;pyrenees-orientales-66' },
+																												'66 - Pyr\xE9n\xE9es-Orientales'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;rhone-69' },
+																												'69 - Rh\xF4ne'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;haute-saone-70' },
+																												'70 - Haute-Sa\xF4ne'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;saone-et-loire-71' },
+																												'71 - Sa\xF4ne-et-Loire'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;savoie-73' },
+																												'73 - Savoie'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;haute-savoie-74' },
+																												'74 - Haute-Savoie'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;seine-maritime-76' },
+																												'76 - Seine-Maritime'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;seine-et-marne-77' },
+																												'77 - Seine-et-Marne'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;deux-sevres-79' },
+																												'79 - Deux-S\xE8vres'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;somme-80' },
+																												'80 - Somme'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;tarn-81' },
+																												'81 - Tarn'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;tarn-et-garonne-82' },
+																												'82 - Tarn-et-Garonne'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;var-83' },
+																												'83 - Var'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;vaucluse-84' },
+																												'84 - Vaucluse'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;vendee-85' },
+																												'85 - Vend\xE9e'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;vienne-86' },
+																												'86 - Vienne'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;haute-vienne-87' },
+																												'87 - Haute-Vienne'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;yonne-89' },
+																												'89 - Yonne'
+																										),
+																										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																												'option',
+																												{ value: 'd;essonne-91' },
+																												'91 - Essonne'
+																										)
+																								)
+																						),
+																						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																								'div',
+																								{ className: 'col' },
+																								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																										'p',
+																										null,
+																										'Prix'
+																								),
+																								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																										'b',
+																										{ className: 'f-left' },
+																										'239\xA0\u20AC'
+																								),
+																								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																										'b',
+																										{ className: 'f-right' },
+																										'527\xA0\u20AC'
+																								),
+																								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'range', min: '1', max: '100', value: '50', className: 'slider', id: 'myRange' })
+																						)
+																				),
+																				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																						'button',
+																						{ title: 'go', className: 'btn-orange filter-button', type: 'submit' },
+																						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																								'span',
+																								null,
+																								'GO!'
+																						)
+																				),
+																				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+																						'p',
+																						{ className: 'filter-form__num-activites filter-p' },
+																						'61 activit\xE9s trouv\xE9es'
+																				)
+																		)
+																)
+														)
+												)
+										),
+										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+												'h3',
+												null,
+												'Third Slide'
+										),
+										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+												'p',
+												null,
+												'This is a description for the third slide.'
+										)
+								)
+						);
+				}
+		}]);
+
+		return Slide3;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["a"] = (Slide3);
+
+/***/ }),
+/* 103 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+var Field = function (_Component) {
+    _inherits(Field, _Component);
+
+    function Field(props) {
+        _classCallCheck(this, Field);
+
+        return _possibleConstructorReturn(this, (Field.__proto__ || Object.getPrototypeOf(Field)).call(this, props));
+    }
+
+    _createClass(Field, [{
+        key: 'render',
+        value: function render() {
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'section',
+                { id: 'terrain', className: 'terrain' },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'container' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'my-4 text-center' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'h2',
+                            null,
+                            'Nos Terrains de jeu'
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'border_devider' }),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'p',
+                            null,
+                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
+                        )
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'row text-center' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'col-lg-4 col-sm-6' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'div',
+                                { className: 'single_terrain' },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'div',
+                                    { className: 'single_terrain_img' },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'images/ab1.jpg', alt: '' })
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'div',
+                                    { className: 'single_terrain_img_overlay all_overlay' },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'a',
+                                        { href: '' },
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'h2',
+                                            null,
+                                            'Air'
+                                        )
+                                    )
+                                )
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'h2',
+                                null,
+                                'Air'
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'p',
+                                null,
+                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
+                            )
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'col-lg-4 col-sm-6' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'div',
+                                { className: 'single_terrain' },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'div',
+                                    { className: 'single_terrain_img' },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'images/ab2.jpg', alt: '' })
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'div',
+                                    { className: 'single_terrain_img_overlay all_overlay' },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'a',
+                                        { href: '' },
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'h2',
+                                            null,
+                                            'Eau'
+                                        )
+                                    )
+                                )
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'h2',
+                                null,
+                                'Eau'
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'p',
+                                null,
+                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
+                            )
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'col-lg-4 col-sm-6' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'div',
+                                { className: 'single_terrain' },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'div',
+                                    { className: 'single_terrain_img' },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'images/ab3.jpg', alt: '' })
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'div',
+                                    { className: 'single_terrain_img_overlay all_overlay' },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'a',
+                                        { href: '' },
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'h2',
+                                            null,
+                                            'Terre'
+                                        )
+                                    )
+                                )
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'h2',
+                                null,
+                                'Terre'
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'p',
+                                null,
+                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
+                            )
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+
+    return Field;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["a"] = (Field);
+
+/***/ }),
+/* 104 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+var Service = function (_Component) {
+    _inherits(Service, _Component);
+
+    function Service(props) {
+        _classCallCheck(this, Service);
+
+        return _possibleConstructorReturn(this, (Service.__proto__ || Object.getPrototypeOf(Service)).call(this, props));
+    }
+
+    _createClass(Service, [{
+        key: 'render',
+        value: function render() {
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'section',
+                { id: 'service', className: 'service' },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'container' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'head_title text-center' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'h4',
+                            { className: 'subtitle' },
+                            'We work with'
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'h2',
+                            null,
+                            'Amazing Services'
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'border_devider' })
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'row' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'col-lg-4 col-sm-6' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'div',
+                                { className: 'single_service' },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'div',
+                                    { className: 'single_service_icon' },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-clock-o' })
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'div',
+                                    { className: 'single_service_content' },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'h3',
+                                        null,
+                                        'Photography'
+                                    ),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'p',
+                                        null,
+                                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'
+                                    )
+                                )
+                            )
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'col-lg-4 col-sm-6' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'div',
+                                { className: 'single_service' },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'div',
+                                    { className: 'single_service_icon' },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-picture-o' })
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'div',
+                                    { className: 'single_service_content' },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'h3',
+                                        null,
+                                        'Photography'
+                                    ),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'p',
+                                        null,
+                                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'
+                                    )
+                                )
+                            )
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'col-lg-4 col-sm-6' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'div',
+                                { className: 'single_service' },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'div',
+                                    { className: 'single_service_icon' },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-television' })
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'div',
+                                    { className: 'single_service_content' },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'h3',
+                                        null,
+                                        'Photography'
+                                    ),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'p',
+                                        null,
+                                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'
+                                    )
+                                )
+                            )
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'border_devider' }),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'col-lg-4 col-sm-6' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'div',
+                                { className: 'single_service' },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'div',
+                                    { className: 'single_service_icon' },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-object-group' })
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'div',
+                                    { className: 'single_service_content' },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'h3',
+                                        null,
+                                        'Photography'
+                                    ),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'p',
+                                        null,
+                                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'
+                                    )
+                                )
+                            )
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'col-lg-4 col-sm-6' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'div',
+                                { className: 'single_service' },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'div',
+                                    { className: 'single_service_icon' },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-home' })
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'div',
+                                    { className: 'single_service_content' },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'h3',
+                                        null,
+                                        'Photography'
+                                    ),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'p',
+                                        null,
+                                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'
+                                    )
+                                )
+                            )
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'col-lg-4 col-sm-6' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'div',
+                                { className: 'single_service' },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'div',
+                                    { className: 'single_service_icon' },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-book' })
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'div',
+                                    { className: 'single_service_content' },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'h3',
+                                        null,
+                                        'Photography'
+                                    ),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'p',
+                                        null,
+                                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'
+                                    )
+                                )
+                            )
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+
+    return Service;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["a"] = (Service);
+
+/***/ }),
+/* 105 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+var Description = function (_Component) {
+    _inherits(Description, _Component);
+
+    function Description(props) {
+        _classCallCheck(this, Description);
+
+        return _possibleConstructorReturn(this, (Description.__proto__ || Object.getPrototypeOf(Description)).call(this, props));
+    }
+
+    _createClass(Description, [{
+        key: 'render',
+        value: function render() {
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'section',
+                { id: 'soufflerie', className: 'soufflerie' },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'container' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'head_title text-center' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'h4',
+                            { className: 'subtitle' },
+                            'Soufflerie'
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'h2',
+                            null,
+                            'Description'
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'border_devider' }),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'p',
+                            null,
+                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                        )
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'row' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'col' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'div',
+                                { className: 'single_soufflerie' },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'div',
+                                    { className: 'single_soufflerie_img' },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'images/soufflerie.jpg', alt: '' })
+                                )
+                            )
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'col' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'div',
+                                { className: 'single_soufflerie' },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'div',
+                                    { className: 'single_soufflerie_acording' },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'div',
+                                        { className: 'panel-group', id: 'accordion', role: 'tablist', 'aria-multiselectable': 'true' },
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'div',
+                                            { className: 'panel panel-default' },
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                'div',
+                                                { className: 'panel-heading', role: 'tab', id: 'headingOne' },
+                                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                    'h4',
+                                                    { className: 'panel-title' },
+                                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                        'a',
+                                                        { role: 'button', 'data-toggle': 'collapse', 'data-parent': '#accordion', href: '#collapseOne', 'aria-expanded': 'true', 'aria-controls': 'collapseOne' },
+                                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-picture-o' }),
+                                                        ' Gallerie ',
+                                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-chevron-down' })
+                                                    )
+                                                )
+                                            ),
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                'div',
+                                                { id: 'collapseOne', className: 'panel-collapse collapse in', role: 'tabpanel', 'aria-labelledby': 'headingOne' },
+                                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                    'div',
+                                                    { className: 'panel-body' },
+                                                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+                                                )
+                                            )
+                                        ),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'div',
+                                            { className: 'panel panel-default' },
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                'div',
+                                                { className: 'panel-heading', role: 'tab', id: 'headingTwo' },
+                                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                    'h4',
+                                                    { className: 'panel-title' },
+                                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                        'a',
+                                                        { className: 'collapsed', role: 'button', 'data-toggle': 'collapse', 'data-parent': '#accordion', href: '#collapseTwo', 'aria-expanded': 'false', 'aria-controls': 'collapseTwo' },
+                                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-map-signs' }),
+                                                        ' Descriptions ',
+                                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-chevron-down' })
+                                                    )
+                                                )
+                                            ),
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                'div',
+                                                { id: 'collapseTwo', className: 'panel-collapse collapse', role: 'tabpanel', 'aria-labelledby': 'headingTwo' },
+                                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                    'div',
+                                                    { className: 'panel-body' },
+                                                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+                                                )
+                                            )
+                                        ),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'div',
+                                            { className: 'panel panel-default' },
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                'div',
+                                                { className: 'panel-heading', role: 'tab', id: 'headingThree' },
+                                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                    'h4',
+                                                    { className: 'panel-title' },
+                                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                        'a',
+                                                        { className: 'collapsed', role: 'button', 'data-toggle': 'collapse', 'data-parent': '#accordion', href: '#collapseThree', 'aria-expanded': 'false', 'aria-controls': 'collapseThree' },
+                                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-bullseye' }),
+                                                        ' Equipements ',
+                                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-chevron-down' })
+                                                    )
+                                                )
+                                            ),
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                'div',
+                                                { id: 'collapseThree', className: 'panel-collapse collapse', role: 'tabpanel', 'aria-labelledby': 'headingThree' },
+                                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                    'div',
+                                                    { className: 'panel-body' },
+                                                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+                                                )
+                                            )
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+
+    return Description;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["a"] = (Description);
+
+/***/ }),
+/* 106 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+var Promotion = function (_Component) {
+    _inherits(Promotion, _Component);
+
+    function Promotion(props) {
+        _classCallCheck(this, Promotion);
+
+        return _possibleConstructorReturn(this, (Promotion.__proto__ || Object.getPrototypeOf(Promotion)).call(this, props));
+    }
+
+    _createClass(Promotion, [{
+        key: 'render',
+        value: function render() {
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'section',
+                { id: 'Promotions', className: 'Promotions' },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'container' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'head_title text-center' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'h4',
+                            { className: 'subtitle' },
+                            'Who we are'
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'h2',
+                            null,
+                            'Meet our Promotions'
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'border_devider' }),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'p',
+                            null,
+                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                        )
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'row text-center' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'col' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'div',
+                                { className: 'single_Promotions' },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'div',
+                                    { className: 'single_Promotions_img' },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'images/Promotions1.jpg', alt: '' }),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'div',
+                                        { className: 'single_Promotions_overlay all_overlay' },
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'a',
+                                            { href: '' },
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-facebook' })
+                                        ),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'a',
+                                            { href: '' },
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-twitter' })
+                                        ),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'a',
+                                            { href: '' },
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-pinterest-p' })
+                                        ),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'a',
+                                            { href: '' },
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-instagram' })
+                                        )
+                                    )
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'div',
+                                    { className: 'single_Promotions_content' },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'h5',
+                                        null,
+                                        'Parapente'
+                                    ),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'p',
+                                        { className: 'robotolight' },
+                                        'lorem ipsum'
+                                    )
+                                )
+                            )
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'col' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'div',
+                                { className: 'single_Promotions' },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'div',
+                                    { className: 'single_Promotions_img' },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'images/Promotions2.jpg', alt: '' }),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'div',
+                                        { className: 'single_Promotions_overlay all_overlay' },
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'a',
+                                            { href: '' },
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-facebook' })
+                                        ),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'a',
+                                            { href: '' },
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-twitter' })
+                                        ),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'a',
+                                            { href: '' },
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-pinterest-p' })
+                                        ),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'a',
+                                            { href: '' },
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-instagram' })
+                                        )
+                                    )
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'div',
+                                    { className: 'single_Promotions_content' },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'h5',
+                                        null,
+                                        'Canoe-Kayak'
+                                    ),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'p',
+                                        { className: 'robotolight' },
+                                        'lorem ipsum'
+                                    )
+                                )
+                            )
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'col' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'div',
+                                { className: 'single_Promotions' },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'div',
+                                    { className: 'single_Promotions_img' },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'images/Promotions3.jpg', alt: '' }),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'div',
+                                        { className: 'single_Promotions_overlay all_overlay' },
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'a',
+                                            { href: '' },
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-facebook' })
+                                        ),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'a',
+                                            { href: '' },
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-twitter' })
+                                        ),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'a',
+                                            { href: '' },
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-pinterest-p' })
+                                        ),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'a',
+                                            { href: '' },
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-instagram' })
+                                        )
+                                    )
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'div',
+                                    { className: 'single_Promotions_content' },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'h5',
+                                        null,
+                                        'Escalade'
+                                    ),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'p',
+                                        { className: 'robotolight' },
+                                        'lorem ipsum'
+                                    )
+                                )
+                            )
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+
+    return Promotion;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["a"] = (Promotion);
+
+/***/ }),
+/* 107 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+var ClientLogo = function (_Component) {
+  _inherits(ClientLogo, _Component);
+
+  function ClientLogo(props) {
+    _classCallCheck(this, ClientLogo);
+
+    return _possibleConstructorReturn(this, (ClientLogo.__proto__ || Object.getPrototypeOf(ClientLogo)).call(this, props));
+  }
+
+  _createClass(ClientLogo, [{
+    key: 'render',
+    value: function render() {
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'section',
+        { id: 'clinetslogo', className: 'clinetslogo' },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: 'containter' },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            { className: 'row' },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'div',
+              { className: 'col-md-10 col-md-offset-1' },
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'div',
+                { className: 'row' },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  'div',
+                  { className: 'main_clinetslogo text-center' },
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'col-md-2' },
+                    ' ',
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                      'a',
+                      { href: '' },
+                      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'images/clogo1.png', alt: '' })
+                    )
+                  ),
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'col-md-2' },
+                    ' ',
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                      'a',
+                      { href: '' },
+                      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'images/clogo2.png', alt: '' })
+                    )
+                  ),
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'col-md-2' },
+                    ' ',
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                      'a',
+                      { href: '' },
+                      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'images/clogo3.png', alt: '' })
+                    )
+                  ),
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'col-md-2' },
+                    ' ',
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                      'a',
+                      { href: '' },
+                      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'images/clogo4.png', alt: '' })
+                    )
+                  ),
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'col-md-2' },
+                    ' ',
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                      'a',
+                      { href: '' },
+                      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'images/clogo6.png', alt: '' })
+                    )
+                  )
+                )
+              )
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return ClientLogo;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["a"] = (ClientLogo);
+
+/***/ }),
+/* 108 */,
+/* 109 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+var Client = function (_Component) {
+    _inherits(Client, _Component);
+
+    function Client(props) {
+        _classCallCheck(this, Client);
+
+        return _possibleConstructorReturn(this, (Client.__proto__ || Object.getPrototypeOf(Client)).call(this, props));
+    }
+
+    _createClass(Client, [{
+        key: 'render',
+        value: function render() {
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'section',
+                { id: 'client', className: 'client' },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'home-overlay' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'container' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'head_title text-center' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'h2',
+                                null,
+                                'Avis clients'
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'separator' })
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'row' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'div',
+                                { className: 'col-6' },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'div',
+                                    { className: 'single_client' },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'div',
+                                        { className: 'single_client_img' },
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'img-circle img-responsive', src: 'images/cl1.jpg', alt: '' })
+                                    ),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'div',
+                                        { className: 'single_client_content' },
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'p',
+                                            { className: 'monseratregular' },
+                                            'Matthew Dix'
+                                        ),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'p',
+                                            { className: 'robotolight' },
+                                            'Graphic Design'
+                                        ),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { className: 'separator4' }),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'p',
+                                            null,
+                                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.'
+                                        )
+                                    )
+                                )
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'div',
+                                { className: 'col-6' },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'div',
+                                    { className: 'single_client' },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'div',
+                                        { className: 'single_client_img' },
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'img-circle img-responsive', src: 'images/cl2.jpg', alt: '' })
+                                    ),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'div',
+                                        { className: 'single_client_content' },
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'p',
+                                            { className: 'monseratregular' },
+                                            'Matthew Dix'
+                                        ),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'p',
+                                            { className: 'robotolight' },
+                                            'Graphic Design'
+                                        ),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { className: 'separator4' }),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'p',
+                                            null,
+                                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.'
+                                        )
+                                    )
+                                )
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'div',
+                                { className: 'col-6' },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'div',
+                                    { className: 'single_client' },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'div',
+                                        { className: 'single_client_img' },
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'img-circle img-responsive', src: 'images/cl3.jpg', alt: '' })
+                                    ),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'div',
+                                        { className: 'single_client_content' },
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'p',
+                                            { className: 'monseratregular' },
+                                            'Matthew Dix'
+                                        ),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'p',
+                                            { className: 'robotolight' },
+                                            'Graphic Design'
+                                        ),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { className: 'separator4' }),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'p',
+                                            null,
+                                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.'
+                                        )
+                                    )
+                                )
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'div',
+                                { className: 'col-6' },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'div',
+                                    { className: 'single_client' },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'div',
+                                        { className: 'single_client_img' },
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'img-circle img-responsive', src: 'images/cl4.jpg', alt: '' })
+                                    ),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'div',
+                                        { className: 'single_client_content' },
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'p',
+                                            { className: 'monseratregular' },
+                                            'Matthew Dix'
+                                        ),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'p',
+                                            { className: 'robotolight' },
+                                            'Graphic Design'
+                                        ),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { className: 'separator4' }),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'p',
+                                            null,
+                                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.'
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+
+    return Client;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["a"] = (Client);
+
+/***/ }),
+/* 110 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+var Community = function (_Component) {
+    _inherits(Community, _Component);
+
+    function Community(props) {
+        _classCallCheck(this, Community);
+
+        return _possibleConstructorReturn(this, (Community.__proto__ || Object.getPrototypeOf(Community)).call(this, props));
+    }
+
+    _createClass(Community, [{
+        key: 'render',
+        value: function render() {
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'section',
+                { id: 'blog', className: 'blog' },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'container' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'head_title text-center' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'h2',
+                            null,
+                            'Communaut\xE9 SO\'Extreme'
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'separator' })
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'row' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'col-md-4' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'div',
+                                { className: 'single_blog' },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'div',
+                                    { className: 'single_blog_img' },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'images/blog1.jpg', alt: '' }),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'div',
+                                        { className: 'single_bolg_date' },
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'h2',
+                                            null,
+                                            '12'
+                                        ),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'p',
+                                            { className: 'robotolight' },
+                                            'Jan'
+                                        )
+                                    )
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'div',
+                                    { className: 'single_blog_content' },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'p',
+                                        { className: 'monseratregular' },
+                                        'Lorem ipsum dolor sit amet'
+                                    ),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'p',
+                                        null,
+                                        'Consectetur elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+                                    ),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('hr', null),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'div',
+                                        { className: 'single_blog_bottom_content' },
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'a',
+                                            { className: 'robotolight', href: '' },
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-eye' }),
+                                            '552'
+                                        ),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'a',
+                                            { className: 'robotolight', href: '' },
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-commenting' }),
+                                            '17'
+                                        )
+                                    )
+                                )
+                            )
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'col-md-4' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'div',
+                                { className: 'single_blog' },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'div',
+                                    { className: 'single_blog_img' },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'images/blog2.jpg', alt: '' }),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'div',
+                                        { className: 'single_bolg_date' },
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'h2',
+                                            null,
+                                            '12'
+                                        ),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'p',
+                                            { className: 'robotolight' },
+                                            'Jan'
+                                        )
+                                    )
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'div',
+                                    { className: 'single_blog_content' },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'p',
+                                        { className: 'monseratregular' },
+                                        'sed do eiusmod tempor'
+                                    ),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'p',
+                                        null,
+                                        'Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+                                    ),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('hr', null),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'div',
+                                        { className: 'single_blog_bottom_content' },
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'a',
+                                            { className: 'robotolight', href: '' },
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-eye' }),
+                                            '552'
+                                        ),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'a',
+                                            { className: 'robotolight', href: '' },
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-commenting' }),
+                                            '17'
+                                        )
+                                    )
+                                )
+                            )
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'col-md-4' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'div',
+                                { className: 'single_blog' },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'div',
+                                    { className: 'single_blog_img' },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'images/blog3.jpg', alt: '' }),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'div',
+                                        { className: 'single_bolg_date' },
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'h2',
+                                            null,
+                                            '12'
+                                        ),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'p',
+                                            { className: 'robotolight' },
+                                            'Jan'
+                                        )
+                                    )
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'div',
+                                    { className: 'single_blog_content' },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'p',
+                                        { className: 'monseratregular' },
+                                        'incididunt ut labore et dolore'
+                                    ),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'p',
+                                        null,
+                                        'Elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+                                    ),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('hr', null),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'div',
+                                        { className: 'single_blog_bottom_content' },
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'a',
+                                            { className: 'robotolight', href: '' },
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-eye' }),
+                                            '552'
+                                        ),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'a',
+                                            { className: 'robotolight', href: '' },
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-commenting' }),
+                                            '17'
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+
+    return Community;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["a"] = (Community);
 
 /***/ })
 /******/ ]);
