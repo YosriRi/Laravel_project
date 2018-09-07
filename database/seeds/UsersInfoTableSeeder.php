@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class UsersTableSeeder extends Seeder
+class UsersInfoTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,6 +12,6 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
     	// Lance la génération de données en précisant le nombre à générer
-        factory(App\Users::class, 5)->create();
+        factory(App\UsersInfo::class, 5)->create();
     }
 }

@@ -16,13 +16,9 @@ export default class Register extends Component {
             					<h5 className="card-title text-center">Register</h5>
             					<form className="form-signin">
               						<div className="form-label-group">
-                						<input type="text" id="inputUserame" className="form-control" placeholder="Username" required autoFocus />
-                						<label htmlFor="inputUserame">Username</label>
-              						</div>
-              						<div className="form-label-group">
             							<input type="email" id="inputEmail" className="form-control" placeholder="Email address" required />
                 						<label htmlFor="inputEmail">Email address</label>
-              						</div>              
+              						</div>
               						<hr />
               						<div className="form-label-group">
                 						<input type="password" id="inputPassword" className="form-control" placeholder="Password" required />

@@ -34,10 +34,12 @@
     </head>
     <body>
 
-        
-
-        <div id="homeComponent">
+        <div class="culumn">
+            @include ('include.activite');
         </div>
+
+        <!-- <div id="terrainComponent">
+        </div> -->
 
         <!-- START SCROLL TO TOP  -->
 

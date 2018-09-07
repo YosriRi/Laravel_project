@@ -4,11 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
-use App\Users;
-use App\Http\Resources\Users as UsersResource;
+use App\UsersInfo;
+use App\Http\Resources\UsersInfo as UsersInfoResource;
 use Unlu\Laravel\Api\QueryBuilder;
 
-class UsersController extends Controller
+class UsersInfoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -32,7 +32,7 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        $users = new Users;
+        $users = new UsersInfo;
 
         $users->firstname           = $request->input('firstname');
         $users->lastname            = $request->input('lastname');
@@ -47,7 +47,7 @@ class UsersController extends Controller
         $users->password            = $request->input('password');
 
         if ($users->save()) {
-            return new UsersResource($users);
+            return new UsersInfoResource($users);
         }
     }
 
@@ -59,9 +59,9 @@ class UsersController extends Controller
      */
     public function show($id)
     {
-        $users = Users::findOrFail($id);
+        $users = UsersInfo::findOrFail($id);
 
-        return new UsersResource($users);
+        return new UsersInfoResource($users);
     }
 
     /**
@@ -73,7 +73,7 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $users = Users::findOrFail($id);
+        $users = UsersInfo::findOrFail($id);
 
         $users->firstname           = $request->input('firstname');
         $users->lastname            = $request->input('lastname');
@@ -88,7 +88,7 @@ class UsersController extends Controller
         $users->password            = $request->input('password');
 
         if ($users->save()) {
-            return new UsersResource($users);
+            return new UsersInfoResource($users);
         }
     }
 
@@ -100,10 +100,10 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        $users = Users::findOrFail($id);
+        $users = UsersInfo::findOrFail($id);
 
         if ($users->delete()) {
-            return new UsersResource($users);
+            return new UsersInfoResource($users);
         }
     }
 }

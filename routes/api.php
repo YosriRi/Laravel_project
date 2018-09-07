@@ -14,25 +14,27 @@ use App\Users;
 |
  */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
 
+/************************* USERSINFO *************************/
+// Get all usersInfo
+Route::get('usersInfo', 'UsersController@index');
+
+// Get one usersInfo
+Route::get('usersInfo/{id}', 'UsersController@show');
+
+// Post a new usersInfo
+Route::post('usersInfo', 'UsersController@store');
+
+// Update a usersInfo
+Route::put('usersInfo/{id}', 'UsersController@update');
+
+// Delete a usersInfo
+Route::delete('usersInfo/{id}', 'UsersController@destroy');
 /************************* USERS *************************/
-// Get all users
-Route::get('users', 'UsersController@index');
 
-// Get one user
-Route::get('users/{id}', 'UsersController@show');
-
-// Post a new user
-Route::post('users', 'UsersController@store');
-
-// Update a user
-Route::put('users/{id}', 'UsersController@update');
-
-// Delete a user
-Route::delete('users/{id}', 'UsersController@destroy');
 
 /************************* ACTIVITIES *************************/
 // Get all activities
@@ -49,148 +51,166 @@ Route::put('activities/{id}', 'ActivitiesController@update');
 
 // Delete an activity
 Route::delete('activities/{id}', 'ActivitiesController@destroy');
+/************************* ACTIVITIES *************************/
+
 
 /************************* CATEGORIES *************************/
-
-// Get all users
+// Get all categories
 Route::get('categories', 'CategoryController@index');
 
-// Get one user
+// Get one category
 Route::get('category/{id}', 'CategoryController@show');
 
-// Post a new user
+// Post a new category
 Route::post('category', 'CategoryController@store');
 
-// Update a user
+// Update a category
 Route::put('category/{id}', 'CategoryController@update');
 
-// Delete a user
+// Delete a category
 Route::delete('category/{id}', 'CategoryController@destroy');
+/************************* CATEGORIES *************************/
+
 
 /************************* COMMENTS *************************/
-// Get all users
+// Get all comments
 Route::get('comments', 'CommentController@index');
 
-// Get one user
+// Get one comment
 Route::get('comment/{id}', 'CommentController@show');
 
-// Post a new user
+// Post a new comment
 Route::post('comment', 'CommentController@store');
 
-// Update a user
+// Update a comment
 Route::put('comment/{id}', 'CommentController@update');
 
-// Delete a user
+// Delete a comment
 Route::delete('comment/{id}', 'CommentController@destroy');
+/************************* COMMENTS *************************/
+
 
 /************************* PHOTOS *************************/
-// Get all users
+// Get all photos
 Route::get('photos', 'PhotoController@index');
 
-// Get one user
+// Get one photo
 Route::get('photo/{id}', 'PhotoController@show');
 
-// Post a new user
+// Post a new photo
 Route::post('photo', 'PhotoController@store');
 
-// Update a user
+// Update a photo
 Route::put('photo/{id}', 'PhotoController@update');
 
-// Delete a user
+// Delete a photo
 Route::delete('photo/{id}', 'PhotoController@destroy');
+/************************* PHOTOS *************************/
+
 
 /************************* RESERVATIONS *************************/
-// Get all users
+// Get all reservations
 Route::get('reservations', 'ReservationController@index');
 
-// Get one user
+// Get one reservation
 Route::get('reservation/{id}', 'ReservationController@show');
 
-// Post a new user
+// Post a new reservation
 Route::post('reservation', 'ReservationController@store');
 
-// Update a user
+// Update a reservation
 Route::put('reservation/{id}', 'ReservationController@update');
 
-// Delete a user
+// Delete a reservation
 Route::delete('reservation/{id}', 'ReservationController@destroy');
+/************************* RESERVATIONS *************************/
+
 
 /************************* SALES *************************/
-// Get all users
+// Get all sales
 Route::get('sales', 'SalesController@index');
 
-// Get one user
+// Get one sale
 Route::get('sale/{id}', 'SalesController@show');
 
-// Post a new user
+// Post a new sale
 Route::post('sale', 'SalesController@store');
 
-// Update a user
+// Update a sale
 Route::put('sale/{id}', 'SalesController@update');
 
-// Delete a user
+// Delete a sale
 Route::delete('sale/{id}', 'SalesController@destroy');
+/************************* SALES *************************/
+
 
 /************************* GIFTS *************************/
-// Get all users
+// Get all gifts
 Route::get('gifts', 'GiftController@index');
 
-// Get one user
+// Get one gift
 Route::get('gift/{id}', 'GiftController@show');
 
-// Post a new user
+// Post a new gift
 Route::post('gift', 'GiftController@store');
 
-// Update a user
+// Update a gift
 Route::put('gift/{id}', 'GiftController@update');
 
-// Delete a user
+// Delete a gift
 Route::delete('gift/{id}', 'GiftController@destroy');
+/************************* GIFTS *************************/
+
 
 /************************* PROMOTIONS *************************/
-// Get all users
+// Get all promotions
 Route::get('promotions', 'PromotionController@index');
 
-// Get one user
+// Get one promotion
 Route::get('promotion/{id}', 'PromotionController@show');
 
-// Post a new user
+// Post a new promotion
 Route::post('promotion', 'PromotionController@store');
 
-// Update a user
+// Update a promotion
 Route::put('promotion/{id}', 'PromotionController@update');
 
-// Delete a user
+// Delete a promotion
 Route::delete('promotion/{id}', 'PromotionController@destroy');
+/************************* PROMOTIONS *************************/
+
 
 /************************* NOTES *************************/
-// Get all users
+// Get all notes
 Route::get('notes', 'NoteController@index');
 
-// Get one user
+// Get one note
 Route::get('note/{id}', 'NoteController@show');
 
-// Post a new user
+// Post a new note
 Route::post('note', 'NoteController@store');
 
-// Update a user
+// Update a note
 Route::put('note/{id}', 'NoteController@update');
 
-// Delete a user
+// Delete a note
 Route::delete('note/{id}', 'NoteController@destroy');
+/************************* NOTES *************************/
+
 
 /************************* PAYEMENTS *************************/
-// Get all users
+// Get all payements
 Route::get('payements', 'PayementController@index');
 
-// Get one user
+// Get one payement
 Route::get('payement/{id}', 'PayementController@show');
 
-// Post a new user
+// Post a new payement
 Route::post('payement', 'PayementController@store');
 
-// Update a user
+// Update a payement
 Route::put('payement/{id}', 'PayementController@update');
 
-// Delete a user
+// Delete a payement
 Route::delete('payement/{id}', 'PayementController@destroy');
+/************************* PAYEMENTS *************************/
