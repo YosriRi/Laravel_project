@@ -22,7 +22,7 @@ Route::get('notes', 'NoteController@index');
 /**
 * Must be logged in to do these actions
 */
-Route::group(['middleware' => 'auth.jwt'], function () {
+Route::group(['middleware' => ['jwt.verify']], function() {
     Route::get('logout', 'UserController@logout');
 
  	/**
