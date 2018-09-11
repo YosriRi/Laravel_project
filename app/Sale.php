@@ -4,10 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Category extends Model
+class Sale extends Model
 {
     protected $fillable = [
-    	'category_name',
-    	'description',
+    	'sales_amount', 'activity_price',
 	];
 }

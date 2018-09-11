@@ -21,6 +21,21 @@ class CreateNotesTable extends Migration
             $table->integer('id_photos');
             $table->integer('activity_or_photo');
             $table->timestamps();
+
+            $table->foreign('id_user')
+            ->references('id')
+            ->on('users')
+            ->onDelete('cascade');
+
+            $table->foreign('id_activity')
+            ->references('id')
+            ->on('activities')
+            ->onDelete('cascade');
+
+            $table->foreign('id_photos')
+            ->references('id')
+            ->on('photos')
+            ->onDelete('cascade');
         });
     }
 

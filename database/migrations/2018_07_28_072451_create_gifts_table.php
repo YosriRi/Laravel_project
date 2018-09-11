@@ -19,6 +19,16 @@ class CreateGiftsTable extends Migration
             $table->integer('id_user');
             $table->integer('id_activity');
             $table->timestamps();
+
+            $table->foreign('id_user')
+            ->references('id')
+            ->on('users')
+            ->onDelete('cascade');
+
+            $table->foreign('id_activity')
+            ->references('id')
+            ->on('activities')
+            ->onDelete('cascade');
         });
     }
 
