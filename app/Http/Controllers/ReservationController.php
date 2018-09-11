@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Reservation;
 use App\Http\Resources\Reservation as ReservationResource;
-use Unlu\Laravel\Api\QueryBuilder;
 
 class ReservationController extends Controller
 {
@@ -17,10 +16,8 @@ class ReservationController extends Controller
      */
     public function index()
     {
-        // Get reservations
         $reservations = Reservation::paginate(15);
 
-        //Return collection of reservations as a resource
         return ReservationResource::collection($reservations);
     }
 
@@ -32,11 +29,12 @@ class ReservationController extends Controller
      */
     public function store(Request $request)
     {
-        $reservation = $request->isMethod('put') ? Reservation::findOrFail($request->reservation_id) : new Reservation;
-        $reservation->id = $request->input('reservation_id');
+        $reservation = new Reservation;
+
         $reservation->reservation = $request->input('reservation');
-        $reservation->id_user = $request->input('id_user');
-        if($reservation->save()) {
+        $reservation->date_of_activity = $request->input('date_of_activity');
+
+        if ($reservation->save()) {
             return new ReservationResource($reservation);
         }
     }
@@ -49,9 +47,8 @@ class ReservationController extends Controller
      */
     public function show($id)
     {
-        // Get reservation
         $reservation = Reservation::findOrFail($id);
-        // Return single reservation as a resource
+
         return new ReservationResource($reservation);
     }
 
@@ -64,7 +61,14 @@ class ReservationController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $reservation = Reservation::findOrFail($id);
+
+        $reservation->reservation = $request->input('reservation');
+        $reservation->date_of_activity = $request->input('date_of_activity');
+
+        if ($reservation->save()) {
+            return new ReservationResource($reservation);
+        }
     }
 
     /**
@@ -75,10 +79,9 @@ class ReservationController extends Controller
      */
     public function destroy($id)
     {
-        // Get reservation
         $reservation = Reservation::findOrFail($id);
     
-        if($reservation->delete()) {
+        if ($reservation->delete()) {
             return new ReservationResource($reservation);
         } 
     }

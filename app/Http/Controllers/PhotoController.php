@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Photo;
 use App\Http\Resources\Photo as PhotoResource;
-use Unlu\Laravel\Api\QueryBuilder;
 
 class PhotoController extends Controller
 {
@@ -17,10 +16,8 @@ class PhotoController extends Controller
      */
     public function index()
     {
-        // Get photos
         $photos = Photo::paginate(15);
 
-        //Return collection of photos as a resource
         return PhotoResource::collection($photos);
     }
 
@@ -32,11 +29,14 @@ class PhotoController extends Controller
      */
     public function store(Request $request)
     {
-        $photo = $request->isMethod('put') ? Photo::findOrFail($request->photo_id) : new Photo;
-        $photo->id = $request->input('photo_id');
-        $photo->photo = $request->input('photo');
+        $photo = new Photo;
+
+        $photo->media = $request->input('media');
         $photo->id_user = $request->input('id_user');
-        if($photo->save()) {
+        $photo->id_note = $request->input('id_note');
+        $photo->id_comment = $request->input('id_comment');
+
+        if ($photo->save()) {
             return new PhotoResource($photo);
         }
     }
@@ -49,9 +49,8 @@ class PhotoController extends Controller
      */
     public function show($id)
     {
-        // Get photo
         $photo = Photo::findOrFail($id);
-        // Return single photo as a resource
+
         return new PhotoResource($photo);
     }
 
@@ -64,7 +63,16 @@ class PhotoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $photo = Photo::findOrFail($id);
+
+        $photo->media = $request->input('media');
+        $photo->id_user = $request->input('id_user');
+        $photo->id_note = $request->input('id_note');
+        $photo->id_comment = $request->input('id_comment');
+
+        if ($photo->save()) {
+            return new PhotoResource($photo);
+        }
     }
 
     /**
@@ -75,10 +83,9 @@ class PhotoController extends Controller
      */
     public function destroy($id)
     {
-        // Get photo
         $photo = Photo::findOrFail($id);
         
-        if($photo->delete()) {
+        if ($photo->delete()) {
             return new PhotoResource($photo);
         } 
     }

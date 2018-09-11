@@ -4,11 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
-use App\Payement;
-use App\Http\Resources\Payement as PayementResource;
-use Unlu\Laravel\Api\QueryBuilder;
+use App\Sale;
+use App\Http\Resources\Sale as SaleResource;
 
-class PayementController extends Controller
+class SaleController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,11 +16,9 @@ class PayementController extends Controller
      */
     public function index()
     {
-        // Get payements
-        $payements = Payement::paginate(15);
+        $sales = Sales::paginate(15);
 
-        //Return collection of payements as a resource
-        return PayementResource::collection($payements);
+        return SaleResource::collection($sales);
     }
 
     /**
@@ -32,12 +29,14 @@ class PayementController extends Controller
      */
     public function store(Request $request)
     {
-        $payement = $request->isMethod('put') ? Payement::findOrFail($request->payement_id) : new Payement;
-        $payement->id = $request->input('payement_id');
-        $payement->payement = $request->input('payement');
-        $payement->id_user = $request->input('id_user');
-        if($payement->save()) {
-            return new PayementResource($payement);
+        $sale = new Sale;
+
+        $sale->sales_amount = $request->input('sales_amount');
+        $sale->id_promotion = $request->input('id_promotion');
+        $sale->activity_price = $request->input('activity_price');
+
+        if ($sale->save()) {
+            return new SaleResource($sale);
         }
     }
 
@@ -49,13 +48,9 @@ class PayementController extends Controller
      */
     public function show($id)
     {
-        // Get payement
-        $payement = Payement::findOrFail($id);
-        // Return single payement as a resource
-        return new PayementResource($payement);
+        $sale = Sale::findOrFail($id);
+        return new SaleResource($sale);
     }
-
-
 
     /**
      * Update the specified resource in storage.
@@ -66,7 +61,15 @@ class PayementController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $sale = Sale::findOrFail($id);
+
+        $sale->sales_amount = $request->input('sales_amount');
+        $sale->id_promotion = $request->input('id_promotion');
+        $sale->activity_price = $request->input('activity_price');
+
+        if ($sale->save()) {
+            return new SaleResource($sale);
+        }
     }
 
     /**
@@ -77,11 +80,10 @@ class PayementController extends Controller
      */
     public function destroy($id)
     {
-        // Get payement
-        $payement = Payement::findOrFail($id);
-        
-        if($payement->delete()) {
-            return new PayementResource($payement);
-        } 
+        $sale = Sale::findOrFail($id);
+
+        if ($sale->delete()) {
+            return new SaleResource($sale);
+        }
     }
 }

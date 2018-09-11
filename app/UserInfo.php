@@ -4,11 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class UserInfos extends Model
+class UserInfo extends Model
 {
 	protected $fillable = [
-    	'firstname',
-    	'lastname',
+		'id_user',
     	'address',
     	'phone',
     	'sexe',
