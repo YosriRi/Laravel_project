@@ -16,7 +16,7 @@ class CreateSalesTable extends Migration
         Schema::create('sales', function (Blueprint $table) {
             $table->increments('id');
             $table->decimal('sales_amount');
-            $table->integer('id_promotion');
+            $table->integer('id_promotion')->unsigned();
             $table->decimal('activity_price');
             $table->timestamps();
 
