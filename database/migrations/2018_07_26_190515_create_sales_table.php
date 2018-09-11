@@ -19,6 +19,11 @@ class CreateSalesTable extends Migration
             $table->integer('id_promotion');
             $table->decimal('activity_price');
             $table->timestamps();
+
+            $table->foreign('id_promotion')
+            ->references('id')
+            ->on('promotions')
+            ->onDelete('cascade');
         });
     }
 

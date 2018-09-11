@@ -34,10 +34,8 @@
     </head>
     <body>
 
-        <div class="culmn">  
-        @include ('include.visualize-photo');
-         
 
+        <div id="homeComponent">
         </div>
 
         <!-- START SCROLL TO TOP  -->
@@ -67,6 +65,7 @@
 
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/app.js"></script>
 
     </body>
 </html>
