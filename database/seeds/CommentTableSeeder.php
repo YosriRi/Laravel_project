@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class PhotosTableSeeder extends Seeder
+class CommentTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +11,6 @@ class PhotosTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Photo::class, 20)->create();
+        factory(App\Comment::class, 20)->create();
     }
 }

@@ -2,19 +2,33 @@
 
 use Illuminate\Http\Request;
 
-Route::post('login', 'ApiController@login');
-Route::post('register', 'ApiController@register');
+/**
+* Doesn't need to be logged in to do these actions
+*/
+Route::post('login', 'UserController@login');
+Route::post('register', 'UserController@register');
+
+Route::get('activities', 'ActivityController@index');
+Route::get('activities/{id}', 'ActivityController@show');
+
+Route::get('comments', 'CommentController@index');
+
+Route::get('photos', 'PhotoController@index');
+
+Route::get('promotions', 'PromotionController@index');
+
+Route::get('notes', 'NoteController@index');
 
 /**
 * Must be logged in to do these actions
 */
 Route::group(['middleware' => 'auth.jwt'], function () {
-    Route::get('logout', 'ApiController@logout');
+    Route::get('logout', 'UserController@logout');
 
  	/**
  	* Who is connected
  	*/
-    Route::get('user', 'ApiController@getAuthUser');
+    Route::get('user', 'UserController@getAuthUser');
 
     /**
     * User informations
@@ -109,17 +123,3 @@ Route::group(['middleware' => 'auth.jwt'], function () {
 	Route::put('payments/{id}', 'PaymentController@update');
 	Route::delete('payments/{id}', 'PaymentController@destroy');
 });
-
-/**
-* Doesn't need to be logged in to do these actions
-*/
-Route::get('activities', 'ActivityController@index');
-Route::get('activities/{id}', 'ActivityController@show');
-
-Route::get('comments', 'CommentController@index');
-
-Route::get('photos', 'PhotoController@index');
-
-Route::get('promotions', 'PromotionController@index');
-
-Route::get('notes', 'NoteController@index');

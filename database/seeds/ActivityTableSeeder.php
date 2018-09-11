@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class ActivitiesTableSeeder extends Seeder
+class ActivityTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,6 +12,6 @@ class ActivitiesTableSeeder extends Seeder
     public function run()
     {
         // Lance la génération de données en précisant le nombre à générer
-        factory(App\Activity::class, 50)->create();
+        factory(App\Activity::class, 20)->create();
     }
 }

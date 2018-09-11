@@ -21,7 +21,7 @@ class Comment extends JsonResource
         //     'comment' => $this->comment,
         //     'id_user' => $this->id_user,
         //     'id_activity' => $this->id_activity,
-        //     'id_photos' => $this->id_photos,
+        //     'id_photos' => $this->id_photo,
         //     'activity_or_photo' => $this->activity_or_photo
         // ];
     }

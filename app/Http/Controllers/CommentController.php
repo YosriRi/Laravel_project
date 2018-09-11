@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Comment;
 use App\Http\Resources\Comment as CommentResource;
-use Unlu\Laravel\Api\QueryBuilder;
 
 class CommentController extends Controller
 {
@@ -17,10 +16,8 @@ class CommentController extends Controller
      */
     public function index()
     {
-        // Get comments
         $comments = Comment::paginate(15);
 
-        //Return collection of comments as a resource
         return CommentResource::collection($comments);
     }
 
@@ -32,11 +29,15 @@ class CommentController extends Controller
      */
     public function store(Request $request)
     {
-        $comment = $request->isMethod('put') ? Comment::findOrFail($request->comment_id) : new Comment;
-        $comment->id = $request->input('comment_id');
+        $comment = new Comment;
+
         $comment->comment = $request->input('comment');
         $comment->id_user = $request->input('id_user');
-        if($comment->save()) {
+        $comment->id_activity = $request->input('id_activity');
+        $comment->id_photo = $request->input('id_photo');
+        $comment->activity_or_photo = $request->input('activity_or_photo');
+
+        if ($comment->save()) {
             return new CommentResource($comment);
         }
     }
@@ -49,13 +50,10 @@ class CommentController extends Controller
      */
     public function show($id)
     {
-        // Get comment
         $comment = Comment::findOrFail($id);
-        // Return single comment as a resource
+
         return new CommentResource($comment);
     }
-
-
 
     /**
      * Update the specified resource in storage.
@@ -66,7 +64,17 @@ class CommentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $comment = Comment::findOrFail($id);
+
+        $comment->comment = $request->input('comment');
+        $comment->id_user = $request->input('id_user');
+        $comment->id_activity = $request->input('id_activity');
+        $comment->id_photo = $request->input('id_photo');
+        $comment->activity_or_photo = $request->input('activity_or_photo');
+
+        if ($comment->save()) {
+            return new CommentResource($comment);
+        }
     }
 
     /**
@@ -77,10 +85,9 @@ class CommentController extends Controller
      */
     public function destroy($id)
     {
-        // Get comment
         $comment = Comment::findOrFail($id);
         
-        if($comment->delete()) {
+        if ($comment->delete()) {
             return new CommentResource($comment);
         } 
     }

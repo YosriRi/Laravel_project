@@ -18,7 +18,7 @@ class CreateNotesTable extends Migration
             $table->decimal('note');
             $table->integer('id_user');
             $table->integer('id_activity');
-            $table->integer('id_photos');
+            $table->integer('id_photo');
             $table->integer('activity_or_photo');
             $table->timestamps();
 
@@ -32,7 +32,7 @@ class CreateNotesTable extends Migration
             ->on('activities')
             ->onDelete('cascade');
 
-            $table->foreign('id_photos')
+            $table->foreign('id_photo')
             ->references('id')
             ->on('photos')
             ->onDelete('cascade');
