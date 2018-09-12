@@ -36237,25 +36237,31 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var CrudExample = function (_Component) {
     _inherits(CrudExample, _Component);
 
-    function CrudExample(props) {
+    function CrudExample() {
         _classCallCheck(this, CrudExample);
 
-        var _this = _possibleConstructorReturn(this, (CrudExample.__proto__ || Object.getPrototypeOf(CrudExample)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (CrudExample.__proto__ || Object.getPrototypeOf(CrudExample)).call(this));
 
         _this.state = {
             activities: []
         };
+
+        // this.componentDidMount = this.componentDidMount.bind(this);
         return _this;
     }
 
     _createClass(CrudExample, [{
         key: 'componentDidMount',
         value: function componentDidMount() {
-            var _this2 = this;
+            var currentComponent = this;
 
             __WEBPACK_IMPORTED_MODULE_2_axios___default.a.get('/api/activities').then(function (res) {
-                var activities = res.data.data.data;
-                _this2.setState({ activities: activities });
+                var result = res.data.data;
+                currentComponent.setState({
+                    activities: result
+                });
+            }).catch(function (error) {
+                console.log(error);
             });
         }
     }, {
@@ -36281,6 +36287,8 @@ var CrudExample = function (_Component) {
             }).then(function (res) {
                 console.log(res);
                 console.log(res.data);
+            }).catch(function (error) {
+                console.log(error);
             });
         }
     }, {
@@ -36288,9 +36296,12 @@ var CrudExample = function (_Component) {
         value: function handleDelete(event) {
             event.preventDefault();
 
+            console.log(event.target.id.value);
             __WEBPACK_IMPORTED_MODULE_2_axios___default.a.delete('/api/activities/' + event.target.id.value).then(function (res) {
                 console.log(res);
                 console.log(res.data);
+            }).catch(function (error) {
+                console.log(error);
             });
         }
     }, {
