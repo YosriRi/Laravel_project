@@ -57737,7 +57737,7 @@ var Header = function (_Component) {
 									null,
 									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 										'a',
-										{ href: '#login' },
+										{ href: '/login' },
 										'Login'
 									)
 								),
@@ -57755,7 +57755,7 @@ var Header = function (_Component) {
 									null,
 									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 										'a',
-										{ href: '#register' },
+										{ href: '/register' },
 										'Register'
 									)
 								)
