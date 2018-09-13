@@ -10,7 +10,6 @@ $factory->define(App\UserInfo::class, function (Faker $faker) {
         'phone' 			=> $faker->phoneNumber,
         'sexe' 				=> "M",
         'date_of_birth' 	=> $faker->date,
-        'user_or_admin' 	=> $faker->numberBetween($min = 0, $max = 1),
         'question_password' => $faker->text(),
         'alt_email' 		=> $faker->email,
     ];

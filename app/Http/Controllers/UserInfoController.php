@@ -36,7 +36,6 @@ class UserInfosController extends Controller
         $userInfo->phone               = $request->input('phone');
         $userInfo->sexe                = $request->input('sexe');
         $userInfo->date_of_birth       = $request->input('date_of_birth');
-        $userInfo->user_or_admin       = $request->input('user_or_admin');
         $userInfo->question_password   = $request->input('question_password');
         $userInfo->alt_email           = $request->input('alt_email');
 
@@ -73,7 +72,6 @@ class UserInfosController extends Controller
         $userInfo->phone               = $request->input('phone');
         $userInfo->sexe                = $request->input('sexe');
         $userInfo->date_of_birth       = $request->input('date_of_birth');
-        $userInfo->user_or_admin       = $request->input('user_or_admin');
         $userInfo->question_password   = $request->input('question_password');
         $userInfo->alt_email           = $request->input('alt_email');
 

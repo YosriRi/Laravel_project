@@ -20,7 +20,6 @@ class CreateUserInfosTable extends Migration
             $table->string('phone', 25);
             $table->string('sexe', 1);
             $table->date('date_of_birth');
-            $table->integer('user_or_admin');
             $table->string('question_password', 255);
             $table->string('alt_email', 100);
             $table->timestamps();

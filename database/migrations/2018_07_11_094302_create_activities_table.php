@@ -15,12 +15,19 @@ class CreateActivitiesTable extends Migration
     {
         Schema::create('activities', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('id_category')->unsigned();
             $table->string('name', 55);
             $table->string('type', 45);
-            $table->integer('duration');
             $table->string('description', 255);
-            $table->datetime('date_of_activity');
+            $table->decimal('price');
+            $table->datetime('start');
+            $table->datetime('end');
             $table->timestamps();
+
+            $table->foreign('id_category')
+            ->references('id')
+            ->on('categories')
+            ->onDelete('cascade');
         });
     }
 

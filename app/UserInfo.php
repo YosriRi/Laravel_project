@@ -12,7 +12,6 @@ class UserInfo extends Model
     	'phone',
     	'sexe',
     	'date_of_birth',
-    	'user_or_admin',
     	'question_password',
     	'alt_email',
 	];
