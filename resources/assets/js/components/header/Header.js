@@ -30,13 +30,13 @@ export default class Header extends Component {
 							</ul>
 							<ul className="authentification">
 								<li>
-									<a href="#login">Login</a>
+									<a href="/login">Login</a>
 								</li>
 								<li>
 									<p>|</p>
 								</li>
 								<li>
-									<a href="#register">Register</a>
+									<a href="/register">Register</a>
 								</li>
 							</ul>
 						</div>

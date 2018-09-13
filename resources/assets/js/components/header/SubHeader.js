@@ -19,7 +19,7 @@ export default class SubHeader extends Component {
 					<div className="collapse navbar-collapse" id="navbarResponsive">
 						<ul className="navbar-nav ml-auto">
 							<li className="nav-item active">
-								<a className="nav-link" href="#">Accueil
+								<a className="nav-link" href="/">Accueil
 									<span className="sr-only">(current)</span>
 								</a>
 							</li>

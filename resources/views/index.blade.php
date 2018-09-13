@@ -34,8 +34,11 @@
     </head>
     <body>
 
-
-        <div id="homeComponent">
+        <div id="headerComponent">
+        </div>
+        <div id="{{$name}}">
+        </div>
+        <div id="footerComponent">
         </div>
 
         <!-- START SCROLL TO TOP  -->
