@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSalesTable extends Migration
+class CreateCountriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,10 @@ class CreateSalesTable extends Migration
      */
     public function up()
     {
-        Schema::create('sales', function (Blueprint $table) {
+        Schema::create('countries', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_reservation')->unsigned();
-            $table->decimal('amount');
+            $table->string('name', 20);
             $table->timestamps();
-
-            $table->foreign('id_reservation')
-            ->references('id')
-            ->on('reservations')
-            ->onDelete('cascade');
         });
     }
 
@@ -33,6 +27,6 @@ class CreateSalesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sales');
+        Schema::dropIfExists('countries');
     }
 }

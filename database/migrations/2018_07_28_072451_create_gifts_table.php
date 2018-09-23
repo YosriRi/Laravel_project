@@ -15,9 +15,10 @@ class CreateGiftsTable extends Migration
     {
         Schema::create('gifts', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('description');
             $table->integer('id_user')->unsigned();
             $table->integer('id_activity')->unsigned();
+            $table->text('message');
+            $table->string('email', 255);
             $table->timestamps();
 
             $table->foreign('id_user')

@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class PaymentTableSeeder extends Seeder
+class RegionTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +11,6 @@ class PaymentTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Payment::class, 20)->create();
+        //
     }
 }

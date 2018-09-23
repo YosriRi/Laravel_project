@@ -16,13 +16,19 @@ class CreatePromotionsTable extends Migration
         Schema::create('promotions', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('id_category')->unsigned();
-            $table->string('description');
+            $table->integer('id_type')->unsigned();
+            $table->text('description');
             $table->decimal('amount');
             $table->timestamps();
 
             $table->foreign('id_category')
             ->references('id')
             ->on('categories')
+            ->onDelete('cascade');
+
+            $table->foreign('id_type')
+            ->references('id')
+            ->on('types')
             ->onDelete('cascade');
         });
     }
