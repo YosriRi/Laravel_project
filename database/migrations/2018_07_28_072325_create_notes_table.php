@@ -16,11 +16,26 @@ class CreateNotesTable extends Migration
         Schema::create('notes', function (Blueprint $table) {
             $table->increments('id');
             $table->decimal('note');
-            $table->integer('id_user');
-            $table->integer('id_activity');
-            $table->integer('id_photos');
+            $table->integer('id_user')->unsigned();
+            $table->integer('id_activity')->unsigned();
+            $table->integer('id_photo')->unsigned();
             $table->integer('activity_or_photo');
             $table->timestamps();
+
+            $table->foreign('id_user')
+            ->references('id')
+            ->on('users')
+            ->onDelete('cascade');
+
+            $table->foreign('id_activity')
+            ->references('id')
+            ->on('activities')
+            ->onDelete('cascade');
+
+            $table->foreign('id_photo')
+            ->references('id')
+            ->on('photos')
+            ->onDelete('cascade');
         });
     }
 
