@@ -13,19 +13,24 @@ class TypeTableSeeder extends Seeder
     {
         $type = [
     		[
-            	'name' => 'Parachute',
+				'name' 			=> 'Parachute',
+				'description' 	=> 'Parachute',
         	],
         	[
-            	'name' => 'Deltaplane',
+				'name' 			=> 'Deltaplane',
+				'description' 	=> 'Deltaplane',
         	],
         	[
-            	'name' => 'Surf',
+				'name' 			=> 'Surf',
+				'description' 	=> 'Surf',
         	],
         	[
-            	'name' => 'Voile',
+				'name' 			=> 'Voile',
+				'description' 	=> 'Voile',
         	],
         	[
-            	'name' => 'Motoneige',
+				'name' 			=> 'Motoneige',
+				'description' 	=> 'Motoneige',
         	]
     	];
 

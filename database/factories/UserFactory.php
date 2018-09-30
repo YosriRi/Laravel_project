@@ -7,6 +7,6 @@ $factory->define(App\User::class, function (Faker $faker) {
         'firstname' 	=> $faker->name,
         'lastname' 		=> $faker->name,
         'email' 		=> $faker->email,
-        'password' 		=> $faker->password,
+        'password' 		=> bcrypt($faker->password),
     ];
 });

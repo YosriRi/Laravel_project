@@ -6,7 +6,7 @@ $factory->define(App\UserInfo::class, function (Faker $faker) {
 	// Génère des données aléatoire pour chaque champ
     return [
         'id_user'           => $faker->numberBetween($min = 1, $max = 20),
-        'id_country'        => $faker->numberBetween($min = 1, $max = 20),
+        'id_country'        => $faker->numberBetween($min = 1, $max = 5),
         'address' 			=> $faker->address,
         'postal_code'       => '75000',
         'phone' 			=> $faker->phoneNumber,
