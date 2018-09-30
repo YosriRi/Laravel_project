@@ -8,9 +8,10 @@ class Activity extends Model
 {
 	protected $fillable = [
     	'name',
-    	'type',
-    	'duration',
     	'description',
-    	'date_of_activity',
+    	'amount',
+    	'start',
+    	'end',
+    	'number_of_persons',
 	];
 }

@@ -12,6 +12,6 @@ class UserInfoTableSeeder extends Seeder
     public function run()
     {
     	// Lance la génération de données en précisant le nombre à générer
-        factory(App\UserInfo::class, 10)->create();
+        factory(App\UserInfo::class, 20)->create();
     }
 }

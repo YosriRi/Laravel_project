@@ -31,8 +31,8 @@ class CategoryController extends Controller
     {
         $category = new Category;
 
-        $category->category_name = $request->input('category_name');
-        $category->description = $request->input('description');
+        $category->name         = $request->input('name');
+        $category->description  = $request->input('description');
 
         if ($category->save()) {
             return new CategoryResource($category);
@@ -63,8 +63,8 @@ class CategoryController extends Controller
     {
         $category = Category::findOrFail($id);
 
-        $category->category_name = $request->input('category_name');
-        $category->description = $request->input('description');
+        $category->name         = $request->input('name');
+        $category->description  = $request->input('description');
 
         if ($category->save()) {
             return new CategoryResource($category);

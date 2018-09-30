@@ -31,11 +31,10 @@ class CommentController extends Controller
     {
         $comment = new Comment;
 
-        $comment->comment = $request->input('comment');
-        $comment->id_user = $request->input('id_user');
-        $comment->id_activity = $request->input('id_activity');
-        $comment->id_photo = $request->input('id_photo');
-        $comment->activity_or_photo = $request->input('activity_or_photo');
+        $comment->id_user       = $request->input('id_user');
+        $comment->id_activity   = $request->input('id_activity');
+        $comment->id_photo      = $request->input('id_photo');
+        $comment->comment       = $request->input('comment');
 
         if ($comment->save()) {
             return new CommentResource($comment);
@@ -66,11 +65,10 @@ class CommentController extends Controller
     {
         $comment = Comment::findOrFail($id);
 
-        $comment->comment = $request->input('comment');
-        $comment->id_user = $request->input('id_user');
-        $comment->id_activity = $request->input('id_activity');
-        $comment->id_photo = $request->input('id_photo');
-        $comment->activity_or_photo = $request->input('activity_or_photo');
+        $comment->id_user       = $request->input('id_user');
+        $comment->id_activity   = $request->input('id_activity');
+        $comment->id_photo      = $request->input('id_photo');
+        $comment->comment       = $request->input('comment');
 
         if ($comment->save()) {
             return new CommentResource($comment);

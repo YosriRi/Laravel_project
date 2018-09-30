@@ -13,7 +13,6 @@ require('./bootstrap');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-require('./components/CrudExample');
 require('./components/activity/Activity');
 require('./components/header/Header');
 require('./components/footer/Footer');

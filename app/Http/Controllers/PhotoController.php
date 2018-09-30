@@ -31,10 +31,9 @@ class PhotoController extends Controller
     {
         $photo = new Photo;
 
-        $photo->media = $request->input('media');
-        $photo->id_user = $request->input('id_user');
-        $photo->id_note = $request->input('id_note');
-        $photo->id_comment = $request->input('id_comment');
+        $photo->id_user     = $request->input('id_user');
+        $photo->id_activity = $request->input('id_activity');
+        $photo->name        = $request->input('name');
 
         if ($photo->save()) {
             return new PhotoResource($photo);
@@ -65,10 +64,9 @@ class PhotoController extends Controller
     {
         $photo = Photo::findOrFail($id);
 
-        $photo->media = $request->input('media');
-        $photo->id_user = $request->input('id_user');
-        $photo->id_note = $request->input('id_note');
-        $photo->id_comment = $request->input('id_comment');
+        $photo->id_user     = $request->input('id_user');
+        $photo->id_activity = $request->input('id_activity');
+        $photo->name        = $request->input('name');
 
         if ($photo->save()) {
             return new PhotoResource($photo);

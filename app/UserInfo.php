@@ -7,12 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 class UserInfo extends Model
 {
 	protected $fillable = [
-		'id_user',
     	'address',
+    	'postal_code',
     	'phone',
     	'sexe',
     	'date_of_birth',
-    	'user_or_admin',
     	'question_password',
     	'alt_email',
 	];

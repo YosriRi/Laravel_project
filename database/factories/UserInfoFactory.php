@@ -5,12 +5,13 @@ use Faker\Generator as Faker;
 $factory->define(App\UserInfo::class, function (Faker $faker) {
 	// Génère des données aléatoire pour chaque champ
     return [
-        'id_user'           => $faker->numberBetween($min = 1, $max = 100),
+        'id_user'           => $faker->numberBetween($min = 1, $max = 20),
+        'id_country'        => $faker->numberBetween($min = 1, $max = 5),
         'address' 			=> $faker->address,
+        'postal_code'       => '75000',
         'phone' 			=> $faker->phoneNumber,
         'sexe' 				=> "M",
         'date_of_birth' 	=> $faker->date,
-        'user_or_admin' 	=> $faker->numberBetween($min = 0, $max = 1),
         'question_password' => $faker->text(),
         'alt_email' 		=> $faker->email,
     ];

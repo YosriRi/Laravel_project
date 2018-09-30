@@ -16,11 +16,12 @@ class CreateUserInfosTable extends Migration
         Schema::create('user_infos', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('id_user')->unsigned();
+            $table->integer('id_country')->unsigned();
             $table->string('address', 100);
+            $table->string('postal_code', 10);
             $table->string('phone', 25);
             $table->string('sexe', 1);
             $table->date('date_of_birth');
-            $table->integer('user_or_admin');
             $table->string('question_password', 255);
             $table->string('alt_email', 100);
             $table->timestamps();
@@ -28,6 +29,11 @@ class CreateUserInfosTable extends Migration
             $table->foreign('id_user')
             ->references('id')
             ->on('users')
+            ->onDelete('cascade');
+
+            $table->foreign('id_country')
+            ->references('id')
+            ->on('countries')
             ->onDelete('cascade');
         });
     }

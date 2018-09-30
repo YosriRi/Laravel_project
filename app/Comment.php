@@ -8,6 +8,5 @@ class Comment extends Model
 {
     protected $fillable = [
     	'comment',
-    	'activity_or_photo',
 	];
 }

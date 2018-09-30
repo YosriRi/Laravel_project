@@ -33,10 +33,11 @@ class UserInfosController extends Controller
 
         $userInfo->id_user             = $request->input('id_user');
         $userInfo->address             = $request->input('address');
+        $userInfo->postal_code         = $request->input('postal_code');
+        $userInfo->id_country          = $request->input('id_country');
         $userInfo->phone               = $request->input('phone');
         $userInfo->sexe                = $request->input('sexe');
         $userInfo->date_of_birth       = $request->input('date_of_birth');
-        $userInfo->user_or_admin       = $request->input('user_or_admin');
         $userInfo->question_password   = $request->input('question_password');
         $userInfo->alt_email           = $request->input('alt_email');
 
@@ -69,11 +70,13 @@ class UserInfosController extends Controller
     {
         $userInfo = UserInfo::findOrFail($id);
 
+        $userInfo->id_user             = $request->input('id_user');
         $userInfo->address             = $request->input('address');
+        $userInfo->postal_code         = $request->input('postal_code');
+        $userInfo->id_country          = $request->input('id_country');
         $userInfo->phone               = $request->input('phone');
         $userInfo->sexe                = $request->input('sexe');
         $userInfo->date_of_birth       = $request->input('date_of_birth');
-        $userInfo->user_or_admin       = $request->input('user_or_admin');
         $userInfo->question_password   = $request->input('question_password');
         $userInfo->alt_email           = $request->input('alt_email');
 

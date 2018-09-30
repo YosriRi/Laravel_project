@@ -11,6 +11,9 @@ Route::post('register', 'UserController@register');
 Route::get('activities', 'ActivityController@index');
 Route::get('activities/{id}', 'ActivityController@show');
 
+Route::get('categories', 'CategoryController@index');
+Route::get('categories/{id}', 'CategoryController@show');
+
 Route::get('comments', 'CommentController@index');
 
 Route::get('photos', 'PhotoController@index');
@@ -18,6 +21,14 @@ Route::get('photos', 'PhotoController@index');
 Route::get('promotions', 'PromotionController@index');
 
 Route::get('notes', 'NoteController@index');
+
+Route::get('regions', 'RegionController@index');
+
+Route::get('cities', 'CityController@index');
+
+Route::get('countries', 'CountryController@index');
+
+Route::get('types', 'TypeController@index');
 
 /**
 * Must be logged in to do these actions
@@ -49,8 +60,6 @@ Route::group(['middleware' => ['jwt.verify']], function() {
 	/**
 	* Categories
 	**/
-	Route::get('categories', 'CategoryController@index');
-	Route::get('categories/{id}', 'CategoryController@show');
 	Route::post('categories', 'CategoryController@store');
 	Route::put('categories/{id}', 'CategoryController@update');
 	Route::delete('categories/{id}', 'CategoryController@destroy');
@@ -115,11 +124,34 @@ Route::group(['middleware' => ['jwt.verify']], function() {
 	Route::delete('notes/{id}', 'NoteController@destroy');
 
 	/**
-	* Payments
-	**/
-	Route::get('payments', 'PaymentController@index');
-	Route::get('payments/{id}', 'PaymentController@show');
-	Route::post('payments', 'PaymentController@store');
-	Route::put('payments/{id}', 'PaymentController@update');
-	Route::delete('payments/{id}', 'PaymentController@destroy');
+	 * Types
+	 */
+	Route::get('types/{id}', 'TypeController@show');
+	Route::post('types', 'TypeController@store');
+	Route::put('types/{id}', 'TypeController@update');
+	Route::delete('types/{id}', 'TypeController@destroy');
+
+	/**
+	 * Countries
+	 */
+	Route::get('countries/{id}', 'CountryController@show');
+	Route::post('countries', 'CountryController@store');
+	Route::put('countries/{id}', 'CountryController@update');
+	Route::delete('countries/{id}', 'CountryController@destroy');
+
+	/**
+	 * Cities
+	 */
+	Route::get('cities/{id}', 'CityController@show');
+	Route::post('cities', 'CityController@store');
+	Route::put('cities/{id}', 'CityController@update');
+	Route::delete('cities/{id}', 'CityController@destroy');
+
+	/**
+	 * Regions
+	 */
+	Route::get('regions/{id}', 'RegionController@show');
+	Route::post('regions', 'RegionController@store');
+	Route::put('regions/{id}', 'RegionController@update');
+	Route::delete('regions/{id}', 'RegionController@destroy');
 });

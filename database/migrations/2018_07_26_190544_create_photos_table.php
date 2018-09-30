@@ -15,10 +15,9 @@ class CreatePhotosTable extends Migration
     {
         Schema::create('photos', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('media');
             $table->integer('id_user')->unsigned();
-            $table->integer('id_note')->unsigned();
-            $table->integer('id_comment')->unsigned();
+            $table->integer('id_activity')->unsigned();
+            $table->string('name', 50);
             $table->timestamps();
 
             $table->foreign('id_user')
@@ -26,14 +25,9 @@ class CreatePhotosTable extends Migration
             ->on('users')
             ->onDelete('cascade');
 
-            $table->foreign('id_note')
+            $table->foreign('id_activity')
             ->references('id')
-            ->on('notes')
-            ->onDelete('cascade');
-
-            $table->foreign('id_comment')
-            ->references('id')
-            ->on('comments')
+            ->on('activities')
             ->onDelete('cascade');
         });
     }
