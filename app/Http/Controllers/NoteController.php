@@ -31,11 +31,10 @@ class NoteController extends Controller
     {
         $note = new Note;
 
-        $note->note = $request->input('note');
-        $note->id_user = $request->input('id_user');
-        $note->id_activity = $request->input('id_activity');
-        $note->id_photo = $request->input('id_photo');
-        $note->activity_or_photo = $request->input('activity_or_photo');
+        $note->id_user      = $request->input('id_user');
+        $note->id_activity  = $request->input('id_activity');
+        $note->id_photo     = $request->input('id_photo');
+        $note->note         = $request->input('note');
 
         if ($note->save()) {
             return new NoteResource($note);
@@ -66,11 +65,10 @@ class NoteController extends Controller
     {
         $note = Note::findOrFail($id);
 
-        $note->note = $request->input('note');
-        $note->id_user = $request->input('id_user');
-        $note->id_activity = $request->input('id_activity');
-        $note->id_photo = $request->input('id_photo');
-        $note->activity_or_photo = $request->input('activity_or_photo');
+        $note->id_user      = $request->input('id_user');
+        $note->id_activity  = $request->input('id_activity');
+        $note->id_photo     = $request->input('id_photo');
+        $note->note         = $request->input('note');
 
         if ($note->save()) {
             return new NoteResource($note);

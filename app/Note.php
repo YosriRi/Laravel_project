@@ -8,6 +8,5 @@ class Note extends Model
 {
     protected $fillable = [
     	'note',
-    	'activity_or_photo',
 	];
 }

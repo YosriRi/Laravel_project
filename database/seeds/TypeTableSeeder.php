@@ -11,6 +11,24 @@ class TypeTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        $type = [
+    		[
+            	'name' => 'Parachute',
+        	],
+        	[
+            	'name' => 'Deltaplane',
+        	],
+        	[
+            	'name' => 'Surf',
+        	],
+        	[
+            	'name' => 'Voile',
+        	],
+        	[
+            	'name' => 'Motoneige',
+        	]
+    	];
+
+        DB::table('types')->insert($type);
     }
 }

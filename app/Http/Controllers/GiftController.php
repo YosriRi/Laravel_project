@@ -31,9 +31,10 @@ class GiftController extends Controller
     {
         $gift = new Gift;
 
-        $gift->description = $request->input('description');
-        $gift->id_user = $request->input('id_user');
-        $gift->id_activity = $request->input('id_activity');
+        $gift->id_user      = $request->input('id_user');
+        $gift->id_activity  = $request->input('id_activity');
+        $gift->message      = $request->input('message');
+        $gift->email        = $request->input('email');
 
         if ($gift->save()) {
             return new GiftResource($gift);
@@ -64,9 +65,10 @@ class GiftController extends Controller
     {
         $gift = Gift::findOrFail($id);;
 
-        $gift->description = $request->input('description');
-        $gift->id_user = $request->input('id_user');
-        $gift->id_activity = $request->input('id_activity');
+        $gift->id_user      = $request->input('id_user');
+        $gift->id_activity  = $request->input('id_activity');
+        $gift->message      = $request->input('message');
+        $gift->email        = $request->input('email');
 
         if ($gift->save()) {
             return new GiftResource($gift);

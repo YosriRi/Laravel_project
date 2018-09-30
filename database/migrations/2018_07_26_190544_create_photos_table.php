@@ -17,8 +17,7 @@ class CreatePhotosTable extends Migration
             $table->increments('id');
             $table->integer('id_user')->unsigned();
             $table->integer('id_activity')->unsigned();
-            $table->string('name', 15);
-            $table->string('url', 100);
+            $table->string('name', 20);
             $table->timestamps();
 
             $table->foreign('id_user')

@@ -31,8 +31,9 @@ class ReservationController extends Controller
     {
         $reservation = new Reservation;
 
-        $reservation->reservation = $request->input('reservation');
-        $reservation->date_of_activity = $request->input('date_of_activity');
+        $reservation->id_user       = $request->input('id_user');
+        $reservation->id_activity   = $request->input('id_activity');
+        $reservation->amount        = $request->input('amount');
 
         if ($reservation->save()) {
             return new ReservationResource($reservation);
@@ -63,8 +64,9 @@ class ReservationController extends Controller
     {
         $reservation = Reservation::findOrFail($id);
 
-        $reservation->reservation = $request->input('reservation');
-        $reservation->date_of_activity = $request->input('date_of_activity');
+        $reservation->id_user       = $request->input('id_user');
+        $reservation->id_activity   = $request->input('id_activity');
+        $reservation->amount        = $request->input('amount');
 
         if ($reservation->save()) {
             return new ReservationResource($reservation);

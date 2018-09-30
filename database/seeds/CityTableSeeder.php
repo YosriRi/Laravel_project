@@ -11,6 +11,24 @@ class CityTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        $city = [
+    		[
+            	'name' => 'Paris',
+        	],
+        	[
+            	'name' => 'Lille',
+        	],
+        	[
+            	'name' => 'Marseille',
+        	],
+        	[
+            	'name' => 'Lyon',
+        	],
+        	[
+            	'name' => 'Rouen',
+        	]
+    	];
+
+        DB::table('cities')->insert($city);
     }
 }

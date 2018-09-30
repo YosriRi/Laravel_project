@@ -31,11 +31,17 @@ class ActivityController extends Controller
     {
         $activity = new Activity;
 
-        $activity->name               = $request->input('name');
-        $activity->type               = $request->input('type');
-        $activity->duration           = $request->input('duration');
-        $activity->description        = $request->input('description');
-        $activity->date_of_activity   = $request->input('date_of_activity');
+        $activity->id_category          = $request->input('id_category');
+        $activity->id_type              = $request->input('id_type');
+        $activity->id_city              = $request->input('id_city');
+        $activity->id_region            = $request->input('id_region');
+        $activity->id_country           = $request->input('id_country');
+        $activity->name                 = $request->input('name');
+        $activity->description          = $request->input('description');
+        $activity->amount               = $request->input('amount');
+        $activity->start                = $request->input('start');
+        $activity->end                  = $request->input('end');
+        $activity->number_of_persons    = $request->input('number_of_persons');
 
         if ($activity->save()) {
             return new ActivityResource($activity);
@@ -66,11 +72,17 @@ class ActivityController extends Controller
     {
         $activity = Activity::findOrFail($id);
 
-        $activity->name               = $request->input('name');
-        $activity->type               = $request->input('type');
-        $activity->duration           = $request->input('duration');
-        $activity->description        = $request->input('description');
-        $activity->date_of_activity   = $request->input('date_of_activity');
+        $activity->id_category          = $request->input('id_category');
+        $activity->id_type              = $request->input('id_type');
+        $activity->id_city              = $request->input('id_city');
+        $activity->id_region            = $request->input('id_region');
+        $activity->id_country           = $request->input('id_country');
+        $activity->name                 = $request->input('name');
+        $activity->description          = $request->input('description');
+        $activity->amount               = $request->input('amount');
+        $activity->start                = $request->input('start');
+        $activity->end                  = $request->input('end');
+        $activity->number_of_persons    = $request->input('number_of_persons');
 
         if ($activity->save()) {
             return new ActivityResource($activity);

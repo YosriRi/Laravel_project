@@ -11,6 +11,24 @@ class RegionTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        $region = [
+    		[
+            	'name' => 'Ile-de-France',
+        	],
+        	[
+            	'name' => 'Corse',
+        	],
+        	[
+            	'name' => 'Normandie',
+        	],
+        	[
+            	'name' => 'Bretagne',
+        	],
+        	[
+            	'name' => 'Provence-Alpes-Côte d\'Azur',
+        	]
+    	];
+
+        DB::table('regions')->insert($region);
     }
 }

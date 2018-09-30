@@ -31,9 +31,8 @@ class SaleController extends Controller
     {
         $sale = new Sale;
 
-        $sale->sales_amount = $request->input('sales_amount');
-        $sale->id_promotion = $request->input('id_promotion');
-        $sale->activity_price = $request->input('activity_price');
+        $sale->id_reservation   = $request->input('id_reservation');
+        $sale->amount           = $request->input('amount');
 
         if ($sale->save()) {
             return new SaleResource($sale);
@@ -63,9 +62,8 @@ class SaleController extends Controller
     {
         $sale = Sale::findOrFail($id);
 
-        $sale->sales_amount = $request->input('sales_amount');
-        $sale->id_promotion = $request->input('id_promotion');
-        $sale->activity_price = $request->input('activity_price');
+        $sale->id_reservation   = $request->input('id_reservation');
+        $sale->amount           = $request->input('amount');
 
         if ($sale->save()) {
             return new SaleResource($sale);

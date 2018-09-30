@@ -31,8 +31,10 @@ class PromotionController extends Controller
     {
         $promotion = new Promotion;
 
+        $promotion->id_category = $request->input('id_category');
+        $promotion->id_type     = $request->input('id_type');
         $promotion->description = $request->input('description');
-        $promotion->amount = $request->input('amount');
+        $promotion->amount      = $request->input('amount');
 
         if ($promotion->save()) {
             return new PromotionResource($promotion);
@@ -63,8 +65,10 @@ class PromotionController extends Controller
     {
         $promotion = Promotion::findOrFail($id);
 
+        $promotion->id_category = $request->input('id_category');
+        $promotion->id_type     = $request->input('id_type');
         $promotion->description = $request->input('description');
-        $promotion->amount = $request->input('amount');
+        $promotion->amount      = $request->input('amount');
 
         if ($promotion->save()) {
             return new PromotionResource($promotion);
