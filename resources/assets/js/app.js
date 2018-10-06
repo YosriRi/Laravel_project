@@ -13,7 +13,7 @@ require('./bootstrap');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-require('./components/activity/Activity');
+require('./components/activity/detail/Activity');
 require('./components/header/Header');
 require('./components/footer/Footer');
 require('./components/slide/Slide');

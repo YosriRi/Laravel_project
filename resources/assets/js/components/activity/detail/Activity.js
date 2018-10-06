@@ -20,6 +20,6 @@ export default class Activity extends Component {
 	}
 }
 
-if (document.getElementById('activityComponent')) {
-    ReactDOM.render(<Activity />, document.getElementById('activityComponent'));
+if (document.getElementById('detailActivityComponent')) {
+    ReactDOM.render(<Activity />, document.getElementById('detailActivityComponent'));
 }

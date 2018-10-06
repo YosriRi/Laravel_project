@@ -35,6 +35,6 @@ export default class Home extends Component {
 	}
 }
 
-if (document.getElementById('homeComponent')) {
-	ReactDOM.render(<Home />, document.getElementById('homeComponent'));
+if (document.getElementById('slideComponent')) {
+	ReactDOM.render(<Home />, document.getElementById('slideComponent'));
 }

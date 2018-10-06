@@ -13,17 +13,15 @@ export default class Result extends Component {
                 	<div className="card z-depth-1">
                   		<div className="view overlay">
                     		<img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).jpg" className="card-img-top" alt="narrower" />
-                    		<a>
+                    		<a href='/detailActivity/1'>
                       			<div className="mask rgba-white-slight waves-effect waves-light"></div>
                     		</a>
                   		</div>
                   		<div className=" card-body card-body-cascade">
-                    		<h5 className="card-title">
-                      			<i className="fas fa-euro-sign"></i> Culinary
-                  			</h5>
+                    		<h5 className="card-title">Saut en parachute</h5>
                     		<h4 className="card-title">Cheat day inspirations</h4>
                     		<p className="card-text">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi.</p>
-                    		<a className="btn btn-primary">Find Out More!</a>
+                    		<a className="btn btn-primary" href='/detailActivity/1'>Find Out More!</a>
                   		</div>
                 	</div>
               	</div>

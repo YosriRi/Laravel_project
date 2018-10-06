@@ -9,15 +9,15 @@ export default class Content extends Component {
 
 	render() {
 		const divStyle1 = {
-			background: 'url(images/parachute1.JPG) no-repeat center top',
+			background: 'url(/images/parachute1.JPG) no-repeat center top',
 			'background-size': 'cover'
 		}
 		const divStyle2 = {
-			background: 'url(images/parachute2.JPG) no-repeat center top',
+			background: 'url(/images/parachute2.JPG) no-repeat center top',
 			'background-size': 'cover'
 		}
 		const divStyle3 = {
-			background: 'url(images/parachute3.png) no-repeat center top',
+			background: 'url(/images/parachute3.png) no-repeat center top',
 			'background-size': 'cover',
 			cursor: 'pointer'
 		}
