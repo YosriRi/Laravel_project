@@ -1,10 +1,34 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import Cookies from 'universal-cookie';
 
 export default class Login extends Component {
 	constructor(props) {
 		super(props);
 	}
+
+    handleSubmit(event) {
+        event.preventDefault();
+        const cookies = new Cookies();
+        const target = event.target;
+
+        const email             = target.inputEmailLogin.value;
+        const password          = target.inputPasswordLogin.value;
+
+        axios.post('/api/login', {
+            email: email,
+            password: password
+        })
+        .then(res => {
+            cookies.set('userCookie', res.data.token, { path: '/' });
+            alert("Connexion réussi");
+            window.location.replace("/");
+        })
+        .catch(function (error) {
+            console.log(error, 'error');
+            alert('Problème de connexion');
+        });
+    }
 
 	render() {
 		return (
@@ -14,23 +38,20 @@ export default class Login extends Component {
         				<div className="card card-signin my-5">
           					<div className="card-body">
             					<h5 className="card-title text-center">Sign In</h5>
-    							<form className="form-signin">
+							    <form className="form-signin" onSubmit={this.handleSubmit}>
               						<div className="form-label-group">
-                						<input type="email" id="inputEmailLogin" className="form-control" placeholder="Email address" required autoFocus />
-                						<label htmlFor="inputEmailLogin">Email address</label>
+                						<input type="email" id="inputEmailLogin" className="form-control" placeholder="Email" required autoFocus />
+                						<label htmlFor="inputEmailLogin">Email</label>
               						</div>
               						<div className="form-label-group">
-                						<input type="password" id="inputPasswordLogin" className="form-control" placeholder="Password" required />
-                						<label htmlFor="inputPasswordLogin">Password</label>
+                						<input type="password" id="inputPasswordLogin" className="form-control" placeholder="Mot de passe" required />
+                						<label htmlFor="inputPasswordLogin">Mot de passe</label>
               						</div>
               						<div className="custom-control custom-checkbox mb-3">
                 						<input type="checkbox" className="custom-control-input" id="customCheck1" />
                 						<label className="custom-control-label" htmlFor="customCheck1">Remember password</label>
               						</div>
-          							<button className="btn btn-lg btn-secondary btn-block text-uppercase" type="submit">Sign in</button>
-          							<hr className="my-4" />
-          							<button className="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i className="fab fa-google mr-2"></i> Sign in with Google</button>
-              						<button className="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i className="fab fa-facebook-f mr-2"></i> Sign in with Facebook</button>
+          							<button className="btn btn-lg btn-secondary btn-block text-uppercase" type="submit">Se connecter</button>
             					</form>
           					</div>
         				</div>

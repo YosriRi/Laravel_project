@@ -4,9 +4,6 @@ import ReactDOM from 'react-dom';
 export default class Register extends Component {
 	constructor(props) {
 		super(props);
-        this.state = {
-            activity: []
-        }
 	}
 
     handleSubmit(event) {
@@ -27,8 +24,8 @@ export default class Register extends Component {
                 password: password
             })
             .then(res => {
-                console.log(res, 'res');
-                console.log(res.data, 'res.data');
+                alert("Inscription réussi");
+                window.location.replace("/login");
             })
             .catch(function (error) {
                 console.log(error, 'error');
@@ -56,16 +53,16 @@ export default class Register extends Component {
                                         <label htmlFor="inputLastname">Nom</label>
                                     </div>
               						<div className="form-label-group">
-            							<input type="email" id="inputEmail" name="inputEmail" className="form-control" placeholder="Email" required />
+            							<input type="email" id="inputEmail" name="inputEmail" className="form-control" placeholder="Email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" required />
                 						<label htmlFor="inputEmail">Email</label>
               						</div>
               						<hr />
               						<div className="form-label-group">
-                						<input type="password" id="inputPassword" name="inputPassword" className="form-control" placeholder="Mot de passe" required />
+                						<input type="password" id="inputPassword" name="inputPassword" className="form-control" placeholder="Mot de passe" pattern="^.{6,}$" required />
                 						<label htmlFor="inputPassword">Mot de passe</label>
               						</div>
               						<div className="form-label-group">
-                						<input type="password" id="inputConfirmPassword" name="inputConfirmPassword" className="form-control" placeholder="Mot de passe" required />
+                						<input type="password" id="inputConfirmPassword" name="inputConfirmPassword" className="form-control" placeholder="Mot de passe" pattern="^.{6,}$" required />
                 						<label htmlFor="inputConfirmPassword">Confirmation du mot de passe</label>
               						</div>
               						<button className="btn btn-lg btn-secondary btn-block text-uppercase" type="submit">S'inscrire</button>

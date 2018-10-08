@@ -1,10 +1,34 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import SubHeader from './SubHeader';
+import Cookies from 'universal-cookie';
 
 export default class Header extends Component {
 	constructor(props) {
 		super(props);
+
+		this.state = {
+			cookies: new Cookies(),
+            user: []
+        };
+	}
+
+	componentDidMount() {
+		const currentComponent = this;
+		const cookies = this.state.cookies.get('userCookie');
+
+		if (cookies) {
+			axios.get('/api/user?token=' + cookies)
+	        .then(function (res) {
+	            const result = res.data.user;
+	            currentComponent.setState({
+	                user: result
+	            });
+	        })
+	        .catch(function (error) {
+	            console.log(error);
+	        });
+		}
 	}
 
 	render() {

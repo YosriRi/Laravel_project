@@ -23,7 +23,7 @@ class PageController extends Controller
 
     public function detailActivity($id)
     {
-        return view('index', ['name' => 'detailActivityComponent', 'id' => $id]);
+        return view('index', ['name' => 'detailActivityComponent']);
     }
 
     public function all()
