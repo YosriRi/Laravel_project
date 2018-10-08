@@ -6,8 +6,6 @@ export default class Example extends Component {
     
     constructor() {
         super();
-        console.log(super());
-        
     }
 
     render() {

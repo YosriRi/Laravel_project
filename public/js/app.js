@@ -14058,7 +14058,7 @@ if (token) {
   var undefined;
 
   /** Used as the semantic version number. */
-  var VERSION = '4.17.10';
+  var VERSION = '4.17.11';
 
   /** Used as the size to enable large array optimizations. */
   var LARGE_ARRAY_SIZE = 200;
@@ -14322,7 +14322,7 @@ if (token) {
   var reHasUnicode = RegExp('[' + rsZWJ + rsAstralRange  + rsComboRange + rsVarRange + ']');
 
   /** Used to detect strings that need a more robust regexp to match words. */
-  var reHasUnicodeWord = /[a-z][A-Z]|[A-Z]{2,}[a-z]|[0-9][a-zA-Z]|[a-zA-Z][0-9]|[^a-zA-Z0-9 ]/;
+  var reHasUnicodeWord = /[a-z][A-Z]|[A-Z]{2}[a-z]|[0-9][a-zA-Z]|[a-zA-Z][0-9]|[^a-zA-Z0-9 ]/;
 
   /** Used to assign default `context` object properties. */
   var contextProps = [
@@ -15268,20 +15268,6 @@ if (token) {
       }
     }
     return result;
-  }
-
-  /**
-   * Gets the value at `key`, unless `key` is "__proto__".
-   *
-   * @private
-   * @param {Object} object The object to query.
-   * @param {string} key The key of the property to get.
-   * @returns {*} Returns the property value.
-   */
-  function safeGet(object, key) {
-    return key == '__proto__'
-      ? undefined
-      : object[key];
   }
 
   /**
@@ -17741,7 +17727,7 @@ if (token) {
           if (isArguments(objValue)) {
             newValue = toPlainObject(objValue);
           }
-          else if (!isObject(objValue) || (srcIndex && isFunction(objValue))) {
+          else if (!isObject(objValue) || isFunction(objValue)) {
             newValue = initCloneObject(srcValue);
           }
         }
@@ -20662,6 +20648,22 @@ if (token) {
         array[length] = isIndex(index, arrLength) ? oldArray[index] : undefined;
       }
       return array;
+    }
+
+    /**
+     * Gets the value at `key`, unless `key` is "__proto__".
+     *
+     * @private
+     * @param {Object} object The object to query.
+     * @param {string} key The key of the property to get.
+     * @returns {*} Returns the property value.
+     */
+    function safeGet(object, key) {
+      if (key == '__proto__') {
+        return;
+      }
+
+      return object[key];
     }
 
     /**
@@ -56991,23 +56993,49 @@ var Content = function (_Component) {
 	function Content(props) {
 		_classCallCheck(this, Content);
 
-		return _possibleConstructorReturn(this, (Content.__proto__ || Object.getPrototypeOf(Content)).call(this, props));
+		var _this = _possibleConstructorReturn(this, (Content.__proto__ || Object.getPrototypeOf(Content)).call(this, props));
+
+		var url = window.location.pathname;
+		var id = url.substring(url.lastIndexOf('/') + 1);
+
+		_this.state = {
+			id: id,
+			activity: []
+		};
+		return _this;
 	}
 
 	_createClass(Content, [{
+		key: 'componentDidMount',
+		value: function componentDidMount() {
+			var currentComponent = this;
+
+			console.log(this.state.id);
+
+			axios.get('/api/activities/' + this.state.id).then(function (res) {
+				var result = res.data.data;
+				currentComponent.setState({
+					activity: result
+				});
+			}).catch(function (error) {
+				console.log(error);
+			});
+		}
+	}, {
 		key: 'render',
 		value: function render() {
+			var activity = this.state.activity;
 			var divStyle1 = {
 				background: 'url(/images/parachute1.JPG) no-repeat center top',
-				'background-size': 'cover'
+				backgroundSize: 'cover'
 			};
 			var divStyle2 = {
 				background: 'url(/images/parachute2.JPG) no-repeat center top',
-				'background-size': 'cover'
+				backgroundSize: 'cover'
 			};
 			var divStyle3 = {
 				background: 'url(/images/parachute3.png) no-repeat center top',
-				'background-size': 'cover',
+				backgroundSize: 'cover',
 				cursor: 'pointer'
 			};
 			return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -57016,7 +57044,7 @@ var Content = function (_Component) {
 				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 					'h1',
 					{ className: 'mt-4' },
-					'Saut en Parachute'
+					activity.name
 				),
 				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 					'p',
@@ -57124,7 +57152,7 @@ var Content = function (_Component) {
 							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 								'div',
 								{ className: 'panel-body' },
-								'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+								activity.description
 							)
 						)
 					),
@@ -60803,111 +60831,151 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 var Register = function (_Component) {
-  _inherits(Register, _Component);
+    _inherits(Register, _Component);
 
-  function Register(props) {
-    _classCallCheck(this, Register);
+    function Register(props) {
+        _classCallCheck(this, Register);
 
-    return _possibleConstructorReturn(this, (Register.__proto__ || Object.getPrototypeOf(Register)).call(this, props));
-  }
+        var _this = _possibleConstructorReturn(this, (Register.__proto__ || Object.getPrototypeOf(Register)).call(this, props));
 
-  _createClass(Register, [{
-    key: 'render',
-    value: function render() {
-      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'div',
-        { className: 'container' },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'div',
-          { className: 'row' },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'div',
-            { className: 'col-sm-9 col-md-7 col-lg-5 mx-auto' },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              'div',
-              { className: 'card card-signin flex-row my-5' },
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'div',
-                { className: 'card-body' },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                  'h5',
-                  { className: 'card-title text-center' },
-                  'Register'
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                  'form',
-                  { className: 'form-signin' },
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { className: 'form-label-group' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'email', id: 'inputEmail', className: 'form-control', placeholder: 'Email address', required: true }),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                      'label',
-                      { htmlFor: 'inputEmail' },
-                      'Email address'
-                    )
-                  ),
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('hr', null),
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { className: 'form-label-group' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'password', id: 'inputPassword', className: 'form-control', placeholder: 'Password', required: true }),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                      'label',
-                      { htmlFor: 'inputPassword' },
-                      'Password'
-                    )
-                  ),
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { className: 'form-label-group' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'password', id: 'inputConfirmPassword', className: 'form-control', placeholder: 'Password', required: true }),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                      'label',
-                      { htmlFor: 'inputConfirmPassword' },
-                      'Confirm password'
-                    )
-                  ),
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'button',
-                    { className: 'btn btn-lg btn-secondary btn-block text-uppercase', type: 'submit' },
-                    'Register'
-                  ),
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'a',
-                    { className: 'd-block text-center mt-2 small', href: '#' },
-                    'Sign In'
-                  ),
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('hr', { className: 'my-4' }),
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'button',
-                    { className: 'btn btn-lg btn-google btn-block text-uppercase', type: 'submit' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fab fa-google mr-2' }),
-                    ' Sign up with Google'
-                  ),
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'button',
-                    { className: 'btn btn-lg btn-facebook btn-block text-uppercase', type: 'submit' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fab fa-facebook-f mr-2' }),
-                    ' Sign up with Facebook'
-                  )
-                )
-              )
-            )
-          )
-        )
-      );
+        _this.state = {
+            activity: []
+        };
+        return _this;
     }
-  }]);
 
-  return Register;
+    _createClass(Register, [{
+        key: 'handleSubmit',
+        value: function handleSubmit(event) {
+            event.preventDefault();
+            var target = event.target;
+
+            var firstname = target.inputFirstname.value;
+            var lastname = target.inputLastname.value;
+            var email = target.inputEmail.value;
+            var password = target.inputPassword.value;
+            var confirmPassword = target.inputConfirmPassword.value;
+
+            if (password === confirmPassword) {
+                axios.post('/api/register', {
+                    firstname: firstname,
+                    lastname: lastname,
+                    email: email,
+                    password: password
+                }).then(function (res) {
+                    console.log(res, 'res');
+                    console.log(res.data, 'res.data');
+                }).catch(function (error) {
+                    console.log(error, 'error');
+                });
+            } else {
+                alert("Mot de passe différent");
+            }
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'div',
+                { className: 'container' },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'row' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'col-sm-9 col-md-7 col-lg-5 mx-auto' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'card card-signin flex-row my-5' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'div',
+                                { className: 'card-body' },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'h5',
+                                    { className: 'card-title text-center' },
+                                    'Inscription'
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'form',
+                                    { className: 'form-signin', onSubmit: this.handleSubmit },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'div',
+                                        { className: 'form-label-group' },
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'text', id: 'inputFirstname', name: 'inputFirstname', className: 'form-control', placeholder: 'Pr\xE9nom', required: true }),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'label',
+                                            { htmlFor: 'inputFirstname' },
+                                            'Pr\xE9nom'
+                                        )
+                                    ),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'div',
+                                        { className: 'form-label-group' },
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'text', id: 'inputLastname', name: 'inputLastname', className: 'form-control', placeholder: 'Nom', required: true }),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'label',
+                                            { htmlFor: 'inputLastname' },
+                                            'Nom'
+                                        )
+                                    ),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'div',
+                                        { className: 'form-label-group' },
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'email', id: 'inputEmail', name: 'inputEmail', className: 'form-control', placeholder: 'Email', required: true }),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'label',
+                                            { htmlFor: 'inputEmail' },
+                                            'Email'
+                                        )
+                                    ),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('hr', null),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'div',
+                                        { className: 'form-label-group' },
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'password', id: 'inputPassword', name: 'inputPassword', className: 'form-control', placeholder: 'Mot de passe', required: true }),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'label',
+                                            { htmlFor: 'inputPassword' },
+                                            'Mot de passe'
+                                        )
+                                    ),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'div',
+                                        { className: 'form-label-group' },
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'password', id: 'inputConfirmPassword', name: 'inputConfirmPassword', className: 'form-control', placeholder: 'Mot de passe', required: true }),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'label',
+                                            { htmlFor: 'inputConfirmPassword' },
+                                            'Confirmation du mot de passe'
+                                        )
+                                    ),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'button',
+                                        { className: 'btn btn-lg btn-secondary btn-block text-uppercase', type: 'submit' },
+                                        'S\'inscrire'
+                                    ),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'a',
+                                        { className: 'd-block text-center mt-2 small', href: '/login' },
+                                        'Se connecter'
+                                    )
+                                )
+                            )
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+
+    return Register;
 }(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (Register);
 
 
 if (document.getElementById('registerComponent')) {
-  __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Register, null), document.getElementById('registerComponent'));
+    __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Register, null), document.getElementById('registerComponent'));
 }
 
 /***/ }),
@@ -63265,282 +63333,83 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 var Result = function (_Component) {
-  _inherits(Result, _Component);
+    _inherits(Result, _Component);
 
-  function Result(props) {
-    _classCallCheck(this, Result);
+    function Result(props) {
+        _classCallCheck(this, Result);
 
-    return _possibleConstructorReturn(this, (Result.__proto__ || Object.getPrototypeOf(Result)).call(this, props));
-  }
+        var _this = _possibleConstructorReturn(this, (Result.__proto__ || Object.getPrototypeOf(Result)).call(this, props));
 
-  _createClass(Result, [{
-    key: 'render',
-    value: function render() {
-      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'div',
-        { className: 'row' },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'div',
-          { className: 'search-card col-lg-4 col-md-6' },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'div',
-            { className: 'card z-depth-1' },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              'div',
-              { className: 'view overlay' },
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).jpg', className: 'card-img-top', alt: 'narrower' }),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'a',
-                { href: '/detailActivity/1' },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'mask rgba-white-slight waves-effect waves-light' })
-              )
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              'div',
-              { className: ' card-body card-body-cascade' },
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'h5',
-                { className: 'card-title' },
-                'Saut en parachute'
-              ),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'h4',
-                { className: 'card-title' },
-                'Cheat day inspirations'
-              ),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'p',
-                { className: 'card-text' },
-                'Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi.'
-              ),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'a',
-                { className: 'btn btn-primary', href: '/detailActivity/1' },
-                'Find Out More!'
-              )
-            )
-          )
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'div',
-          { className: 'search-card col-lg-4 col-md-6' },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'div',
-            { className: 'card z-depth-1' },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              'div',
-              { className: 'view overlay' },
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).jpg', className: 'card-img-top', alt: 'narrower' }),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'a',
-                null,
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'mask rgba-white-slight waves-effect waves-light' })
-              )
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              'div',
-              { className: 'card-body card-body-cascade' },
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'h5',
-                { className: 'card-title' },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fas fa-euro-sign' }),
-                ' Culinary'
-              ),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'h4',
-                { className: 'card-title' },
-                'Cheat day inspirations'
-              ),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'p',
-                { className: 'card-text' },
-                'Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi.'
-              ),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'a',
-                { className: 'btn btn-primary' },
-                'Find Out More!'
-              )
-            )
-          )
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'div',
-          { className: 'search-card col-lg-4 col-md-6' },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'div',
-            { className: 'card z-depth-1' },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              'div',
-              { className: 'view overlay' },
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).jpg', className: 'card-img-top', alt: 'narrower' }),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'a',
-                null,
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'mask rgba-white-slight waves-effect waves-light' })
-              )
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              'div',
-              { className: ' card-body card-body-cascade' },
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'h5',
-                { className: 'card-title' },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fas fa-euro-sign' }),
-                ' Culinary'
-              ),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'h4',
-                { className: 'card-title' },
-                'Cheat day inspirations'
-              ),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'p',
-                { className: 'card-text' },
-                'Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi.'
-              ),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'a',
-                { className: 'btn btn-primary' },
-                'Find Out More!'
-              )
-            )
-          )
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'div',
-          { className: 'search-card col-lg-4 col-md-6' },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'div',
-            { className: 'card z-depth-1' },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              'div',
-              { className: 'view overlay' },
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).jpg', className: 'card-img-top', alt: 'narrower' }),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'a',
-                null,
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'mask rgba-white-slight waves-effect waves-light' })
-              )
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              'div',
-              { className: 'card-body card-body-cascade' },
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'h5',
-                { className: 'card-title' },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fas fa-euro-sign' }),
-                ' Culinary'
-              ),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'h4',
-                { className: 'card-title' },
-                'Cheat day inspirations'
-              ),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'p',
-                { className: 'card-text' },
-                'Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi.'
-              ),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'a',
-                { className: 'btn btn-primary' },
-                'Find Out More!'
-              )
-            )
-          )
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'div',
-          { className: 'search-card col-lg-4 col-md-6' },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'div',
-            { className: 'card z-depth-1' },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              'div',
-              { className: 'view overlay' },
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).jpg', className: 'card-img-top', alt: 'narrower' }),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'a',
-                null,
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'mask rgba-white-slight waves-effect waves-light' })
-              )
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              'div',
-              { className: ' card-body card-body-cascade' },
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'h5',
-                { className: 'card-title' },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fas fa-euro-sign' }),
-                ' Culinary'
-              ),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'h4',
-                { className: 'card-title' },
-                'Cheat day inspirations'
-              ),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'p',
-                { className: 'card-text' },
-                'Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi.'
-              ),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'a',
-                { className: 'btn btn-primary' },
-                'Find Out More!'
-              )
-            )
-          )
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'div',
-          { className: 'search-card col-lg-4 col-md-6' },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'div',
-            { className: 'card z-depth-1' },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              'div',
-              { className: 'view overlay' },
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).jpg', className: 'card-img-top', alt: 'narrower' }),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'a',
-                null,
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'mask rgba-white-slight waves-effect waves-light' })
-              )
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              'div',
-              { className: 'card-body card-body-cascade' },
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'h5',
-                { className: 'card-title' },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fas fa-euro-sign' }),
-                ' Culinary'
-              ),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'h4',
-                { className: 'card-title' },
-                'Cheat day inspirations'
-              ),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'p',
-                { className: 'card-text' },
-                'Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi.'
-              ),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'a',
-                { className: 'btn btn-primary' },
-                'Find Out More!'
-              )
-            )
-          )
-        )
-      );
+        _this.state = {
+            activities: []
+        };
+        return _this;
     }
-  }]);
 
-  return Result;
+    _createClass(Result, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            var currentComponent = this;
+
+            axios.get('/api/activities').then(function (res) {
+                var result = res.data.data;
+                currentComponent.setState({
+                    activities: result
+                });
+            }).catch(function (error) {
+                console.log(error);
+            });
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'div',
+                { className: 'row' },
+                this.state.activities.map(function (activity) {
+                    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { key: activity.id, className: 'search-card col-lg-4 col-md-6' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'card z-depth-1' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'div',
+                                { className: 'view overlay' },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).jpg', className: 'card-img-top', alt: 'narrower' }),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'a',
+                                    { href: '/detailActivity/' + activity.id },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'mask rgba-white-slight waves-effect waves-light' })
+                                )
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'div',
+                                { className: ' card-body card-body-cascade' },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'h5',
+                                    { className: 'card-title' },
+                                    activity.name
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'p',
+                                    { className: 'card-text' },
+                                    activity.description
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'a',
+                                    { className: 'btn btn-primary' },
+                                    'Ajouter au panier'
+                                )
+                            )
+                        )
+                    );
+                })
+            );
+        }
+    }]);
+
+    return Result;
 }(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
 
 /* harmony default export */ __webpack_exports__["a"] = (Result);

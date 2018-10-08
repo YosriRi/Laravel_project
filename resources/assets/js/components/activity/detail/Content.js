@@ -5,25 +5,50 @@ import Comment from './Comment';
 export default class Content extends Component {
 	constructor(props) {
 		super(props);
+		const url = window.location.pathname;
+		const id = url.substring(url.lastIndexOf('/') + 1);
+
+		this.state = {
+            id: id,
+            activity: []
+        };
 	}
 
+	componentDidMount() {
+        let currentComponent = this;
+
+        console.log(this.state.id);
+
+        axios.get('/api/activities/' + this.state.id)
+        .then(function (res) {
+            const result = res.data.data;
+            currentComponent.setState({
+                activity: result
+            });
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+    }
+
 	render() {
+		const activity = this.state.activity;
 		const divStyle1 = {
 			background: 'url(/images/parachute1.JPG) no-repeat center top',
-			'background-size': 'cover'
+			backgroundSize: 'cover'
 		}
 		const divStyle2 = {
 			background: 'url(/images/parachute2.JPG) no-repeat center top',
-			'background-size': 'cover'
+			backgroundSize: 'cover'
 		}
 		const divStyle3 = {
 			background: 'url(/images/parachute3.png) no-repeat center top',
-			'background-size': 'cover',
+			backgroundSize: 'cover',
 			cursor: 'pointer'
 		}
 		return (
 			<div className="col-lg-8">
-				<h1 className="mt-4">Saut en Parachute</h1>
+				<h1 className="mt-4">{activity.name}</h1>
 				<p className="lead">
 					Catégorie :
 					<a href="#">Air</a>
@@ -77,7 +102,7 @@ export default class Content extends Component {
 						</div>
 						<div id="collapseTwo" className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
 							<div className="panel-body">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								{activity.description}
 							</div>
 						</div>
 					</div>
