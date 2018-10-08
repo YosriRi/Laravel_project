@@ -5,7 +5,16 @@ import Cookies from 'universal-cookie';
 export default class Connected extends Component {
 	constructor(props) {
 		super(props);
-		console.log(this.props.user, 'props');
+		this.state = {
+			user: []
+		}
+	}
+
+	componentWillReceiveProps(user) {
+		const currentComponent = this;
+		currentComponent.setState({
+			user: user.user
+		});
 	}
 
 	logout(event) {
@@ -19,16 +28,17 @@ export default class Connected extends Component {
             window.location.replace("/login");
         })
         .catch(function (error) {
-            console.log(error);
+            console.log(error, 'error');
             alert('Déconnexion impossible');
         });
 	}
 
 	render() {
+		const user = this.state.user;
 		return (
 			<ul className="authentification">
 				<li>
-					<a href="#">sdfd</a>
+					<a href="#">{user.firstname + ' ' + user.lastname}</a>
 				</li>
 				<li>
 					<p>|</p>

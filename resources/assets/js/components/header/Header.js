@@ -18,12 +18,13 @@ export default class Header extends Component {
 	componentWillMount() {
 		const currentComponent = this;
 		const cookies = this.state.cookies.get('userCookie');
+		console.log(cookies);
 
-		if (cookies) {
+		if (cookies !== undefined) {
+			console.log('toto');
 			axios.get('/api/user?token=' + cookies)
 	        .then(function (res) {
 	            const result = res.data.user;
-	            console.log(result, 'result');
 	            currentComponent.setState({
 	                user: result
 	            });
@@ -36,13 +37,11 @@ export default class Header extends Component {
 
 	render() {
 		let connected;
-		console.log(this.state.user, 'user');
-		if (this.state.user) {
-			console.log(this.state.user, 'user23');
+		const user = this.state.user;
+		console.log(this.state.user, 'uu');
+		if (user !== undefined) {
 			connected = <Connected user={this.state.user}/>;
-			console.log(this.state.user, 'user2555');
 		} else {
-			console.log('ttrtretre');
 			connected = <NotConnected />;
 		}
 		return (
