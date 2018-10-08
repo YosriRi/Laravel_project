@@ -17,8 +17,6 @@ export default class Content extends Component {
 	componentDidMount() {
         let currentComponent = this;
 
-        console.log(this.state.id);
-
         axios.get('/api/activities/' + this.state.id)
         .then(function (res) {
             const result = res.data.data;

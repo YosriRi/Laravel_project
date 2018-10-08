@@ -10,7 +10,7 @@ import Community from './Community';
 
 export default class Home extends Component {
 	constructor(props) {
-		super(props); 
+		super(props);
 	}
 
 	render() {
