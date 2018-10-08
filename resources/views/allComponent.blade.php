@@ -30,15 +30,36 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-        <script src="/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     </head>
     <body>
-        <div id="headerComponent">
-        </div>
-        <div id="{{$name}}">
-        </div>
-        <div id="footerComponent">
-        </div>
+
+        <h1>Header</h1>
+        <div id="headerComponent"></div>
+        <h1>Footer</h1>
+        <div id="footerComponent"></div>
+        <h1>Activity</h1>
+        <div id="detailActivityComponent"></div>
+        <h1>Home</h1>
+        <div id="homeComponent"></div>
+        <h1>Login</h1>
+        <div id="loginComponent"></div>
+        <h1>other</h1>
+        <div id="otherComponent"></div>
+        <h1>payment</h1>
+        <div id="paymentComponent"></div>
+        <h1>profile</h1>
+        <div id="profileComponent"></div>
+        <h1>register</h1>
+        <div id="registerComponent"></div>
+        <h1>reservation</h1>
+        <div id="reservationComponent"></div>
+        <h1>searchResult</h1>
+        <div id="searchResultComponent"></div>
+        <h1>slide</h1>
+        <div id="slideComponent"></div>
+        <h1>visualizePhoto</h1>
+        <div id="visualizePhotoComponent"></div>
 
         <!-- START SCROLL TO TOP  -->
 
@@ -50,10 +71,10 @@
         <script src="{{ asset('js/vendor/bootstrap.min.js') }}"></script>
         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 
-        <script src="/js/jquery.mixitup.min.js"></script>
-        <script src="/js/jquery.easing.1.3.js"></script>
-        <script src="/js/jquery.masonry.min.js"></script>
-        <script src="/js/jquery.fancybox.pack.js"></script>
+        <script src="js/jquery.mixitup.min.js"></script>
+        <script src="js/jquery.easing.1.3.js"></script>
+        <script src="js/jquery.masonry.min.js"></script>
+        <script src="js/jquery.fancybox.pack.js"></script>
 
         <!--This link is only for gmaps-->
         <!-- <script src="http://maps.google.com/maps/api/js"></script>
@@ -65,9 +86,9 @@
             baguetteBox.run('.tz-gallery');
         </script>
 
-        <script src="/js/plugins.js"></script>
-        <script src="/js/main.js"></script>
-        <script src="/js/app.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/app.js"></script>
 
     </body>
 </html>

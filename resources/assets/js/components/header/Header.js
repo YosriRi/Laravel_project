@@ -14,8 +14,8 @@ export default class Header extends Component {
 					<div className="uou-block-1a blog">
 						<div className="containerToolbar">
 							<div className=" language">
-								<a href="#"><img src="images/France-Flag.ico" className="toggle" alt="FR" /></a>
-								<a href="#"><img src="images/United-Kingdom-Flag.ico" className="toggle" alt="EN" /></a>
+								<a href="#"><img src="/images/France-Flag.ico" className="toggle" alt="FR" /></a>
+								<a href="#"><img src="/images/United-Kingdom-Flag.ico" className="toggle" alt="EN" /></a>
 							</div>
 							<ul className="social">
 								<li>
