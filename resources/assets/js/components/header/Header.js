@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import SubHeader from './SubHeader';
+import Connected from './Connected';
+import NotConnected from './NotConnected';
 import Cookies from 'universal-cookie';
 
 export default class Header extends Component {
@@ -13,7 +15,7 @@ export default class Header extends Component {
         };
 	}
 
-	componentDidMount() {
+	componentWillMount() {
 		const currentComponent = this;
 		const cookies = this.state.cookies.get('userCookie');
 
@@ -21,6 +23,7 @@ export default class Header extends Component {
 			axios.get('/api/user?token=' + cookies)
 	        .then(function (res) {
 	            const result = res.data.user;
+	            console.log(result, 'result');
 	            currentComponent.setState({
 	                user: result
 	            });
@@ -32,6 +35,16 @@ export default class Header extends Component {
 	}
 
 	render() {
+		let connected;
+		console.log(this.state.user, 'user');
+		if (this.state.user) {
+			console.log(this.state.user, 'user23');
+			connected = <Connected user={this.state.user}/>;
+			console.log(this.state.user, 'user2555');
+		} else {
+			console.log('ttrtretre');
+			connected = <NotConnected />;
+		}
 		return (
 			<div>
 				<div className="toolbar">
@@ -52,17 +65,7 @@ export default class Header extends Component {
 									<a href="" className="fa fa-google-plus"></a>
 								</li>
 							</ul>
-							<ul className="authentification">
-								<li>
-									<a href="/login">Login</a>
-								</li>
-								<li>
-									<p>|</p>
-								</li>
-								<li>
-									<a href="/register">Register</a>
-								</li>
-							</ul>
+							{connected}
 						</div>
 					</div>
 				</div>
