@@ -14,9 +14,7 @@ export default class Result extends Component {
 
         axios.get('/api/activities')
         .then(function (res) {
-            console.log(res, 'res');
             const result = res.data.data;
-            console.log(result, 'result');
             currentComponent.setState({
                 activities: result
             });

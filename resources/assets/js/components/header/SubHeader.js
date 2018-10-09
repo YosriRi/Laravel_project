@@ -1,12 +1,33 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import Cookies from 'universal-cookie';
+import Cart from './Cart';
 
 export default class SubHeader extends Component {
 	constructor(props) {
 		super(props);
+		const cookies = new Cookies();
+
+		this.state = {
+            user: [],
+            cookie: cookies.get('userCookie')
+        };
+	}
+
+	componentWillReceiveProps(user) {
+		const currentComponent = this;
+		currentComponent.setState({
+			user: user.user
+		});
 	}
 
 	render() {
+		const user = this.state.user;
+		let cartLink;
+
+		if (this.state.cookie !== undefined) {
+			cartLink = <Cart user={user} />
+		}
 		return (
 			<nav className="navbar navbar-expand-lg nav_bg navbar-dark">
 				<div className="container">
@@ -39,11 +60,7 @@ export default class SubHeader extends Component {
 							<li className="nav-item">
 								<a className="nav-link" href="#">Contact</a>
 							</li>
-							<li className="nav-item">
-								<a className="nav-link" href="#">
-									<i className="fas fa-shopping-cart"></i>
-								</a>
-							</li>
+							{cartLink}
 							<li className="nav-item">
 								<a className="nav-link" href="#">
 									<i className="fas fa-search"></i>

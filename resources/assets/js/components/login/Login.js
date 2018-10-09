@@ -20,7 +20,7 @@ export default class Login extends Component {
             password: password
         })
         .then(res => {
-            cookies.set('userCookie', res.data.token, { path: '/' });
+            cookies.set('userCookie', res.data.token, { path: '/', maxAge: 10800 });
             alert("Connexion réussi");
             window.location.replace("/");
         })

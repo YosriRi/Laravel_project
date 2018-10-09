@@ -21,4 +21,8 @@ Route::get('/activity', 'PageController@searchResult');
 
 Route::get('/detailActivity/{id}', 'PageController@detailActivity');
 
+Route::get('/profile/{id}', 'PageController@profile');
+
+Route::get('/cart/{id}', 'PageController@cart');
+
 Route::get('/all', 'PageController@all');
