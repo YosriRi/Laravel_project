@@ -5,6 +5,7 @@ import Cookies from 'universal-cookie';
 export default class Connected extends Component {
 	constructor(props) {
 		super(props);
+
 		this.state = {
 			user: []
 		}
@@ -22,15 +23,9 @@ export default class Connected extends Component {
 
 		const cookies = new Cookies();
 
-		axios.get('/api/logout?token=' + cookies.get('userCookie'))
-        .then(function (res) {
-            alert('Déconnexion réussi');
-            window.location.replace("/login");
-        })
-        .catch(function (error) {
-            console.log(error, 'error');
-            alert('Déconnexion impossible');
-        });
+		cookies.remove('userCookie');
+		alert('Déconnexion réussi');
+        location.reload();
 	}
 
 	render() {
@@ -38,7 +33,7 @@ export default class Connected extends Component {
 		return (
 			<ul className="authentification">
 				<li>
-					<a href="#">{user.firstname + ' ' + user.lastname}</a>
+					<a href={'/profile/' + user.id}>{user.firstname + ' ' + user.lastname}</a>
 				</li>
 				<li>
 					<p>|</p>

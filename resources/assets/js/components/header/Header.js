@@ -8,21 +8,17 @@ import Cookies from 'universal-cookie';
 export default class Header extends Component {
 	constructor(props) {
 		super(props);
+		const cookies = new Cookies();
+		const currentComponent = this;
+        const cookie = cookies.get('userCookie');
 
 		this.state = {
-			cookies: new Cookies(),
-            user: []
+            user: [],
+            cookie: cookie
         };
-	}
 
-	componentWillMount() {
-		const currentComponent = this;
-		const cookies = this.state.cookies.get('userCookie');
-		console.log(cookies);
-
-		if (cookies !== undefined) {
-			console.log('toto');
-			axios.get('/api/user?token=' + cookies)
+        if (cookie !== undefined) {
+			axios.get('/api/user?token=' + cookie)
 	        .then(function (res) {
 	            const result = res.data.user;
 	            currentComponent.setState({
@@ -38,9 +34,9 @@ export default class Header extends Component {
 	render() {
 		let connected;
 		const user = this.state.user;
-		console.log(this.state.user, 'uu');
-		if (user !== undefined) {
-			connected = <Connected user={this.state.user}/>;
+
+		if (this.state.cookie !== undefined) {
+			connected = <Connected user={user}/>;
 		} else {
 			connected = <NotConnected />;
 		}
@@ -68,7 +64,7 @@ export default class Header extends Component {
 						</div>
 					</div>
 				</div>
-				<SubHeader/>
+				<SubHeader user={user}/>
 			</div>
 		);
 	}

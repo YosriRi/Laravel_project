@@ -32,7 +32,7 @@ export default class Profile extends Component {
                         					<h3>About</h3>
                         					<div className="row profile-in">
                             					<div className="media-left col-xs-12">
-                                    				<img src="images/user.jpg" alt="" className="img-fluid media-object" />
+                                    				<img src="/images/user.jpg" alt="" className="img-fluid media-object" />
                             					</div>
                             					<div className="media-body col-xs-12">
                                 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, mollitia, voluptatibus similique aliquidautem laudantium sapiente ad enim ipsa modi labo rum accusantium deleniti neque architecto vitae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, nihil, dolores, culpa ullam vero ipsum placeat accusamus nemo itate id molestiae consectetur quae pariatur repudi andae vel ex quaerat nam iusto aliquid laborum quia adipisci aut ut imcati nisi deleniti tempore maxime sequi fugit reiciendis libero quo. Rerum, assumenda. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, at nemo inventore temporibus corporis suscipit.</p>
