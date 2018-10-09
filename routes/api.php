@@ -108,6 +108,15 @@ Route::group(['middleware' => ['jwt.verify']], function() {
 	Route::delete('gifts/{id}', 'GiftController@destroy');
 
 	/**
+	* Carts
+	**/
+	Route::get('carts', 'CartController@index');
+	Route::get('carts/{id}', 'CartController@show');
+	Route::post('carts', 'CartController@store');
+	Route::put('carts/{id}', 'CartController@update');
+	Route::delete('carts/{id}', 'CartController@destroy');
+
+	/**
 	* Promotions
 	**/
 	Route::get('promotions/{id}', 'PromotionController@show');

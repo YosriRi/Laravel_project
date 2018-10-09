@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import Cookies from 'universal-cookie';
 
 export default class Login extends Component {
 	constructor(props) {
@@ -9,7 +8,6 @@ export default class Login extends Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        const cookies = new Cookies();
         const target = event.target;
 
         const email             = target.inputEmailLogin.value;
@@ -20,13 +18,12 @@ export default class Login extends Component {
             password: password
         })
         .then(res => {
-            cookies.set('userCookie', res.data.token, { path: '/', maxAge: 10800 });
+            localStorage.setItem('userToken', res.data.token);
             alert("Connexion réussi");
             window.location.replace("/");
         })
         .catch(function (error) {
-            console.log(error, 'error');
-            alert('Problème de connexion');
+            alert('Utilisateur n\'existe pas');
         });
     }
 
