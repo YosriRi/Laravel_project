@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Gift;
 use App\Http\Resources\Gift as GiftResource;
-use Unlu\Laravel\Api\QueryBuilder;
 
 class GiftController extends Controller
 {
@@ -17,10 +16,8 @@ class GiftController extends Controller
      */
     public function index()
     {
-        // Get gifts
         $gifts = Gift::paginate(15);
 
-        //Return collection of gifts as a resource
         return GiftResource::collection($gifts);
     }
 
@@ -32,11 +29,14 @@ class GiftController extends Controller
      */
     public function store(Request $request)
     {
-        $gift = $request->isMethod('put') ? Gift::findOrFail($request->gift_id) : new Gift;
-        $gift->id = $request->input('gift_id');
-        $gift->gift = $request->input('gift');
-        $gift->id_user = $request->input('id_user');
-        if($gift->save()) {
+        $gift = new Gift;
+
+        $gift->id_user      = $request->input('id_user');
+        $gift->id_activity  = $request->input('id_activity');
+        $gift->message      = $request->input('message');
+        $gift->email        = $request->input('email');
+
+        if ($gift->save()) {
             return new GiftResource($gift);
         }
     }
@@ -49,13 +49,10 @@ class GiftController extends Controller
      */
     public function show($id)
     {
-        // Get gift
         $gift = Gift::findOrFail($id);
-        // Return single gift as a resource
+
         return new GiftResource($gift);
     }
-
-
 
     /**
      * Update the specified resource in storage.
@@ -66,7 +63,16 @@ class GiftController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $gift = Gift::findOrFail($id);;
+
+        $gift->id_user      = $request->input('id_user');
+        $gift->id_activity  = $request->input('id_activity');
+        $gift->message      = $request->input('message');
+        $gift->email        = $request->input('email');
+
+        if ($gift->save()) {
+            return new GiftResource($gift);
+        }
     }
 
     /**
@@ -77,10 +83,9 @@ class GiftController extends Controller
      */
     public function destroy($id)
     {
-        // Get gift
         $gift = Gift::findOrFail($id);
         
-        if($gift->delete()) {
+        if ($gift->delete()) {
             return new GiftResource($gift);
         } 
     }

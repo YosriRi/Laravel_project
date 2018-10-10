@@ -15,10 +15,14 @@ class CreateSalesTable extends Migration
     {
         Schema::create('sales', function (Blueprint $table) {
             $table->increments('id');
-            $table->decimal('sales_amount');
-            $table->integer('id_promotion');
-            $table->decimal('activity_price');
+            $table->integer('id_reservation')->unsigned();
+            $table->decimal('amount');
             $table->timestamps();
+
+            $table->foreign('id_reservation')
+            ->references('id')
+            ->on('reservations')
+            ->onDelete('cascade');
         });
     }
 

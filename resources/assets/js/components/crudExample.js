@@ -1,19 +1,29 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import axios from 'axios';
 
 export default class CrudExample extends Component {
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
         this.state = {
             activities: []
         };
+
+        // this.componentDidMount = this.componentDidMount.bind(this);
     }
 
     componentDidMount() {
+        let currentComponent = this;
+
         axios.get('/api/activities')
-        .then(res => {
-            const activities = res.data.data.data;
-            this.setState({activities});
+        .then(function (res) {
+            const result = res.data.data;
+            currentComponent.setState({
+                activities: result
+            });
+        })
+        .catch(function (error) {
+            console.log(error);
         });
     }
 
@@ -40,16 +50,23 @@ export default class CrudExample extends Component {
             console.log(res);
             console.log(res.data);
         })
+        .catch(function (error) {
+            console.log(error);
+        });
     }
 
     handleDelete(event) {
         event.preventDefault();
 
+        console.log(event.target.id.value);
         axios.delete('/api/activities/'+event.target.id.value)
         .then(res => {
             console.log(res);
             console.log(res.data);
         })
+        .catch(function (error) {
+            console.log(error);
+        });
     }
 
     render() {

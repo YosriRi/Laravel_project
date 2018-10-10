@@ -15,9 +15,20 @@ class CreateReservationsTable extends Migration
     {
         Schema::create('reservations', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('description');
-            $table->datetime('date_of_activity');
+            $table->integer('id_user')->unsigned();
+            $table->integer('id_activity')->unsigned();
+            $table->decimal('amount');
             $table->timestamps();
+
+            $table->foreign('id_user')
+            ->references('id')
+            ->on('users')
+            ->onDelete('cascade');
+
+            $table->foreign('id_activity')
+            ->references('id')
+            ->on('activities')
+            ->onDelete('cascade');
         });
     }
 

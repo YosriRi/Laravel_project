@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Promotion;
 use App\Http\Resources\Promotion as PromotionResource;
-use Unlu\Laravel\Api\QueryBuilder;
 
 class PromotionController extends Controller
 {
@@ -17,10 +16,8 @@ class PromotionController extends Controller
      */
     public function index()
     {
-        // Get promotions
         $promotions = Promotion::paginate(15);
 
-        //Return collection of promotions as a resource
         return PromotionResource::collection($promotions);
     }
 
@@ -32,11 +29,14 @@ class PromotionController extends Controller
      */
     public function store(Request $request)
     {
-        $promotion = $request->isMethod('put') ? Promotion::findOrFail($request->promotion_id) : new Promotion;
-        $promotion->id = $request->input('promotion_id');
-        $promotion->promotion = $request->input('promotion');
-        $promotion->id_user = $request->input('id_user');
-        if($promotion->save()) {
+        $promotion = new Promotion;
+
+        $promotion->id_category = $request->input('id_category');
+        $promotion->id_type     = $request->input('id_type');
+        $promotion->description = $request->input('description');
+        $promotion->amount      = $request->input('amount');
+
+        if ($promotion->save()) {
             return new PromotionResource($promotion);
         }
     }
@@ -49,13 +49,10 @@ class PromotionController extends Controller
      */
     public function show($id)
     {
-        // Get promotion
         $promotion = Promotion::findOrFail($id);
-        // Return single promotion as a resource
+
         return new PromotionResource($promotion);
     }
-
-
 
     /**
      * Update the specified resource in storage.
@@ -66,7 +63,16 @@ class PromotionController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $promotion = Promotion::findOrFail($id);
+
+        $promotion->id_category = $request->input('id_category');
+        $promotion->id_type     = $request->input('id_type');
+        $promotion->description = $request->input('description');
+        $promotion->amount      = $request->input('amount');
+
+        if ($promotion->save()) {
+            return new PromotionResource($promotion);
+        }
     }
 
     /**
@@ -77,10 +83,9 @@ class PromotionController extends Controller
      */
     public function destroy($id)
     {
-        // Get promotion
         $promotion = Promotion::findOrFail($id);
         
-        if($promotion->delete()) {
+        if ($promotion->delete()) {
             return new PromotionResource($promotion);
         } 
     }

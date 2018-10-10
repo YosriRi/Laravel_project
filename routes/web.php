@@ -11,14 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', 'PageController@index');
 
-Auth::routes();
+Route::get('/login', 'AuthController@login');
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/register', 'AuthController@register');
 
-Route::get('/crudExample', function () {
-    return view('crudExample');
-});
+Route::get('/activity', 'PageController@searchResult');
+
+Route::get('/detailActivity/{id}', 'PageController@detailActivity');
+
+Route::get('/all', 'PageController@all');

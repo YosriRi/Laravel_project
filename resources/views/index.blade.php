@@ -30,16 +30,14 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     </head>
     <body>
-
-        <div class="culmn">  
-        @include ('include.header');
-        @include ('include.home');
-        @include ('include.footer');
-         
-
+        <div id="headerComponent">
+        </div>
+        <div id="{{$name}}">
+        </div>
+        <div id="footerComponent">
         </div>
 
         <!-- START SCROLL TO TOP  -->
@@ -52,10 +50,10 @@
         <script src="{{ asset('js/vendor/bootstrap.min.js') }}"></script>
         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 
-        <script src="js/jquery.mixitup.min.js"></script>
-        <script src="js/jquery.easing.1.3.js"></script>
-        <script src="js/jquery.masonry.min.js"></script>
-        <script src="js/jquery.fancybox.pack.js"></script>
+        <script src="/js/jquery.mixitup.min.js"></script>
+        <script src="/js/jquery.easing.1.3.js"></script>
+        <script src="/js/jquery.masonry.min.js"></script>
+        <script src="/js/jquery.fancybox.pack.js"></script>
 
         <!--This link is only for gmaps-->
         <!-- <script src="http://maps.google.com/maps/api/js"></script>
@@ -67,8 +65,9 @@
             baguetteBox.run('.tz-gallery');
         </script>
 
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+        <script src="/js/plugins.js"></script>
+        <script src="/js/main.js"></script>
+        <script src="/js/app.js"></script>
 
     </body>
 </html>
