@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import Cookies from 'universal-cookie';
 
 export default class Connected extends Component {
 	constructor(props) {
@@ -20,12 +19,9 @@ export default class Connected extends Component {
 
 	logout(event) {
 		event.preventDefault();
-
-		const cookies = new Cookies();
-
-		cookies.remove('userCookie');
+		localStorage.clear();
 		alert('Déconnexion réussi');
-        location.reload();
+        window.location.replace("/");
 	}
 
 	render() {

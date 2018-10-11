@@ -4,7 +4,31 @@ import ReactDOM from 'react-dom';
 export default class Cart extends Component {
 	constructor(props) {
 		super(props);
+        const token = localStorage.getItem('userToken');
+        const user = localStorage.getItem('user');
+
+        if (token === null) {
+            window.location.replace("/");
+        }
+
+        console.log(JSON.parse(user));
+        console.log(token);
 	}
+
+    // componentDidMount() {
+    //     let currentComponent = this;
+
+    //     axios.get('/api/carts')
+    //     .then((res) => {
+    //         const result = res.data.data;
+    //         currentComponent.setState({
+    //             activities: result
+    //         });
+    //     })
+    //     .catch(function (error) {
+    //         console.log(error);
+    //     });
+    // }
     
 	render() {
 		return (

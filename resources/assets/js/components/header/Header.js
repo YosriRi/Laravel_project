@@ -3,27 +3,30 @@ import ReactDOM from 'react-dom';
 import SubHeader from './SubHeader';
 import Connected from './Connected';
 import NotConnected from './NotConnected';
-import Cookies from 'universal-cookie';
 
 export default class Header extends Component {
 	constructor(props) {
 		super(props);
-		const cookies = new Cookies();
 		const currentComponent = this;
-        const cookie = cookies.get('userCookie');
+        const token = localStorage.getItem('userToken');
 
 		this.state = {
             user: [],
-            cookie: cookie
+            token: token
         };
 
-        if (cookie !== undefined) {
-			axios.get('/api/user?token=' + cookie)
+        if (token !== null) {
+			axios.get('/api/user?token=' + token)
 	        .then(function (res) {
 	            const result = res.data.user;
-	            currentComponent.setState({
-	                user: result
-	            });
+	            if (result !== undefined) {
+	            	currentComponent.setState({
+	                	user: result
+	            	});
+	            	localStorage.setItem('user', JSON.stringify(result));
+	            } else {
+	            	localStorage.clear();
+	            }
 	        })
 	        .catch(function (error) {
 	            console.log(error);
@@ -35,7 +38,7 @@ export default class Header extends Component {
 		let connected;
 		const user = this.state.user;
 
-		if (this.state.cookie !== undefined) {
+		if (this.state.token !== null) {
 			connected = <Connected user={user}/>;
 		} else {
 			connected = <NotConnected />;

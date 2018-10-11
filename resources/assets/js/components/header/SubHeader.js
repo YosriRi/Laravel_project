@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import Cookies from 'universal-cookie';
 import Cart from './Cart';
 
 export default class SubHeader extends Component {
 	constructor(props) {
 		super(props);
-		const cookies = new Cookies();
 
 		this.state = {
             user: [],
-            cookie: cookies.get('userCookie')
+            token: localStorage.getItem('userToken')
         };
 	}
 
@@ -24,8 +22,7 @@ export default class SubHeader extends Component {
 	render() {
 		const user = this.state.user;
 		let cartLink;
-
-		if (this.state.cookie !== undefined) {
+		if (this.state.token !== null) {
 			cartLink = <Cart user={user} />
 		}
 		return (

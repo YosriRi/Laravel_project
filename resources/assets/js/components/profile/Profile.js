@@ -6,6 +6,11 @@ import Reference from './Reference';
 export default class Profile extends Component {
 	constructor(props) {
 		super(props);
+        const token = localStorage.getItem('userToken');
+
+        if (token === null) {
+            window.location.replace("/");
+        }
 	}
 
 	render() {
