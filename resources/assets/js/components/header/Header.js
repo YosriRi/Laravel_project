@@ -15,14 +15,18 @@ export default class Header extends Component {
             token: token
         };
 
-        if (token !== undefined) {
+        if (token !== null) {
 			axios.get('/api/user?token=' + token)
 	        .then(function (res) {
 	            const result = res.data.user;
-	            currentComponent.setState({
-	                user: result
-	            });
-	            localStorage.setItem('user', JSON.stringify(result));
+	            if (result !== undefined) {
+	            	currentComponent.setState({
+	                	user: result
+	            	});
+	            	localStorage.setItem('user', JSON.stringify(result));
+	            } else {
+	            	localStorage.clear();
+	            }
 	        })
 	        .catch(function (error) {
 	            console.log(error);

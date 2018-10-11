@@ -22,7 +22,6 @@ export default class SubHeader extends Component {
 	render() {
 		const user = this.state.user;
 		let cartLink;
-
 		if (this.state.token !== null) {
 			cartLink = <Cart user={user} />
 		}

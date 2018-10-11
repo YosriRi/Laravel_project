@@ -19,7 +19,7 @@ export default class Connected extends Component {
 
 	logout(event) {
 		event.preventDefault();
-		localStorage.removeItem('userCookie');
+		localStorage.clear();
 		alert('Déconnexion réussi');
         window.location.replace("/");
 	}

@@ -4,9 +4,12 @@ import ReactDOM from 'react-dom';
 export default class Cart extends Component {
 	constructor(props) {
 		super(props);
-
-        const user = localStorage.getItem('user');
         const token = localStorage.getItem('userToken');
+        const user = localStorage.getItem('user');
+
+        if (token === null) {
+            window.location.replace("/");
+        }
 
         console.log(JSON.parse(user));
         console.log(token);
