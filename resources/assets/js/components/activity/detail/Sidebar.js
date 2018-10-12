@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import Reservation from './Reservation';
 
 export default class Sidebar extends Component {
     constructor(props) {
@@ -7,6 +8,11 @@ export default class Sidebar extends Component {
     }
 
     render() {
+        const token = localStorage.getItem('userToken');
+        let reservationButton;
+        if (token !== null) {
+            reservationButton = <Reservation/>;
+        }
         return (
             <div className="col-md-4">
     			<div className="card my-4">
@@ -54,10 +60,10 @@ export default class Sidebar extends Component {
       				</div>
     			</div>
 				<div className="card my-4">
-						<h5 className="card-header">Side Widget</h5>
-  					<div className="card-body">
-    					You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
-  					</div>
+					<h5 className="card-header">Side Widget</h5>
+				    <div className="card-body">
+                        {reservationButton}
+			        </div>
 				</div>
 			</div>
         );

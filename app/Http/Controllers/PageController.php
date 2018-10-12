@@ -26,6 +26,16 @@ class PageController extends Controller
         return view('index', ['name' => 'detailActivityComponent']);
     }
 
+    public function profile($id)
+    {
+        return view('index', ['name' => 'profileComponent']);
+    }
+
+    public function cart($id)
+    {
+        return view('index', ['name' => 'paymentComponent']);
+    }
+
     public function all()
     {
         return view('allComponent');

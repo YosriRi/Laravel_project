@@ -16,7 +16,7 @@ export default class Footer extends Component {
 	                    	<div className="col-4">
 	                        	<div className="single_widget wow fadeIn" data-wow-duration="800ms">
 	                            	<div className="footer_logo">
-	                                	<img src="images/footerlogo.png" alt="" />
+	                                	<img src="/images/footerlogo.png" alt="" />
 	                            	</div>
 	                            	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
 	                            	<div className="footer_subcribs_area">
@@ -50,7 +50,7 @@ export default class Footer extends Component {
 	                                    	<span className="separator4"></span>
 	                                		<div className="single_widget_blog">
 	                                    		<div className="single_widget_img">
-	                                        		<img src="images/fb1.jpg" alt="" />
+	                                        		<img src="/images/fb1.jpg" alt="" />
 	                                    		</div>
 	                                    		<div className="single_widget_content">
 	                                        		<p className="monseratregular">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
@@ -59,7 +59,7 @@ export default class Footer extends Component {
 	                                		</div>
 	                                		<div className="single_widget_blog">
 	                                        	<div className="single_widget_img">
-	                                            	<img src="images/fb2.jpg" alt="" />
+	                                            	<img src="/images/fb2.jpg" alt="" />
 	                                        	</div>
 	                                        	<div className="single_widget_content">
 	                                            	<p className="monseratregular">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
@@ -68,7 +68,7 @@ export default class Footer extends Component {
 	                                    	</div>
 	                                		<div className="single_widget_blog">
 	                                        	<div className="single_widget_img">
-	                                            	<img src="images/fb3.jpg" alt="" />
+	                                            	<img src="/images/fb3.jpg" alt="" />
 	                                        	</div>
 	                                        	<div className="single_widget_content">
 	                                            	<p className="monseratregular">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
@@ -84,31 +84,31 @@ export default class Footer extends Component {
 	                                    	<div className="footer_gellary">
 	                                        	<div className="row">
 	                                            	<div className="col-md-4 col-6 no-padding">
-	                                                	<img src="images/fg1.jpg" alt="" />
+	                                                	<img src="/images/fg1.jpg" alt="" />
 	                                            	</div>
 	                                            	<div className="col-md-4 col-6 no-padding">
-	                                                	<img src="images/fg2.jpg" alt="" />
+	                                                	<img src="/images/fg2.jpg" alt="" />
 	                                            	</div>
 		                                            <div className="col-md-4 col-6 no-padding">
-	                                                	<img src="images/fg3.jpg" alt="" />
+	                                                	<img src="/images/fg3.jpg" alt="" />
 	                                            	</div>
 	                                            	<div className="col-md-4 col-6 no-padding">
-		                                                <img src="images/fg4.jpg" alt="" />
+		                                                <img src="/images/fg4.jpg" alt="" />
 	                                            	</div>
 	                                            	<div className="col-md-4 col-6 no-padding">
-	                                                	<img src="images/fg5.jpg" alt="" />
+	                                                	<img src="/images/fg5.jpg" alt="" />
 	                                            	</div>
 	                                            	<div className="col-md-4 col-6 no-padding">
-		                                                <img src="images/fg6.jpg" alt="" />
+		                                                <img src="/images/fg6.jpg" alt="" />
 		                                            </div>
 	                                            	<div className="col-md-4 col-6 no-padding">
-	                                                	<img src="images/fg7.jpg" alt="" />
+	                                                	<img src="/images/fg7.jpg" alt="" />
 	                                            	</div>
 	                                            	<div className="col-md-4 col-6 no-padding">
-	                                                	<img src="images/fg8.jpg" alt="" />
+	                                                	<img src="/images/fg8.jpg" alt="" />
 	                                            	</div>
 	                                            	<div className="col-md-4 col-6 no-padding">
-		                                                <img src="images/fg9.jpg" alt="" />
+		                                                <img src="/images/fg9.jpg" alt="" />
 	                                            	</div>
 	                                        	</div>
 	                                    	</div>

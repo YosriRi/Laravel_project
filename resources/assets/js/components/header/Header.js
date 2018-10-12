@@ -1,29 +1,32 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import SubHeader from './SubHeader';
-import Cookies from 'universal-cookie';
+import Connected from './Connected';
+import NotConnected from './NotConnected';
 
 export default class Header extends Component {
 	constructor(props) {
 		super(props);
+		const currentComponent = this;
+        const token = localStorage.getItem('userToken');
 
 		this.state = {
-			cookies: new Cookies(),
-            user: []
+            user: [],
+            token: token
         };
-	}
 
-	componentDidMount() {
-		const currentComponent = this;
-		const cookies = this.state.cookies.get('userCookie');
-
-		if (cookies) {
-			axios.get('/api/user?token=' + cookies)
+        if (token !== null) {
+			axios.get('/api/user?token=' + token)
 	        .then(function (res) {
 	            const result = res.data.user;
-	            currentComponent.setState({
-	                user: result
-	            });
+	            if (result !== undefined) {
+	            	currentComponent.setState({
+	                	user: result
+	            	});
+	            	localStorage.setItem('user', JSON.stringify(result));
+	            } else {
+	            	localStorage.clear();
+	            }
 	        })
 	        .catch(function (error) {
 	            console.log(error);
@@ -32,6 +35,14 @@ export default class Header extends Component {
 	}
 
 	render() {
+		let connected;
+		const user = this.state.user;
+
+		if (this.state.token !== null) {
+			connected = <Connected user={user}/>;
+		} else {
+			connected = <NotConnected />;
+		}
 		return (
 			<div>
 				<div className="toolbar">
@@ -52,21 +63,11 @@ export default class Header extends Component {
 									<a href="" className="fa fa-google-plus"></a>
 								</li>
 							</ul>
-							<ul className="authentification">
-								<li>
-									<a href="/login">Login</a>
-								</li>
-								<li>
-									<p>|</p>
-								</li>
-								<li>
-									<a href="/register">Register</a>
-								</li>
-							</ul>
+							{connected}
 						</div>
 					</div>
 				</div>
-				<SubHeader/>
+				<SubHeader user={user}/>
 			</div>
 		);
 	}
