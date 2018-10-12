@@ -14,5 +14,7 @@ $factory->define(App\UserInfo::class, function (Faker $faker) {
         'date_of_birth' 	=> $faker->date,
         'question_password' => $faker->text(),
         'alt_email' 		=> $faker->email,
+        'newsletter'        => $faker->numberBetween($min = 0, $max = 1),
+        'cgv'               => $faker->numberBetween($min = 0, $max = 1),
     ];
 });

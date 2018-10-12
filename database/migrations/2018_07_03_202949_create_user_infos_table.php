@@ -24,6 +24,8 @@ class CreateUserInfosTable extends Migration
             $table->date('date_of_birth');
             $table->string('question_password', 255);
             $table->string('alt_email', 100);
+            $table->boolean('newsletter');
+            $table->boolean('cgv');
             $table->timestamps();
 
             $table->foreign('id_user')

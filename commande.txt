@@ -24,3 +24,9 @@ php artisan make:controller NomDuController exemple UsersController --resource
 
 // Pour créer une resource
 php artisan make:resource NomDuResource
+
+// Pour utiliser jwt
+php artisan jwt:secret
+
+// Pour générer un clé pour le .env
+php artisan key:generate

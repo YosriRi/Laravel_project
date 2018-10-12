@@ -992,16 +992,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v4.0.4",
+            "version": "v4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "fa6ee28600d21d49b2b4e1006b48426cec8e579c"
+                "reference": "d0230c5c77a7e3cfa69446febf340978540958c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/fa6ee28600d21d49b2b4e1006b48426cec8e579c",
-                "reference": "fa6ee28600d21d49b2b4e1006b48426cec8e579c",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/d0230c5c77a7e3cfa69446febf340978540958c0",
+                "reference": "d0230c5c77a7e3cfa69446febf340978540958c0",
                 "shasum": ""
             },
             "require": {
@@ -1017,7 +1017,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "4.1-dev"
                 }
             },
             "autoload": {
@@ -1039,7 +1039,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2018-09-18T07:03:24+00:00"
+            "time": "2018-10-10T09:24:14+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -2478,12 +2478,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tymondesigns/jwt-auth.git",
-                "reference": "e190b6a75372e7e5e3a6d2cf0e4456313412299f"
+                "reference": "08b86bd09629dc7e48d51389f0e4373d0ad706aa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tymondesigns/jwt-auth/zipball/e190b6a75372e7e5e3a6d2cf0e4456313412299f",
-                "reference": "e190b6a75372e7e5e3a6d2cf0e4456313412299f",
+                "url": "https://api.github.com/repos/tymondesigns/jwt-auth/zipball/08b86bd09629dc7e48d51389f0e4373d0ad706aa",
+                "reference": "08b86bd09629dc7e48d51389f0e4373d0ad706aa",
                 "shasum": ""
             },
             "require": {
@@ -2545,7 +2545,7 @@
                 "jwt",
                 "laravel"
             ],
-            "time": "2018-09-04T19:48:02+00:00"
+            "time": "2018-10-11T21:29:24+00:00"
         },
         {
             "name": "vlucas/phpdotenv",

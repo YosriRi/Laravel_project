@@ -13,16 +13,22 @@ require('./bootstrap');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-require('./components/activity/detail/Activity');
-require('./components/header/Header');
-require('./components/footer/Footer');
-require('./components/slide/Slide');
-require('./components/login/Login');
-require('./components/other/Other');
-require('./components/payment/Payment');
-require('./components/register/Register');
-require('./components/profile/Profile');
-require('./components/reservation/Reservation');
-require('./components/visualize-photo/VisualizePhoto');
-require('./components/searchResult/SearchResult');
-require('./components/home/Home');
+// Website
+require('./components/website/activity/detail/Activity');
+require('./components/website/header/Header');
+require('./components/website/footer/Footer');
+require('./components/website/slide/Slide');
+require('./components/website/login/Login');
+require('./components/website/other/Other');
+require('./components/website/payment/Payment');
+require('./components/website/register/Register');
+require('./components/website/profile/Profile');
+require('./components/website/reservation/Reservation');
+require('./components/website/visualize-photo/VisualizePhoto');
+require('./components/website/searchResult/SearchResult');
+require('./components/website/home/Home');
+
+// Backoffice
+require('./components/backoffice/sideMenu/SideMenu');
+require('./components/backoffice/profileQuickInfo/ProfileQuickInfo');
+require('./components/backoffice/topNavigation/TopNavigation');
