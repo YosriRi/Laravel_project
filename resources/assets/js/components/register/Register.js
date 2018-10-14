@@ -44,29 +44,37 @@ export default class Register extends Component {
           					<div className="card-body">
             					<h5 className="card-title text-center">Inscription</h5>
             					<form className="form-signin" onSubmit={this.handleSubmit}>
-                                    <div className="form-label-group">
+									<label htmlFor="inputFirstname">Prénom</label>
+									<div className="form-label-group">
                                         <input type="text" id="inputFirstname" name="inputFirstname" className="form-control" placeholder="Prénom" required />
-                                        <label htmlFor="inputFirstname">Prénom</label>
                                     </div>
-                                    <div className="form-label-group">
+									<label htmlFor="inputLastname">Nom</label>
+									<div className="form-label-group">
                                         <input type="text" id="inputLastname" name="inputLastname" className="form-control" placeholder="Nom" required />
-                                        <label htmlFor="inputLastname">Nom</label>
                                     </div>
-              						<div className="form-label-group">
+									<label htmlFor="inputEmail">Email</label>
+									<div className="form-label-group">
             							<input type="email" id="inputEmail" name="inputEmail" className="form-control" placeholder="Email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" required />
-                						<label htmlFor="inputEmail">Email</label>
               						</div>
               						<hr />
+									<label htmlFor="inputPassword">Mot de passe</label>
               						<div className="form-label-group">
                 						<input type="password" id="inputPassword" name="inputPassword" className="form-control" placeholder="Mot de passe" pattern="^.{6,}$" required />
-                						<label htmlFor="inputPassword">Mot de passe</label>
               						</div>
+									<label htmlFor="inputConfirmPassword">Confirmation du mot de passe</label>
               						<div className="form-label-group">
                 						<input type="password" id="inputConfirmPassword" name="inputConfirmPassword" className="form-control" placeholder="Mot de passe" pattern="^.{6,}$" required />
-                						<label htmlFor="inputConfirmPassword">Confirmation du mot de passe</label>
+              						</div>
+									<div className="custom-control custom-checkbox mb-3">
+                						<input type="checkbox" className="custom-control-input" id="customCheck2" />
+                						<label className="custom-control-label" htmlFor="customCheck2">J'accepte les <a href="#">conditions génerales d'utilisations</a></label>
+									</div>
+									<div className="custom-control custom-checkbox mb-3">
+										<input type="checkbox" className="custom-control-input" id="customCheck3" />
+                						<label className="custom-control-label" htmlFor="customCheck3">S'inscrire à la newsletters</label>
               						</div>
               						<button className="btn btn-lg btn-secondary btn-block text-uppercase" type="submit">S'inscrire</button>
-              						<a className="d-block text-center mt-2 small" href="/login">Se connecter</a>
+              						<a className="d-block text-center mt-2" href="/login">Se connecter</a>
             					</form>
           					</div>
         				</div>

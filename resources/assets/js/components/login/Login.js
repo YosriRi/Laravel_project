@@ -34,19 +34,19 @@ export default class Login extends Component {
       				<div className="col-sm-9 col-md-7 col-lg-5 mx-auto">
         				<div className="card card-signin my-5">
           					<div className="card-body">
-            					<h5 className="card-title text-center">Sign In</h5>
+            					<h5 className="card-title text-center">Se connecter</h5>
 							    <form className="form-signin" onSubmit={this.handleSubmit}>
-              						<div className="form-label-group">
-                						<input type="email" id="inputEmailLogin" className="form-control" placeholder="Email" required autoFocus />
-                						<label htmlFor="inputEmailLogin">Email</label>
+									<label htmlFor="inputEmailLogin">Email</label>
+									<div className="form-label-group">
+										<input type="email" id="inputEmailLogin" className="form-control" placeholder="Email" required autoFocus />
               						</div>
+									<label htmlFor="inputPasswordLogin">Mot de passe</label>
               						<div className="form-label-group">
                 						<input type="password" id="inputPasswordLogin" className="form-control" placeholder="Mot de passe" required />
-                						<label htmlFor="inputPasswordLogin">Mot de passe</label>
               						</div>
               						<div className="custom-control custom-checkbox mb-3">
                 						<input type="checkbox" className="custom-control-input" id="customCheck1" />
-                						<label className="custom-control-label" htmlFor="customCheck1">Remember password</label>
+                						<label className="custom-control-label" htmlFor="customCheck1">Se souvenir de moi</label>
               						</div>
           							<button className="btn btn-lg btn-secondary btn-block text-uppercase" type="submit">Se connecter</button>
             					</form>

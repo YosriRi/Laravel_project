@@ -13,12 +13,6 @@ export default class Slide1 extends Component {
 		return (
 			<div className="carousel-item active" style={divStyle}>
               	<div className="carousel-caption d-none d-md-block">
-                	<div className="row">
-                  		<form className="form-wrapper cf">
-                    		<input type="text" placeholder="Search here..." required />
-                    		<button type="submit">Search</button>
-                  		</form>
-                	</div>
                 	<h3>First Slide</h3>
                 	<p>This is a description for the first slide.</p>
               	</div>

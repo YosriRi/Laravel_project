@@ -13,7 +13,8 @@ export default class Field extends Component {
                     <div className="my-4 text-center">
                       	<h2>Nos Terrains de jeu</h2>
                         <div className="border_devider"></div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                        <p>Faites le plein de sensations en famille ou entre amis grâce à une multitude d'activités.
+                            Chute libre indoor, Saut en Parachute, Rafting, Kayak, Escalade, vous n'avez que l'embarras du choix :) </p>
                     </div>
                     <div className="row text-center">
                         <div className="col-lg-4 col-sm-6">
@@ -28,7 +29,7 @@ export default class Field extends Component {
                                 </div>
                             </div>
                             <h2>Air</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                            <p>Il y a deux typologies de loisirs aériens sur So'Extreme : les baptêmes de l’air et les sauts. Si vous êtes en recherche de sensations extrêmes, la deuxième typologie de sports aériens est faite pour vous.</p>
                         </div>
                         <div className="col-lg-4 col-sm-6">
                             <div className="single_terrain">
@@ -42,7 +43,8 @@ export default class Field extends Component {
                                 </div>
                             </div>
                             <h2>Eau</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                            <p>Si vous recherchez plutôt à naviguer, So'Extreme a exactement ce qu’il vous faut : 
+                                Du stage de jet ski à la balade en bateau à moteur ou à voile en passant par le Canöe, Kayak et le Rafting.</p>
                         </div>
                         <div className="col-lg-4 col-sm-6">
                             <div className="single_terrain">
@@ -56,7 +58,9 @@ export default class Field extends Component {
                                 </div>
                             </div>
                             <h2>Terre</h2>
-                    		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    		<p>Pour tous vos moments en montagne, qu'il s'agisse de vacances ou de petits week-end, 
+                                So'Extreme vous propose 15 activités de montagne à réserver ou offrir en bon cadeau. 
+                                C'est l'occasion d'ajouter une touche d'insolite dans vos séjours hivernaux ! </p>
                         </div>
                     </div>
                 </div>

@@ -12,11 +12,20 @@ export default class SearchResult extends Component {
 
 	render() {
 		const divStyle = {
-			backgroundImage: "url('https://unsplash.it/1900/1080?image=1076')"
+			backgroundImage: "url(images/bgcover.jpg)"
 		}
 		return (
 			<div>
-				<header className="py-5 bg-image-full" style={divStyle}></header>
+				<header className="py-5 bg-image-full" style={divStyle}>
+						<div className="container">
+							<div className="row">
+								<div className="col-md-12">
+									<img src="/images/logo.png" class="activityimg" width="250" height="50" alt="So Extreme" />
+									{/* <h4 class="slideHeader">Réservation des activités extrêmes</h4> */}
+								</div>
+							</div>
+						</div>
+				</header>
 				<section className="search-result">
     				<div className="container">
       					<div className="row">

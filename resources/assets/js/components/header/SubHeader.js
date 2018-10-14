@@ -28,9 +28,6 @@ export default class SubHeader extends Component {
 		return (
 			<nav className="navbar navbar-expand-lg nav_bg navbar-dark">
 				<div className="container">
-					<a className="navbar-brand" href="/">
-						<img src="/images/logo.png" width="150" height="30" alt="So Extreme" />
-					</a>
 					<button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 						<span className="navbar-toggler-icon"></span>
 					</button>
