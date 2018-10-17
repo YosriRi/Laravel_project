@@ -31,8 +31,11 @@ class CartController extends Controller
     {
         $cart = new Cart;
 
-        $cart->id_user     = $request->input('id_user');
-        $cart->id_activity = $request->input('id_activity');
+        $cart->id_user          = $request->input('id_user');
+        $cart->id_activity      = $request->input('id_activity');
+        $cart->date             = $request->input('date');
+        $cart->hour             = $request->input('hour');
+        $cart->number_of_person = $request->input('number_of_person');
 
         if ($cart->save()) {
             return new CartResource($cart);
@@ -63,7 +66,11 @@ class CartController extends Controller
     {
         $cart = Cart::findOrFail($id);
 
-        $cart->name = $request->input('name');
+        $cart->id_user          = $request->input('id_user');
+        $cart->id_activity      = $request->input('id_activity');
+        $cart->date             = $request->input('date');
+        $cart->hour             = $request->input('hour');
+        $cart->number_of_person = $request->input('number_of_person');
 
         if ($cart->save()) {
             return new CartResource($cart);

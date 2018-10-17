@@ -11,6 +11,7 @@
 |
 */
 
+// Website
 Route::get('/', 'PageController@index');
 
 Route::get('/login', 'AuthController@login');
@@ -26,3 +27,6 @@ Route::get('/profile/{id}', 'PageController@profile');
 Route::get('/cart/{id}', 'PageController@cart');
 
 Route::get('/all', 'PageController@all');
+
+// Backoffice
+Route::get('/backoffice', 'BackPageController@index');

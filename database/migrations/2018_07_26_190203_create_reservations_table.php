@@ -18,6 +18,8 @@ class CreateReservationsTable extends Migration
             $table->integer('id_user')->unsigned();
             $table->integer('id_activity')->unsigned();
             $table->decimal('amount');
+            $table->date('date');
+            $table->time('heure');
             $table->timestamps();
 
             $table->foreign('id_user')
