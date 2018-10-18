@@ -4,7 +4,7 @@ import Slide1 from './Slide1';
 import Slide2 from './Slide2';
 import Slide3 from './Slide3';
 
-export default class Home extends Component {
+export default class Slider extends Component {
 	constructor(props) {
 		super(props);
 	}
@@ -35,6 +35,7 @@ export default class Home extends Component {
 								<input type="text" placeholder="Rechercher une activité" required />
 								<button type="submit">Rechercher</button>
 							</form>
+							<p><button className="btn btn-secondary btn-block" type="submit">Toutes nos Activités</button></p>
 						</div>
 					</div>
 				</div>

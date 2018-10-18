@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import Slider from '../slide/slide';
 import Field from './Field';
 import Service from './Service';
 import Description from './Description';
@@ -16,6 +17,7 @@ export default class Home extends Component {
 	render() {
 		return (
             <div>
+                <Slider />
                 <Field />
                 <Service />
                 <Description />

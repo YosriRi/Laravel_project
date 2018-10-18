@@ -13,8 +13,6 @@ export default class Slide2 extends Component {
 		return (
 			<div className="carousel-item" style={divStyle}>
               	<div className="carousel-caption d-none d-md-block">
-                	<h3>Second Slide</h3>
-            		<p>This is a description for the second slide.</p>
               	</div>
             </div>
 		);

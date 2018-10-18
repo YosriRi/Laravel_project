@@ -23,6 +23,9 @@ class CreateActivitiesTable extends Migration
             $table->string('name', 100);
             $table->text('description');
             $table->decimal('amount');
+            $table->string('image1_location', 100);
+            $table->string('image2_location', 100);
+            $table->string('image3_location', 100);
             $table->datetime('start');
             $table->datetime('end');
             $table->integer('number_of_persons');

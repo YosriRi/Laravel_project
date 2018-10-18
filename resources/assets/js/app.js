@@ -25,4 +25,5 @@ require('./components/profile/Profile');
 require('./components/reservation/Reservation');
 require('./components/visualize-photo/VisualizePhoto');
 require('./components/searchResult/SearchResult');
+require('./components/about/About');
 require('./components/home/Home');

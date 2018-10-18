@@ -32,15 +32,16 @@ export default class Content extends Component {
 	render() {
 		const activity = this.state.activity;
 		const divStyle1 = {
-			background: 'url(/images/parachute1.JPG) no-repeat center top',
-			backgroundSize: 'cover'
+			backgroundImage: 'url(' + activity.image1_location + ')',
+			backgroundSize: 'cover',
+			
 		}
 		const divStyle2 = {
-			background: 'url(/images/parachute2.JPG) no-repeat center top',
+			backgroundImage: 'url(' + activity.image2_location + ')',
 			backgroundSize: 'cover'
 		}
 		const divStyle3 = {
-			background: 'url(/images/parachute3.png) no-repeat center top',
+			backgroundImage: 'url(' + activity.image3_location + ')',
 			backgroundSize: 'cover',
 			cursor: 'pointer'
 		}
