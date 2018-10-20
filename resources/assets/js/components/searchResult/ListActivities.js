@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-
+import TextTruncate from 'react-text-truncate';
 export default class ListActivities extends Component {
 	constructor(props) {
 		super(props);
@@ -34,8 +34,14 @@ export default class ListActivities extends Component {
                             </div>
                             <div className=" card-body card-body-cascade">
                                 <h5 className="card-title">{activity.name}</h5>
-                                <p className="card-text">{activity.description}</p>
-                                <a className="btn btn-primary" href={'/detailActivity/' + activity.id}>Détail</a>
+                                <TextTruncate
+                                    line={4}
+                                    truncateText=" … "
+                                    text={activity.description}
+                                    textTruncateChild={<a className="btn btn-primary" href={'/detailActivity/' + activity.id}>Détail</a>}
+                                />
+                                
+                                
                             </div>
                         </div>
                     </div>
