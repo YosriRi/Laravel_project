@@ -2,7 +2,7 @@
  <html class="no-js" lang=""> 
  
     <head>
-        <meta charset="utf-8">
+        <meta charset="utf-8" name="csrf-token" content="{{ csrf_token() }}">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>SO'Extreme - activités sports extrêmes</title>
         <meta name="description" content="">

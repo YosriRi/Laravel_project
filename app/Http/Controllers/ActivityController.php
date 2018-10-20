@@ -16,7 +16,22 @@ class ActivityController extends Controller
      */
     public function index(Request $request)
     {
-        $activities = Activity::paginate(15);
+        // $activities = Activity::where('id_category', $request->id_category)
+        //     ->where('id_type', $request->id_type)
+        //     ->get();
+        if ($request->id_category) {
+            $activities = Activity::where('id_category', $request->id_category)->get();
+        } else if ($request->id_type) {
+            $activities = Activity::where('id_type', $request->id_type)->get();
+        } else if ($request->id_city) {
+            $activities = Activity::where('id_city', $request->id_city)->get();
+        } else if ($request->id_region) {
+            $activities = Activity::where('id_region', $request->id_region)->get();
+        } else if ($request->id_country) {
+            $activities = Activity::where('id_country', $request->id_country)->get();
+        } else {
+            $activities = Activity::all();
+        }
         
         return ActivityResource::collection($activities);
     }
