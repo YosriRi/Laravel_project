@@ -11,10 +11,22 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PageController@index');
 
-Auth::routes();
+Route::get('/login', 'AuthController@login');
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/register', 'AuthController@register');
+
+Route::get('/activity', 'PageController@searchResult');
+
+Route::get('/gallery', 'PageController@gallery');
+
+Route::get('/about', 'PageController@about');
+
+Route::get('/detailActivity/{id}', 'PageController@detailActivity');
+
+Route::get('/profile/{id}', 'PageController@profile');
+
+Route::get('/cart/{id}', 'PageController@cart');
+
+Route::get('/all', 'PageController@all');

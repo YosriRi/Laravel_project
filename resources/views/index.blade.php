@@ -13,37 +13,37 @@
         <link href="https://fonts.googleapis.com/css?family=Kaushan+Script&amp;subset=latin-ext" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
 
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="{{ asset('css/all.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
 
         <!--For Plugins external css-->
-        <link rel="stylesheet" href="css/plugins.css" />
+        <link rel="stylesheet" href="{{ asset('css/plugins.css') }}" />
 
         <!--Theme custom css -->
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
         <!--Theme Responsive css-->
-        <link rel="stylesheet" href="css/responsive.css" />
+        <link rel="stylesheet" href="{{ asset('css/responsive.css') }}" />
 
-
-        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+        <script src="/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     </head>
-    <body data-spy="scroll" data-target=".navbar-collapse">
-       
-        <div class='preloader'><div class='loaded'>&nbsp;</div></div>
-        <div class="culmn">
-         
-            @include ('include.home');
-           
-            @include ('include.header');
-            
-            @include ('include.terrain')
-
-            @include('include.footer');
-
-
+    <body>
+        <div id="headerComponent">
         </div>
+        <div id="{{$name}}">
+        </div>
+        <div id="footerComponent">
+        </div>
+        <!-- <div id="headerComponent">
+        </div>
+
+        <div id="footerComponent">
+        </div> -->
 
         <!-- START SCROLL TO TOP  -->
 
@@ -51,37 +51,28 @@
             <a href="#"><i class="fa fa-chevron-up"></i></a>
         </div>
 
-        <script src="js/vendor/jquery-1.11.2.min.js"></script>
-        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="{{ asset('js/vendor/jquery.min.js') }}"></script>
+        <script src="{{ asset('js/vendor/bootstrap.min.js') }}"></script>
         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 
-        <script src="js/jquery.mixitup.min.js"></script>
-        <script src="js/jquery.easing.1.3.js"></script>
-        <script src="js/jquery.masonry.min.js"></script>
-        <script src="js/jquery.fancybox.pack.js"></script>
+        <script src="/js/jquery.mixitup.min.js"></script>
+        <script src="/js/jquery.easing.1.3.js"></script>
+        <script src="/js/jquery.masonry.min.js"></script>
+        <script src="/js/jquery.fancybox.pack.js"></script>
 
         <!--This link is only for gmaps-->
         <!-- <script src="http://maps.google.com/maps/api/js"></script>
         <script src="js/gmaps.min.js"></script>
  -->
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
         <script>
-
-                function showmap() {
-                    var mapOptions = {
-                        zoom: 8,
-                        scrollwheel: false,
-                        center: new google.maps.LatLng(-34.397, 150.644),
-                        mapTypeId: google.maps.MapTypeId.ROADMAP
-                    };
-                    var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
-                }
-
+            baguetteBox.run('.tz-gallery');
         </script>
 
-
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+        <script src="/js/plugins.js"></script>
+        <script src="/js/main.js"></script>
+        <script src="/js/app.js"></script>
 
     </body>
 </html>

@@ -13,4 +13,18 @@ require('./bootstrap');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-require('./components/Example');
+require('./components/activity/detail/Activity');
+require('./components/activity/Gallery');
+require('./components/header/Header');
+require('./components/footer/Footer');
+require('./components/slide/Slide');
+require('./components/login/Login');
+require('./components/other/Other');
+require('./components/payment/Payment');
+require('./components/register/Register');
+require('./components/profile/Profile');
+require('./components/reservation/Reservation');
+require('./components/visualize-photo/VisualizePhoto');
+require('./components/searchResult/SearchResult');
+require('./components/about/About');
+require('./components/home/Home');
