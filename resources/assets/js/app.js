@@ -14,6 +14,7 @@ require('./bootstrap');
  */
 
 require('./components/activity/detail/Activity');
+require('./components/activity/Gallery');
 require('./components/header/Header');
 require('./components/footer/Footer');
 require('./components/slide/Slide');

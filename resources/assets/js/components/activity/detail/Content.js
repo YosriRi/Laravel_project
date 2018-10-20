@@ -84,7 +84,7 @@ export default class Content extends Component {
 							<div className="image-block" style={divStyle2}>
 							</div>
 							<div className="image-block" style={divStyle3}>
-								<a className="img-post"href="#"><p> Plus de photos </p></a>
+								<a className="img-post"href="/gallery"><p> Plus de photos </p></a>
 							</div>
 						</div>
 					</div>

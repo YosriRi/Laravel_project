@@ -365,7 +365,7 @@ Separator
 .separator {
     height: 1px;
     width: 127px;
-    margin: 0 auto;
+    margin: 20px auto ;
     background: #f38181;
 }
 
@@ -1876,6 +1876,9 @@ fieldset[disabled] .form-control {
     margin: 0 auto;
 }
 
+.textCenter{
+    text-align: center;
+}
 footer {
     background: #727271c2;
     color: #fff;

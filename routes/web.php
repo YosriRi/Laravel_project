@@ -19,6 +19,10 @@ Route::get('/register', 'AuthController@register');
 
 Route::get('/activity', 'PageController@searchResult');
 
+Route::get('/gallery', 'PageController@gallery');
+
+Route::get('/about', 'PageController@about');
+
 Route::get('/detailActivity/{id}', 'PageController@detailActivity');
 
 Route::get('/profile/{id}', 'PageController@profile');
