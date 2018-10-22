@@ -20,7 +20,7 @@ export default class SearchResult extends Component {
 						<div className="container">
 							<div className="row">
 								<div className="col-md-12">
-									<img src="/images/logo.png" class="activityimg" width="250" height="50" alt="So Extreme" />
+									<img src="/images/logo.png" className="activityimg" width="250" height="50" alt="So Extreme" />
 									{/* <h4 class="slideHeader">Réservation des activités extrêmes</h4> */}
 								</div>
 							</div>

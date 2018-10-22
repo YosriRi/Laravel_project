@@ -11,7 +11,7 @@ export default class Slider extends Component {
 
 	render() {
 		return (
-			<div class="sliderHome">
+			<div className="sliderHome">
 				<div id="carouselExampleIndicators" className="fullslider carousel slide" data-ride="carousel">
 					<ol className="carousel-indicators">
 						<li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
@@ -25,11 +25,11 @@ export default class Slider extends Component {
 					</div>
 					
 				</div>
-				<div class="opacity">
+				<div className="opacity">
 				<div className="container">
 					<div className="row">
 						<div className="col-md-12">
-							<img src="/images/logo.png" class="sliderImg" width="350" height="50" alt="So Extreme" />
+							<img src="/images/logo.png" className="sliderImg" width="350" height="50" alt="So Extreme" />
 							{/* <h4 class="slideHeader">Réservation des activités extrêmes</h4> */}
 							<form className="form-wrapper cf">
 								<input type="text" placeholder="Rechercher une activité" required />

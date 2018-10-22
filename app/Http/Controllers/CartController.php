@@ -16,7 +16,7 @@ class CartController extends Controller
      */
     public function index(Request $request)
     {
-        $carts = Cart::paginate(15);
+        $carts = Cart::where('id_user', $request->id_user)->get();
         
         return CartResource::collection($carts);
     }

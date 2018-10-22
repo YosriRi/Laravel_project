@@ -40,8 +40,6 @@ export default class ListActivities extends Component {
                                     text={activity.description}
                                     textTruncateChild={<a className="btn btn-primary" href={'/detailActivity/' + activity.id}>Détail</a>}
                                 />
-                                
-                                
                             </div>
                         </div>
                     </div>

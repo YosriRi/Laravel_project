@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import Calendar from 'react-calendar';
+// var DateTimeField = require('react-bootstrap-datetimepicker');
 
 export default class Reservation extends Component {
 	constructor(props) {
@@ -54,6 +55,7 @@ export default class Reservation extends Component {
 
     addIntoCart() {
         // console.log(this.state);
+        const currentComponent = this;
         axios.post('/api/carts', {
             id_user: this.state.user.id,
             id_activity: this.state.id,
@@ -64,6 +66,7 @@ export default class Reservation extends Component {
         })
         .then(function (res) {
             alert('Ajout réussi');
+            currentComponent.toggle();
         })
         .catch(function (error) {
             alert('Problème lors de l\'ajout')
@@ -99,6 +102,7 @@ export default class Reservation extends Component {
                                 )}
                             </Input>
                         </FormGroup>
+                        {/* <DateTimeField /> */}
                         <Calendar onChange={this.onChangeCalendar.bind(this)} />
                     </ModalBody>
                     <ModalFooter>

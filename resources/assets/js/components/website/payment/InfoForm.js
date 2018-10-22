@@ -9,7 +9,7 @@ export default class InfoForm extends Component {
 
 	render() {
 		return (
-			<div className="col-md-8 order-md-1">
+			<div className="col-md-12 order-md-2">
 				<h4 className="mb-3">Billing address</h4>
           		<form className="needs-validation" noValidate="">
             		<div className="row">
