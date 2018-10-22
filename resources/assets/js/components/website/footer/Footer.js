@@ -18,12 +18,13 @@ export default class Footer extends Component {
 	                            	<div className="footer_logo">
 	                                	<img src="/images/footerlogo.png" alt="" />
 	                            	</div>
-	                            	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+	                            	<p>So'Extreme est une centrale de réservation d’activités de loisirs. Sur So'Extreme vous trouverez plus de 60 activités à effectuer seul, en famille ou entre amis, partout en France. Sur so-extreme.com, plusieurs 
+										choix s’offrent à vous selon votre recherche : vous pouvez soit réserver directement l’activité de votre choix soit offrir un bon cadeau à un proche pour qu’il effectue lui-même la réservation en toute liberté et selon ses envies So'Extreme est donc un excellent moyen pour trouver des idées de cadeaux originales et faire plaisir à coup sûr.</p>
 	                            	<div className="footer_subcribs_area">
 	                                	<p className="monseratregular"><strong>15k</strong> followers</p>
 	                                	<hr />
 	                            		<div className="flowus">
-	                                    	<a href="" className="robotolight"> Follow Us : </a>
+	                                    	<a href="" className="robotolight"> Suivez-Nous : </a>
 	                                    	<a href=""><i className="fa fa-facebook"></i></a>
 	                                    	<a href=""><i className="fa fa-twitter"></i></a>
 	                                    	<a href=""><i className="fa fa-google-plus"></i></a>
@@ -36,7 +37,7 @@ export default class Footer extends Component {
 	                                	<form className="navbar-form navbar-left" role="search">
 	                                    	<div className="form-group">
 	                                        	<input type="text" className="form-control" placeholder="Search" />
-	                                        	<button type="submit" className="submit_btn">Subscribe</button>
+	                                        	<button type="submit" className="submit_btn">Souscrire</button>
 	                                    	</div>
 	                                	</form>
 	                            	</div>
@@ -46,15 +47,15 @@ export default class Footer extends Component {
 	                        	<div className="row">
 	                            	<div className="col-6">
 	                                	<div className="single_widget wow fadeIn" data-wow-duration="800ms">
-	                                    	<p className="monseratregular">Dernières posts</p>
+	                                    	<p className="monseratregular">Derniers posts</p>
 	                                    	<span className="separator4"></span>
 	                                		<div className="single_widget_blog">
 	                                    		<div className="single_widget_img">
 	                                        		<img src="/images/fb1.jpg" alt="" />
 	                                    		</div>
 	                                    		<div className="single_widget_content">
-	                                        		<p className="monseratregular">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
-													<p className="robotolight">Jan 9, 2016</p>
+	                                        		<p className="monseratregular">So'Extreme: Nouvelle activité indoor: la Soufflerie!</p>
+													<p className="robotolight">Jan 2, 2018</p>
 												</div>
 	                                		</div>
 	                                		<div className="single_widget_blog">
@@ -62,8 +63,8 @@ export default class Footer extends Component {
 	                                            	<img src="/images/fb2.jpg" alt="" />
 	                                        	</div>
 	                                        	<div className="single_widget_content">
-	                                            	<p className="monseratregular">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
-	                                            	<p className="robotolight">Jan 9, 2018</p>
+	                                            	<p className="monseratregular">So'Extreme: première agence de sensation forte de la région</p>
+	                                            	<p className="robotolight">Jan 4, 2018</p>
 	                                        	</div>
 	                                    	</div>
 	                                		<div className="single_widget_blog">
@@ -71,8 +72,8 @@ export default class Footer extends Component {
 	                                            	<img src="/images/fb3.jpg" alt="" />
 	                                        	</div>
 	                                        	<div className="single_widget_content">
-	                                            	<p className="monseratregular">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
-	                                            	<p className="robotolight">Jan 9, 2018</p>
+	                                            	<p className="monseratregular">Gorge Du Verdan: Nouvelles activités dans la région!</p>
+	                                            	<p className="robotolight">Jan 15, 2018</p>
 	                                        	</div>
 	                                    	</div>
 	                                	</div>

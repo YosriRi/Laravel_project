@@ -27,6 +27,7 @@ export default class Profile extends Component {
         				<a className="nav-link" href="#references" role="tab" data-toggle="tab">References</a>
     				</li>
 				</ul>
+					
 				<section className= "profile">
     				<div className="col-12 tab-content">
         				<div role="tabpanel" className="tab-pane in active" id="profile">
@@ -34,7 +35,7 @@ export default class Profile extends Component {
             					<div className="col-md-12">
                 					<div className="tab-content">
                     					<div className="profile-main">
-                        					<h3>About</h3>
+                        					<h3>Biographie</h3>
                         					<div className="row profile-in">
                             					<div className="media-left col-xs-12">
                                     				<img src="/images/user.jpg" alt="" className="img-fluid media-object" />

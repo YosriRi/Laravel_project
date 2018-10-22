@@ -188,6 +188,15 @@ h4 {
     font-family: 'Kaushan Script', cursive;
 }
 
+h4.slideHeader {
+    text-align: center;
+    font-size: 2rem;
+    line-height: 2.2rem;
+    margin: 0 auto;
+    color: white;
+    padding-top: 20px;
+}
+
 h5 {
     font-size: 1.125rem;
     margin-bottom: 1rem;
@@ -356,7 +365,7 @@ Separator
 .separator {
     height: 1px;
     width: 127px;
-    margin: 0 auto;
+    margin: 20px auto ;
     background: #f38181;
 }
 
@@ -1867,6 +1876,9 @@ fieldset[disabled] .form-control {
     margin: 0 auto;
 }
 
+.textCenter{
+    text-align: center;
+}
 footer {
     background: #727271c2;
     color: #fff;
@@ -3538,16 +3550,41 @@ td {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    text-align: center;
   }
-
+  .sliderHome {
+    text-align: center;
+    height: 70vh;
+    min-height: 300px;
+    position: relative;
+    background-position: center;
+}
+  .fullslider{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+}
 .fullslider .carousel-item {
-    height: 100vh;
+    height: 70vh;
     min-height: 300px;
     background: no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+} 
+
+.opacity {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(209, 209, 209, 0.466);
+}
+
+.sliderHome .opacity {
+    z-index: 2;
 }
 
 a {
@@ -3575,7 +3612,7 @@ a {
 .form-wrapper {
     width: 450px;
     padding: 15px;
-    margin: 150px auto 50px auto;
+    margin: 50px auto 10px auto;
     background: #444;
     background: rgba(0, 0, 0, .2);
     -moz-border-radius: 10px;
@@ -3738,9 +3775,6 @@ input.searchtoggle[type="submit"] {
     width: 63px;
     display: inline-block;
     color: red;
-    float: right;
-    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADNQTFRFU1NT9fX1lJSUXl5e1dXVfn5+c3Nz6urqv7+/tLS0iYmJqampn5+fysrK39/faWlp////Vi4ZywAAABF0Uk5T/////////////////////wAlrZliAAABLklEQVR42rSWWRbDIAhFHeOUtN3/ags1zaA4cHrKZ8JFRHwoXkwTvwGP1Qo0bYObAPwiLmbNAHBWFBZlD9j0JxflDViIObNHG/Do8PRHTJk0TezAhv7qloK0JJEBh+F8+U/hopIELOWfiZUCDOZD1RADOQKA75oq4cvVkcT+OdHnqqpQCITWAjnWVgGQUWz12lJuGwGoaWgBKzRVBcCypgUkOAoWgBX/L0CmxN40u6xwcIJ1cOzWYDffp3axsQOyvdkXiH9FKRFwPRHYZUaXMgPLeiW7QhbDRciyLXJaKheCuLbiVoqx1DVRyH26yb0hsuoOFEPsoz+BVE0MRlZNjGZcRQyHYkmMp2hBTIzdkzCTc/pLqOnBrk7/yZdAOq/q5NPBH1f7x7fGP4C3AAMAQrhzX9zhcGsAAAAASUVORK5CYII=) center center no-repeat;
-    text-indent: -10000px;
     border: none;
     position: absolute;
     top: 0;
@@ -4292,4 +4326,8 @@ display: inline;
 
 .comment-form{
     width: 100%;
+}
+
+img.sliderImg {
+    padding-top: 65px;
 }

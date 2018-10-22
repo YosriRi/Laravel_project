@@ -8,7 +8,7 @@ export default class VisualizePhoto extends Component {
 
 	render() {
 		const divStyle = {
-			background: 'url(images/parachute1.JPG) no-repeat center top',
+			backgroundImage: 'url(images/parachute1.JPG)',
 			backgroundSize: 'cover'
 		}
 		return (

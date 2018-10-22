@@ -23,7 +23,7 @@ export default class Client extends Component {
                             		</div>
                             		<div className="single_client_content">
                                 		<p className="monseratregular">Matthew Dix</p>
-                                		<p className="robotolight">Graphic Design</p>
+                                		<p className="robotolight">Amateur saut en parachute</p>
                                 		<span className="separator4"></span>
                                 		<p>
                                 			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
@@ -38,8 +38,8 @@ export default class Client extends Component {
                                 		<img className="img-circle img-responsive" src="images/cl2.jpg" alt="" />
                             		</div>
                         			<div className="single_client_content">
-                                		<p className="monseratregular">Matthew Dix</p>
-                                		<p className="robotolight">Graphic Design</p>
+                                		<p className="monseratregular">Maxime Fresh</p>
+                                		<p className="robotolight">développeuse</p>
                                 		<span className="separator4"></span>
                                 		<p>
                                 			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
@@ -54,8 +54,8 @@ export default class Client extends Component {
                                 		<img className="img-circle img-responsive" src="images/cl3.jpg" alt="" />
                         			</div>
                             		<div className="single_client_content">
-                                		<p className="monseratregular">Matthew Dix</p>
-                                		<p className="robotolight">Graphic Design</p>
+                                		<p className="monseratregular">Philippe Montat</p>
+                                		<p className="robotolight">Responsable Administratif</p>
                                 		<span className="separator4"></span>
                                 		<p>
                                 			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
@@ -70,8 +70,8 @@ export default class Client extends Component {
                                 		<img className="img-circle img-responsive" src="images/cl4.jpg" alt="" />
                         			</div>
                             		<div className="single_client_content">
-                                		<p className="monseratregular">Matthew Dix</p>
-                                		<p className="robotolight">Graphic Design</p>
+                                		<p className="monseratregular">John Hard</p>
+                                		<p className="robotolight">Comédien</p>
                                 		<span className="separator4"></span>
                                 		<p>
                                 			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 

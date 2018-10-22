@@ -60,6 +60,8 @@
         <div id="slideComponent"></div>
         <h1>visualizePhoto</h1>
         <div id="visualizePhotoComponent"></div>
+        <h1>About</h1>
+        <div id="AboutComponent"></div>
 
         <!-- START SCROLL TO TOP  -->
 

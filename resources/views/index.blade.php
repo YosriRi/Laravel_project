@@ -39,6 +39,11 @@
         </div>
         <div id="footerComponent">
         </div>
+        <!-- <div id="headerComponent">
+        </div>
+
+        <div id="footerComponent">
+        </div> -->
 
         <!-- START SCROLL TO TOP  -->
 

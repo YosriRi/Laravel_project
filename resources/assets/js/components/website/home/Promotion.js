@@ -11,13 +11,14 @@ export default class Promotion extends Component {
 			<section id="Promotions" className="Promotions">
     			<div className="container">
         			<div className="head_title text-center">
-            			<h4 className="subtitle">Who we are</h4>
-	            		<h2>Meet our Promotions</h2>
+            			<h4 className="subtitle">DÉCOUVREZ</h4>
+	            		<h2>TOUTES NOS PROMOTIONS</h2>
             			<div className="border_devider"></div>
             			<p>
-            				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
-                			dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                			ex ea commodo consequat.
+						nous mettons un point d’honneur à vous fournir les plus belles activités au meilleur prix. 
+						C’est pourquoi nous proposons tout au long de l’année une large sélection de loisirs et activités en promotion.
+						Quels que soient vos goûts, nous mettons régulièrement en ligne de nouvelles promotions; soyez donc sûr 
+						de trouver une activité à petit prix. Vous vous en souviendrez longtemps et votre porte-monnaie aussi !
             			</p>
         			</div>
         			<div className="row text-center">

@@ -16,9 +16,19 @@ class PageController extends Controller
         return view('index', ['name' => 'searchResultComponent']);
     }
 
+    public function about()
+    {
+        return view('index', ['name' => 'aboutComponent']);
+    }
+
     public function detailActivity($id)
     {
         return view('index', ['name' => 'detailActivityComponent']);
+    }
+
+    public function gallery()
+    {
+        return view('index', ['name' => 'galleryComponent']);
     }
 
     public function profile($id)

@@ -32,15 +32,16 @@ export default class Content extends Component {
 	render() {
 		const activity = this.state.activity;
 		const divStyle1 = {
-			background: 'url(/images/parachute1.JPG) no-repeat center top',
-			backgroundSize: 'cover'
+			backgroundImage: 'url(' + activity.image1_location + ')',
+			backgroundSize: 'cover',
+			
 		}
 		const divStyle2 = {
-			background: 'url(/images/parachute2.JPG) no-repeat center top',
+			backgroundImage: 'url(' + activity.image2_location + ')',
 			backgroundSize: 'cover'
 		}
 		const divStyle3 = {
-			background: 'url(/images/parachute3.png) no-repeat center top',
+			backgroundImage: 'url(' + activity.image3_location + ')',
 			backgroundSize: 'cover',
 			cursor: 'pointer'
 		}
@@ -83,7 +84,7 @@ export default class Content extends Component {
 							<div className="image-block" style={divStyle2}>
 							</div>
 							<div className="image-block" style={divStyle3}>
-								<a className="img-post"href="#"><p> More pictures  </p></a>
+								<a className="img-post"href="/gallery"><p> Plus de photos </p></a>
 							</div>
 						</div>
 					</div>
@@ -108,14 +109,21 @@ export default class Content extends Component {
 						<div className="panel-heading" role="tab" id="headingThree">
 							<h4 className="panel-title">
 								<a className="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-									<i className="fa fa-bullseye"></i> Equipements <i className="fa fa-chevron-down"></i>
+									<i className="fa fa-bullseye"></i> Infos pratiques <i className="fa fa-chevron-down"></i>
 								</a>
 							</h4>
 						</div>
 						<div id="collapseThree" className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
 							<div className="panel-body">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-							</div>
+							
+							- Equipement à prévoir : Tenue et chaussures de sport basses recommandées (pas de crochet)
+
+							<br/>- Certificat médical nécessaire : Certificat médical de non contre-indication à la pratique de l'activité
+							<br/>- Age minimum : 15
+							<br/>- Poids maximum : 95
+							<br/>- Autorisation parentale (pour les mineurs) nécessaire
+							<br/>- Activité soumise aux conditions météo
+							<br/>ATTENTION : activité interdite aux personnes ayant des problèmes auditifs et portant des implants.</div>
 						</div>
 					</div>
 				</div>
