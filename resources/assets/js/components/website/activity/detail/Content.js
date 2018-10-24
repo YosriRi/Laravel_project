@@ -33,8 +33,7 @@ export default class Content extends Component {
 		const activity = this.state.activity;
 		const divStyle1 = {
 			backgroundImage: 'url(' + activity.image1_location + ')',
-			backgroundSize: 'cover',
-			
+			backgroundSize: 'cover'
 		}
 		const divStyle2 = {
 			backgroundImage: 'url(' + activity.image2_location + ')',

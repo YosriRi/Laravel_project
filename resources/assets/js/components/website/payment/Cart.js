@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { Table } from 'reactstrap';
+import { Table, Button } from 'reactstrap';
 
 export default class Cart extends Component {
 	constructor(props) {
@@ -21,7 +21,7 @@ export default class Cart extends Component {
         axios.get('/api/carts?id_user=' + user.id + '&token=' + token)
         .then((res) => {
             const result = res.data.data;
-            console.log(result);
+            // console.log(result);
             this.setState({
                 carts: result
             });
@@ -29,7 +29,19 @@ export default class Cart extends Component {
         .catch(function (error) {
             console.log(error);
         });
-	}
+    }
+    
+    deleteCart(event) {
+        console.log(event.target.id);
+        axios.delete('/api/carts/' + event.target.id + '?token=' + this.state.token)
+        .then((res) => {
+            alert('Suppression réussi');
+            location.reload();
+        })
+        .catch(function (error) {
+            alert('Erreur lors de la suppression');
+        });
+    }
     
 	render() {
 		return (
@@ -40,9 +52,9 @@ export default class Cart extends Component {
                             <th>Nom</th>
                             <th>Description</th>
                             <th>Date</th>
-                            <th>Heure</th>
                             <th>Nombre de personne</th>
                             <th>Prix</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -51,9 +63,9 @@ export default class Cart extends Component {
                                 <td>{cart.activity.name}</td>
                                 <td>{cart.activity.description}</td>
                                 <td>{cart.date}</td>
-                                <td>{cart.hour}</td>
                                 <td>{cart.number_of_person}</td>
                                 <td>{cart.activity.amount}</td>
+                                <td><Button color="danger" id={cart.id} onClick={this.deleteCart.bind(this)}>Supprimer</Button></td>
                             </tr>
                         )}
                     </tbody>

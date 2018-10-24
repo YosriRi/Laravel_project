@@ -95,7 +95,7 @@ class ActivityTableSeeder extends Seeder
             ],
             [
                 'id_category' 		=> 2,
-                'id_type' 			=> 6,
+                'id_type' 			=> 5,
                 'id_city' 			=> 2,
                 'id_region' 		=> 1,
                 'id_country' 		=> 1,

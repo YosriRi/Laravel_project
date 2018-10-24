@@ -17,8 +17,7 @@ class CreateCartsTable extends Migration
             $table->increments('id');
             $table->integer('id_user')->unsigned();
             $table->integer('id_activity')->unsigned();
-            $table->date('date');
-            $table->integer('hour');
+            $table->datetime('date');
             $table->integer('number_of_person');
             $table->timestamps();
 

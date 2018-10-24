@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
-import Calendar from 'react-calendar';
-// var DateTimeField = require('react-bootstrap-datetimepicker');
+import DatePicker from 'react-datepicker';
+import moment from 'moment';
+import 'react-datepicker/dist/react-datepicker.css';
+moment.locale('fr');
 
 export default class Reservation extends Component {
 	constructor(props) {
@@ -12,9 +14,8 @@ export default class Reservation extends Component {
 
         this.state = {
             modal: false,
-            date: '',
+            date: moment(),
             numberOfPerson: 1,
-            time: 5,
             id: id,
             token: localStorage.getItem('userToken'),
             user: JSON.parse(localStorage.getItem('user'))
@@ -30,12 +31,8 @@ export default class Reservation extends Component {
     }
 
     onChangeCalendar(date) {
-        const month = date.getMonth() + 1;
-        const year = date.getFullYear();
-        const day = date.getDate();
-        const dateFormated = year+'-'+month+'-'+day;
         this.setState({
-            date: dateFormated
+            date: date
         });
     }
 
@@ -46,21 +43,13 @@ export default class Reservation extends Component {
         });
     }
 
-    onChangeTime(event) {
-        // const currentComponent = this;
-        this.setState({
-            time: event.target.value
-        });
-    }
-
     addIntoCart() {
         // console.log(this.state);
         const currentComponent = this;
         axios.post('/api/carts', {
             id_user: this.state.user.id,
             id_activity: this.state.id,
-            date: this.state.date,
-            hour: this.state.time,
+            date: this.state.date.format("YYYY-MM-DD HH:mm"),
             number_of_person: this.state.numberOfPerson,
             token: this.state.token
         })
@@ -75,12 +64,8 @@ export default class Reservation extends Component {
 
 	render() {
         let arrayNumberOfPerson = [];
-        let arrayHour = [];
-        for (let i = 1; i <= 30; i++) {
+        for (let i = 1; i <= 10; i++) {
             arrayNumberOfPerson.push(i);
-        }
-        for (let j = 5; j <= 18; j++) {
-            arrayHour.push(j);
         }
 		return (
             <div>
@@ -95,15 +80,17 @@ export default class Reservation extends Component {
                                     <option key={i}>{i}</option>
                                 )}
                             </Input>
-                            <Label for="time">Heure</Label>
-                            <Input type="select" name="select" id="time" onChange={this.onChangeTime.bind(this)}>
-                                { arrayHour.map(j =>
-                                    <option key={j}>{j}</option>
-                                )}
-                            </Input>
                         </FormGroup>
-                        {/* <DateTimeField /> */}
-                        <Calendar onChange={this.onChangeCalendar.bind(this)} />
+                        <DatePicker
+                            todayButton={"Aujourd'hui"}
+                            className="form-control"
+                            selected={this.state.date}
+                            onChange={this.onChangeCalendar.bind(this)}
+                            showTimeSelect
+                            minTime={moment().hours(9).minutes(0)}
+                            maxTime={moment().hours(19).minutes(0)}
+                            dateFormat="LLL"
+                        />
                     </ModalBody>
                     <ModalFooter>
                         <Button color="primary" onClick={this.addIntoCart.bind(this)}>Ajouter au panier</Button>
