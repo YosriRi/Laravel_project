@@ -18,7 +18,7 @@ export default class About extends Component {
             <div className="border_devider"></div>
 			<div>
 			<h4>Notre histoire</h4>
-			<p>So'Extreme est née en juin 2013, avec les beaux jours : normal quand on vend des activités de plein air !
+			<p>So'Extreme est née en juin 2000, avec les beaux jours : normal quand on vend des activités de plein air !
 			À l'origine, il y a une petite équipe d'esprits curieux, autant attachés à leur liberté que passionnés d'activités outdoor et de sensations, qui ont tout naturellement décidé de créer leur propre entreprise dans un secteur qu'ils connaissaient déjà : celui de la vente de loisirs sur Internet.
 			Ce qui les réunit aussi depuis le départ, c'est l'envie de vivre une vie plus intense et de partager ce plaisir avec le plus grand nombre : pour eux, tout le monde a droit à sa part de frissons et de sensations !
 			</p>
