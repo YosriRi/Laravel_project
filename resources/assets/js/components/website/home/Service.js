@@ -30,7 +30,7 @@ export default class Service extends Component {
             			<div className="col-lg-4 col-sm-6">
                 			<div className="single_service">
                     			<div className="single_service_icon">
-								<i class="fas fa-gift"></i>
+								<i className="fas fa-gift"></i>
                     			</div>
                     			<div className="single_service_content">
                         			<h3>Offrir une activité</h3>
@@ -75,7 +75,7 @@ export default class Service extends Component {
         				<div className="col-lg-4 col-sm-6">
 	                		<div className="single_service">
                     			<div className="single_service_icon">
-									<i class="fas fa-users"></i>
+									<i className="fas fa-users"></i>
                     			</div>
                     			<div className="single_service_content">
                         			<h3>Communauté Sportive</h3>

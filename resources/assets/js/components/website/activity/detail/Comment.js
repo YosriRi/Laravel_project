@@ -1,51 +1,51 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import TextArea from './TextArea';
 
 export default class Comment extends Component {
 	constructor(props) {
 		super(props);
+		const url = window.location.pathname;
+		const idActivity = url.substring(url.lastIndexOf('/') + 1);
+
+		this.state = {
+            comments: []
+		}
+		
+		axios.get('/api/comments?id_activity=' + idActivity)
+        .then((res) => {
+            const result = res.data.data;
+            // console.log(result);
+            this.setState({
+                comments: result
+            });
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
 	}
 
 	render() {
+		const token = localStorage.getItem('userToken');
+        let textArea;
+        if (token !== null) {
+            textArea = <TextArea />;
+        } else {
+			textArea = 'Pour commenter, veuillez vous connecter';
+		}
 		return (
 			<div>
 				<div className="card my-4">
-					<h5 className="card-header">Laisser un Commentaire:</h5>
-					<div className="card-body">
-						<form>
-							<div className="form-group">
-								<textarea className="form-control" rows="3"></textarea>
-							</div>
-							<button type="submit" className="btn btn-primary">Envoyer</button>
-						</form>
-					</div>
+					{textArea}
 				</div>
 				<div className="media mb-4">
-					<img className="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="" />
 					<div className="media-body">
-						<h4 className="mt-0">John Doe</h4>
-						Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-					</div>
-				</div>
-				<div className="media mb-4">
-					<img className="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="" />
-					<div className="media-body">
-						<h5 className="mt-0">John Doe</h5>
-						Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-						<div className="media mt-4">
-							<img className="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="" />
-							<div className="media-body">
-								<h5 className="mt-0">John Doe</h5>
-								Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+						{ this.state.comments.map(comment =>
+							<div key={comment.id}>
+								<h4 className="mt-0">{comment.user.firstname} {comment.user.lastname}</h4>
+								{comment.comment}
 							</div>
-						</div>
-						<div className="media mt-4">
-							<img className="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="" />
-							<div className="media-body">
-								<h5 className="mt-0">John Doe</h5>
-								Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-							</div>
-						</div>
+						)}
 					</div>
 				</div>
 			</div>

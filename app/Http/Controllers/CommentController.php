@@ -14,9 +14,9 @@ class CommentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $comments = Comment::paginate(15);
+        $comments = Comment::where('id_activity', $request->id_activity)->get();
 
         return CommentResource::collection($comments);
     }
