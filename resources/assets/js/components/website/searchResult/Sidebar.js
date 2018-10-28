@@ -167,7 +167,7 @@ export default class Sidebar extends Component {
                               							<span>GO!</span>
                             						</span>
                           						</button>
-                          						<p className="filter-form__num-activites filter-p">61 activités trouvées</p>
+                          						<p className="filter-form__num-activites filter-p">9 activités trouvées</p>
                       						</div>
                   						</div>
                 					</form>

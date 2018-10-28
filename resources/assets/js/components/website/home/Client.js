@@ -39,7 +39,7 @@ export default class Client extends Component {
                             		</div>
                         			<div className="single_client_content">
                                 		<p className="monseratregular">Maxime Fresh</p>
-                                		<p className="robotolight">développeuse</p>
+                                		<p className="robotolight">développeur</p>
                                 		<span className="separator4"></span>
                                 		<p>
                                 			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 

@@ -24,7 +24,7 @@ export default class Profile extends Component {
         				<a className="nav-link" href="#images" role="tab" data-toggle="tab">Images</a>
     				</li>
     				<li className="nav-item">
-        				<a className="nav-link" href="#references" role="tab" data-toggle="tab">References</a>
+        				<a className="nav-link" href="#references" role="tab" data-toggle="tab">Dernières activités</a>
     				</li>
 				</ul>
 					
@@ -48,20 +48,81 @@ export default class Profile extends Component {
                     					<div className="row">
                         					<div className="col-md-8">
                             					<div className="sidebar">
-                                					<h5 className="main-title"></h5>
-                            					</div>
+                                					<h5 className="main-title">Amis So'Extreme</h5>
+													<div className="single_client_img">
+                                						<img className="img-circle img-responsive" src="images/cl2.jpg" alt="" />
+                            						</div>	
+                          					</div>
                             					<div className="sidebar">
-                                					<h5 className="main-title"></h5>
+                                					<h5 className="main-title">Wishlist des activités</h5>
+													<div>
+														<div className="tableReservations">
+															<thead>
+																<tr>
+																	<th>Nom</th>
+																	<th>Date</th>
+																	<th>Nombre de personne</th>
+																	<th>Prix</th>
+																	<th>Réservation</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td>Saut en parachute PAC</td>
+																	<td>25-10-2018</td>
+																	<td>1</td>
+																	<td>1320 euros</td>
+																	<td><a className="btn btn-primary btn-sm " href="">Réserver Maintenant</a></td>
+																</tr>
+																<tr>
+																	<td>Soufflerie</td>
+																	<td>30-03-2019</td>
+																	<td>6</td>
+																	<td>180 euros</td>
+																	<td><a className="btn btn-primary btn-sm " href="">Réserver Maintenant</a></td>
+																</tr>
+																<tr>
+																	<td>Canoe</td>
+																	<td>12-06-2019</td>
+																	<td>2</td>
+																	<td>30 euros</td>
+																	<td><a className="btn btn-primary btn-sm " href="">Réserver Maintenant</a></td>
+																</tr>
+																<tr>
+																	<td>Canyoning</td>
+																	<td>25-08-2019</td>
+																	<td>3</td>
+																	<td>60 euros</td>
+																	<td><a className="btn btn-primary btn-sm " href="">Réserver Maintenant</a></td>
+																</tr>
+															</tbody>
+														</div>
+													</div>
                             					</div>
                         					</div>
                         					<div className="col-md-4">
                             					<div className="sidebar">
-                                					<h5 className="main-title"></h5>
+                                					<h5 className="main-title">Informations personnelles</h5>
                                 					<div className="sidebar-information">
                                     					<ul className="single-category">
                                         					<li className="row">
                                             					<h6 className="title col-xs-6">Name</h6>
                                             					<span className="subtitle col-xs-6">Yosri Riani</span>
+																<h6 className="title col-xs-6">sexe</h6>
+																<span className="subtitle col-xs-6">Male</span>
+																<h6 className="title col-xs-6">Addresse</h6>
+																<span className="subtitle col-xs-6">Rue de la liberté</span>
+																<h6 className="title col-xs-6">Code postal</h6>
+																<span className="subtitle col-xs-6">75012</span>
+																<h6 className="title col-xs-6">téléphone</h6>
+																<span className="subtitle col-xs-6">06 84 75 65 24</span>
+																<h6 className="title col-xs-6">Age</h6>
+																<span className="subtitle col-xs-6">27</span>
+																
+																
+																
+																
+																
                                         					</li>
                                     					</ul>
                                 					</div>

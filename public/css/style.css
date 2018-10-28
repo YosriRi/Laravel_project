@@ -4035,7 +4035,8 @@ ul.authentification li {
 }
 
 .profile {
-    margin-top: 30px;
+    margin-top: 50px;
+    padding-top: 60px;
 }
 
 html {
@@ -4330,4 +4331,15 @@ display: inline;
 
 img.sliderImg {
     padding-top: 65px;
+}
+
+.tableReservations{
+    margin: 0 auto;
+}
+
+
+.tableReservations tr, .tableReservations td {
+    text-align: center;
+    margin: auto;
+    width: 25%;
 }

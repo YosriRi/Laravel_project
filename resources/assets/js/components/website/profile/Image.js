@@ -19,8 +19,8 @@ export default class Image extends Component {
                         	<div className="mb-4 col-lg-3 col-md-4">
                             	<div className="card z-depth-1">
                                 	<div className="view">
-                                		<a className="lightbox" href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(145).jpg" data-size="1600x1067">
-                                    		<img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(145).jpg" alt="placeholder" className="img-fluid " />
+                                		<a className="lightbox" href="/images/gallery/gallery (1).jpg" data-size="1600x1067">
+                                    		<img src="/images/gallery/gallery (1).jpg" alt="placeholder" className="img-fluid " />
                                 		</a>
                             		</div>
                                 	<div className="card-title">
@@ -43,8 +43,8 @@ export default class Image extends Component {
                         	<div className="mb-4 col-lg-3 col-md-4">
                             	<div className="card z-depth-1">
                                 	<div className="view">
-                                    	<a className="lightbox" href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(150).jpg" data-size="1600x1067" className="">
-                                    		<img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(150).jpg" alt="placeholder" className="img-fluid" />
+                                    	<a className="lightbox" href="/images/gallery/gallery (2).jpg" data-size="1600x1067" className="">
+                                    		<img src="/images/gallery/gallery (2).jpg" alt="placeholder" className="img-fluid" />
                                     	</a>
                                 	</div>
                                 	<div className="card-title">
@@ -67,8 +67,8 @@ export default class Image extends Component {
                         	<div className="mb-4 col-lg-3 col-md-4">
                             	<div className="card z-depth-1">
                                 	<div className="view">
-                                		<a className="lightbox" href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(145).jpg" data-size="1600x1067">
-                                    		<img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(145).jpg" alt="placeholder" className="img-fluid " />
+                                		<a className="lightbox" href="/images/gallery/gallery (3).jpg" data-size="1600x1067">
+                                    		<img src="/images/gallery/gallery (3).jpg" alt="placeholder" className="img-fluid " />
                                 		</a>
                             		</div>
                                 	<div className="card-title">
@@ -91,8 +91,8 @@ export default class Image extends Component {
                         	<div className="mb-4 col-lg-3 col-md-4">
                             	<div className="card z-depth-1">
                                 	<div className="view">
-                                    	<a className="lightbox" href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(150).jpg" data-size="1600x1067" className="">
-                                    		<img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(150).jpg" alt="placeholder" className="img-fluid" />
+                                    	<a className="lightbox" href="/images/gallery/gallery (4).jpg" data-size="1600x1067" className="">
+                                    		<img src="/images/gallery/gallery (4).jpg" alt="placeholder" className="img-fluid" />
                                     	</a>
                                 	</div>
                                 	<div className="card-title">
@@ -115,8 +115,8 @@ export default class Image extends Component {
                         	<div className="mb-4 col-lg-3 col-md-4">
                             	<div className="card z-depth-1">
                                 	<div className="view">
-                                		<a className="lightbox" href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(145).jpg" data-size="1600x1067">
-                                    		<img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(145).jpg" alt="placeholder" className="img-fluid " />
+                                		<a className="lightbox" href="/images/gallery/gallery (5).jpg" data-size="1600x1067">
+                                    		<img src="/images/gallery/gallery (5).jpg" alt="placeholder" className="img-fluid " />
                                 		</a>
                             		</div>
                                 	<div className="card-title">
@@ -139,8 +139,8 @@ export default class Image extends Component {
                         	<div className="mb-4 col-lg-3 col-md-4">
                             	<div className="card z-depth-1">
                                 	<div className="view">
-                                    	<a className="lightbox" href="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(150).jpg" data-size="1600x1067" className="">
-                                    		<img src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(150).jpg" alt="placeholder" className="img-fluid" />
+                                    	<a className="lightbox" href="/images/gallery/gallery (6).jpg" data-size="1600x1067" className="">
+                                    		<img src="/images/gallery/gallery (6).jpg" alt="placeholder" className="img-fluid" />
                                     	</a>
                                 	</div>
                                 	<div className="card-title">
