@@ -34,7 +34,6 @@ class CartController extends Controller
         $cart->id_user          = $request->input('id_user');
         $cart->id_activity      = $request->input('id_activity');
         $cart->date             = $request->input('date');
-        $cart->hour             = $request->input('hour');
         $cart->number_of_person = $request->input('number_of_person');
 
         if ($cart->save()) {
@@ -69,7 +68,6 @@ class CartController extends Controller
         $cart->id_user          = $request->input('id_user');
         $cart->id_activity      = $request->input('id_activity');
         $cart->date             = $request->input('date');
-        $cart->hour             = $request->input('hour');
         $cart->number_of_person = $request->input('number_of_person');
 
         if ($cart->save()) {

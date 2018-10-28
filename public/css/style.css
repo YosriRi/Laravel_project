@@ -437,16 +437,16 @@ Button
 } */
 
 .btn:hover {
-    background-color: #f57206ce;
+    background-color: #f5720683;
     color: #fff;
     text-decoration: none;
-    border: 1px solid #f57206ce;
+    border: 1px solid #f5720683;
 }
 
 .btn-primary {
     color: #fff !important;
-    background-color: rgb(228, 160, 82);
-    border-color: #fff;
+    background-color: rgba(34, 61, 97, 0.438);;
+    border-color: rgba(255, 255, 255, 0.37);
     transition: .5s;
 }
 
@@ -1084,8 +1084,8 @@ a.robotolight:hover {
 }
 
 .clinetslogo .main_clinetslogo {
-    margin: 60px 0px;
-    overflow: hidden;
+    margin: 5px 0px;
+
 }
 
 /*portfolio section css*/

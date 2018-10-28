@@ -5,7 +5,7 @@ export default class ListActivities extends Component {
 	constructor(props) {
 		super(props);
 
-        // console.log(props);
+        // console.log(props.activities);
 
         this.state = {
             activities: props.activities
@@ -27,7 +27,7 @@ export default class ListActivities extends Component {
                     <div key={activity.id} className="search-card col-lg-4 col-md-6">
                         <div className="card z-depth-1">
                             <div className="view overlay">
-                                <img src= {activity.image1_location} className="card-img-top" alt="narrower" />
+                                <img src={activity.image1_location} className="card-img-top" alt="narrower" />
                                 <a href={'/detailActivity/' + activity.id}>
                                     <div className="mask rgba-white-slight waves-effect waves-light"></div>
                                 </a>

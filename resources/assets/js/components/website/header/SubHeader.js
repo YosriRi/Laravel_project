@@ -36,9 +36,7 @@ export default class SubHeader extends Component {
 							<li className="nav-item active">
 								<a className="nav-link" href="/">Accueil</a>
 							</li>
-							<li className="nav-item">
-								<a className="nav-link" href="/activity">Nos activités</a>
-							</li>
+
 							<li className="nav-item">
 								<a className="nav-link" href="/#terrain">Nos Terrains de jeu</a>
 							</li>

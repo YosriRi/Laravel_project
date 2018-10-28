@@ -12,7 +12,9 @@ export default class Sidebar extends Component {
         let reservationButton;
         if (token !== null) {
             reservationButton = <Reservation/>;
-        }
+        } else {
+			reservationButton = 'Pour réserver, veuillez vous connecter';
+		}
         return (
             <div className="col-md-4">
     			<div className="card my-4">

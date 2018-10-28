@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import 'gentelella/vendors/bootstrap/dist/js/bootstrap';
+import 'gentelella/vendors/jquery/dist/jquery';
 
 export default class SideMenu extends Component {
 	constructor(props) {
