@@ -13,11 +13,7 @@ export default class PaymentForm extends Component {
             	<div className="d-block my-3">
               		<div className="custom-control custom-radio">
                 		<input id="credit" name="paymentMethod" type="radio" className="custom-control-input" checked="" required="" />
-            			<label className="custom-control-label" htmlFor="credit">Credit card</label>
-              		</div>
-              		<div className="custom-control custom-radio">
-                		<input id="debit" name="paymentMethod" type="radio" className="custom-control-input" required="" />
-                		<label className="custom-control-label" htmlFor="debit">Debit card</label>
+            			<label className="custom-control-label" htmlFor="credit">Carte banquaire</label>
               		</div>
               		<div className="custom-control custom-radio">
                 		<input id="paypal" name="paymentMethod" type="radio" className="custom-control-input" required="" />
@@ -26,18 +22,18 @@ export default class PaymentForm extends Component {
             	</div>
         		<div className="row">
               		<div className="col-md-6 mb-3">
-                		<label htmlFor="cc-name">Name on card</label>
+                		<label htmlFor="cc-name">Propriétaire de la carte</label>
                 		<input type="text" className="form-control" id="cc-name" placeholder="" required="" />
-                		<small className="text-muted">Full name as displayed on card</small>
+                		<small className="text-muted">Nom complet écrit sur la carte</small>
                 		<div className="invalid-feedback">
-                  			Name on card is required
+                  			Nom valide est nécessaire.
             			</div>
               		</div>
               		<div className="col-md-6 mb-3">
-                		<label htmlFor="cc-number">Credit card number</label>
+                		<label htmlFor="cc-number">Numéro de la carte</label>
             			<input type="text" className="form-control" id="cc-number" placeholder="" required="" />
                 		<div className="invalid-feedback">
-                  			Credit card number is required
+                  			Numéro de carte valide est nécessaire.
             			</div>
               		</div>
         		</div>
@@ -46,19 +42,19 @@ export default class PaymentForm extends Component {
                 		<label htmlFor="cc-expiration">Expiration</label>
                 		<input type="text" className="form-control" id="cc-expiration" placeholder="" required="" />
                 		<div className="invalid-feedback">
-                  			Expiration date required
+                  			Date d'expiration valide est nécessaire.
                 		</div>
               		</div>
               		<div className="col-md-3 mb-3">
                 		<label htmlFor="cc-expiration">CVV</label>
                 		<input type="text" className="form-control" id="cc-cvv" placeholder="" required="" />
                 		<div className="invalid-feedback">
-                  			Security code required
+                  			Code de sécurité valide est nécessaire.
                 		</div>
               		</div>
             	</div>
             	<hr className="mb-4" />
-            	<button className="btn btn-secondary btn-block text-uppercase" type="submit">Continue to checkout</button>
+            	<button className="btn btn-secondary btn-block text-uppercase" type="submit">Payer</button>
 			</div>
 		);
 	}
