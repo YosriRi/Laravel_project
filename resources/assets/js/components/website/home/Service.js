@@ -23,7 +23,7 @@ export default class Service extends Component {
                     			</div>
                     			<div className="single_service_content">
                         			<h3>Réservation en 5 min</h3>
-                        			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                        			<p>Réserver une activité en moins que 5 minutes Chrono!</p>
                     			</div>
                 			</div>
             			</div>
@@ -34,7 +34,7 @@ export default class Service extends Component {
                     			</div>
                     			<div className="single_service_content">
                         			<h3>Offrir une activité</h3>
-                        			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                        			<p>Vous pouvez faire plaisir à un proche et l'offrir l'expérience de sa vie!</p>
                     			</div>
                 			</div>
             			</div>
@@ -45,7 +45,7 @@ export default class Service extends Component {
                     			</div>
                     			<div className="single_service_content">
 	                        		<h3>Renseignements</h3>
-                    				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                    				<p>Toutes les informations dont vous aurez besoin pour une expérience inoubliable</p>
                     			</div>
                 			</div>
             			</div>
@@ -57,7 +57,7 @@ export default class Service extends Component {
 	                    		</div>
                     			<div className="single_service_content">
 	                        		<h3>Photographie Professionnelle</h3>
-                        			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                        			<p>Une équipe de Photographes experts à votre disposition.</p>
                     			</div>
                 			</div>
             			</div>
@@ -68,7 +68,7 @@ export default class Service extends Component {
                     			</div>
                     			<div className="single_service_content">
                         			<h3>Partage d'expérience</h3>
-                        			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                        			<p> vous pouvez partager vos photos et votre expérience.</p>
                     			</div>
                 			</div>
             			</div>
@@ -79,7 +79,7 @@ export default class Service extends Component {
                     			</div>
                     			<div className="single_service_content">
                         			<h3>Communauté Sportive</h3>
-                        			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                        			<p>Ineraction avec les autres clients de SO'Extreme sur notre blog.</p>
                     			</div>
                 			</div>
             			</div>
