@@ -34,3 +34,4 @@ Route::get('/all', 'PageController@all');
 
 // Backoffice
 Route::get('/backoffice', 'BackPageController@index');
+Route::get('/backoffice/connexion', 'BackPageController@login');

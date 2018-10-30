@@ -12,4 +12,13 @@ class Admin extends Model
     	'email',
     	'password',
 	];
+
+	/**
+     * The attributes that should be hidden for arrays.
+     *
+     * @var array
+     */
+    protected $hidden = [
+        'password',
+    ];
 }

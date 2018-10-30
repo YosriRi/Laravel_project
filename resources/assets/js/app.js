@@ -30,6 +30,5 @@ require('./components/website/about/About');
 require('./components/website/home/Home');
 
 // Backoffice
-require('./components/backoffice/sideMenu/SideMenu');
-require('./components/backoffice/profileQuickInfo/ProfileQuickInfo');
-require('./components/backoffice/topNavigation/TopNavigation');
+require('./components/backoffice/App');
+require('./components/backoffice/Login');

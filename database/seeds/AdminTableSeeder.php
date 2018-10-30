@@ -16,22 +16,22 @@ class AdminTableSeeder extends Seeder
             	'firstname' => "Yosri",
             	'lastname' => "Riani",
             	'email' => "yosri.riani@gmail.com",
-            	'password' => bcrypt('yosri'),
+            	'password' => sha1('yosri'),
         	],
         	[
             	'firstname' => "Ahmet",
             	'lastname' => "Bolek",
             	'email' => "ahmet.bolek@gmail.com",
-            	'password' => bcrypt('ahmet'),
+            	'password' => sha1('ahmet'),
         	],
         	[
             	'firstname' => "Stéphane",
             	'lastname' => "Lin",
             	'email' => "stephane.lin@gmail.com",
-            	'password' => bcrypt('stephane'),
+            	'password' => sha1('stephane'),
         	]
     	];
 
-        DB::table('admin')->insert($admin);
+        DB::table('admins')->insert($admin);
     }
 }

@@ -10,7 +10,7 @@ export default class Comment extends Component {
 
 		this.state = {
             comments: []
-		}
+		};
 		
 		axios.get('/api/comments?id_activity=' + idActivity)
         .then((res) => {

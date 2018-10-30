@@ -16,7 +16,7 @@ class SaleController extends Controller
      */
     public function index()
     {
-        $sales = Sales::paginate(15);
+        $sales = Sale::paginate(15);
 
         return SaleResource::collection($sales);
     }

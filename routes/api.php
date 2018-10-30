@@ -5,7 +5,9 @@ use Illuminate\Http\Request;
 /**
 * Doesn't need to be logged in to do these actions
 */
+
 Route::post('login', 'UserController@login');
+Route::post('loginAdmin', 'AdminController@login');
 Route::post('register', 'UserController@register');
 
 Route::get('activities', 'ActivityController@index');

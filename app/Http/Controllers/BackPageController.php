@@ -8,6 +8,11 @@ class BackPageController extends Controller
 {
     public function index()
     {
-        return view('backoffice');
+        return view('backoffice', ['name' => 'app']);
+    }
+
+    public function login()
+    {
+        return view('backoffice', ['name' => 'login']);
     }
 }

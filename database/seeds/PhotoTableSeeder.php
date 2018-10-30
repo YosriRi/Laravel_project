@@ -124,7 +124,7 @@ class PhotoTableSeeder extends Seeder
                     'name' 				=> '/images/gallery/gallery (22).jpg'
                 ]
             ];
-                DB::table('photos')->insert($Photo);
+            DB::table('photos')->insert($Photo);
 
     }
 }
