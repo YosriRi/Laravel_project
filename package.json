@@ -27,6 +27,7 @@
         "gentelella": "^1.4.0",
         "moment": "^2.22.2",
         "node-sass": "^4.9.3",
+        "react-async-script-loader": "^0.3.0",
         "react-datepicker": "^1.7.0",
         "react-notifications": "^1.4.3",
         "react-text-truncate": "^0.13.1",

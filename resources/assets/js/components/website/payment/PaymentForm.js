@@ -1,14 +1,33 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import PaypalButton from './PaypalButton';
 
-export default class PaymentForm extends Component {
+	const CLIENT = {
+		sandbox: 'AU1vo9rmu63CqURJnN0hCQn_X5KtyFzsFlks2Y3QFIx5reb2-dWb2RQ-DQ1UXMntUcrI5HMaCkuHBwFB'
+	// 	// process.env.PAYPAL_CLIENT_ID_SANDBOX,
+	// 	// production: process.env.PAYPAL_CLIENT_ID_PRODUCTION,
+	};
+	// const ENV = process.env.NODE_ENV === 'production'
+	// 	? 'production'
+	// 	: 'sandbox';
+
+class PaymentForm extends Component {
 	constructor(props) {
 		super(props);
 	}
 
 	render() {
+		const onSuccess = (payment) =>
+		console.log('Successful payment!', payment);
+  
+	  const onError = (error) =>
+		console.log('Erroneous payment OR failed to load script!', error);
+  
+	  const onCancel = (data) =>
+		console.log('Cancelled payment!', data);
+
 		return (
 			<div>
+
 				<h4 className="mb-3">Payment</h4>
             	<div className="d-block my-3">
               		<div className="custom-control custom-radio">
@@ -54,8 +73,18 @@ export default class PaymentForm extends Component {
               		</div>
             	</div>
             	<hr className="mb-4" />
-            	<button className="btn btn-secondary btn-block text-uppercase" type="submit">Payer</button>
+					<PaypalButton
+						client={CLIENT}
+						env={'sandbox'}
+						commit={true}
+						currency={'EUR'}
+						total={100}
+						onSuccess={onSuccess}
+						onError={onError}
+						onCancel={onCancel}
+					/>
 			</div>
 		);
 	}
 }
+export default PaymentForm;

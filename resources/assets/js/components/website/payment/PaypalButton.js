@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import scriptLoader from 'react-async-script-loader';
 
-class PaypalButton extends React.Component {
+class PaypalButton extends Component {
   constructor(props) {
     super(props);
 
