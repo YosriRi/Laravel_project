@@ -4,17 +4,23 @@ import ReactDOM from 'react-dom';
 export default class Content extends Component {
 	constructor(props) {
 		super(props);
-	}
 
+		this.state = {
+			activities: props.activities
+			
+		};
+		console.log(props);
+	}
+	
 	render() {
 		return (
 			<div className="row">
-            	<div className="title-holder d-none-d-md-block">
+				<div className="title-holder d-none-d-md-block">
                   	<h1 className="base-title">Toutes les activités <strong>So'Extreme</strong></h1>
                   	<div className="base-subtitle">
-                    	<span className="subtitle">521 acitivities match your criteria</span>
+                    	<span className="subtitle"> 9 Activités ont été trouvés</span>
                 		<div className="sort-block">
-                  			<span className="text">Sort By:</span>
+                  			<span className="text">Trier par:</span>
               				<div className="ah-select">
                         		<select className="ais-SortBy__root">
                           			<option value="Proximite">Proximité</option>

@@ -26,8 +26,7 @@ export default class Client extends Component {
                                 		<p className="robotolight">Amateur saut en parachute</p>
                                 		<span className="separator4"></span>
                                 		<p>
-                                			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-                                    		et dolore magna aliqua. Ut enim ad minim.
+                                			So'Extreme Vous êtes les meilleurs! J'ai beaucoup aimé l'ambiance, l'accueil, tout!! Merci pour toute l'équipe!
                                 		</p>
                             		</div>
                         		</div>
@@ -39,11 +38,10 @@ export default class Client extends Component {
                             		</div>
                         			<div className="single_client_content">
                                 		<p className="monseratregular">Maxime Fresh</p>
-                                		<p className="robotolight">développeuse</p>
+                                		<p className="robotolight">développeur</p>
                                 		<span className="separator4"></span>
                                 		<p>
-                                			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-                                    		et dolore magna aliqua. Ut enim ad minim.
+                                			Meilleure expérience de ma vie!! Vous êtes les BEST!! Je recommande fortement!!
                                 		</p>
                             		</div>
                         		</div>
@@ -58,8 +56,7 @@ export default class Client extends Component {
                                 		<p className="robotolight">Responsable Administratif</p>
                                 		<span className="separator4"></span>
                                 		<p>
-                                			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-                                    		et dolore magna aliqua. Ut enim ad minim.
+                                			Equipe accuiellant et souriant!! Je me suis senti en sécurité toute au long de l'activité!! Merci l'équipe SO'Extreme!
                                     	</p>
                             		</div>
                         		</div>
@@ -74,8 +71,7 @@ export default class Client extends Component {
                                 		<p className="robotolight">Comédien</p>
                                 		<span className="separator4"></span>
                                 		<p>
-                                			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-                                    		et dolore magna aliqua. Ut enim ad minim.
+                                			A refaire! J'ai recommandé à tout mon entourage! Merci pour l'accueil et pour une expérience inoubliable!
                                 		</p>
                             		</div>
                         		</div>

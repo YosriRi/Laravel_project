@@ -50,7 +50,9 @@ export default class Content extends Component {
 				<p className="lead">
 					Catégorie :
 					<a href="#">Air</a>
+					<h2 className="right">{activity.amount} €</h2>
 				</p>
+				
 				<hr />
 				<div className="rating">
 					<input type="radio" id="star5" name="rating" value="5" />

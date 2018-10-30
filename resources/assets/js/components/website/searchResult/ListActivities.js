@@ -34,11 +34,12 @@ export default class ListActivities extends Component {
                             </div>
                             <div className=" card-body card-body-cascade">
                                 <h5 className="card-title">{activity.name}</h5>
+                                <h6>{activity.amount} €</h6>
                                 <TextTruncate
                                     line={4}
                                     truncateText=" … "
                                     text={activity.description}
-                                    textTruncateChild={<a className="btn btn-primary" href={'/detailActivity/' + activity.id}>Détail</a>}
+                                    textTruncateChild={<a className="btn btn-primary " href={'/detailActivity/' + activity.id}>Détail</a>}
                                 />
                             </div>
                         </div>
