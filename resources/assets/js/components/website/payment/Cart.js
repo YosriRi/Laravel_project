@@ -78,8 +78,9 @@ export default class Cart extends Component {
             </Popup>
           )
 		return (
-            
-            <div className="col-md-12 order-md-1 mb-4">
+            <div className="container">
+				<div className="row">
+                    <div className=" col-md-9 order-md-1 mb-4 center">
 
                 <Table hover responsive>
                     <thead>
@@ -106,6 +107,9 @@ export default class Cart extends Component {
                     </tbody>
                 </Table>
             </div>
+            </div>
+            </div>
+
 		);
 	}
 }

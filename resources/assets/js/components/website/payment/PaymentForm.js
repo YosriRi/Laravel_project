@@ -30,17 +30,27 @@ class PaymentForm extends Component {
 
 				<h4 className="mb-3">Payment</h4>
             	<div className="d-block my-3">
-              		<div className="custom-control custom-radio">
-                		<input id="credit" name="paymentMethod" type="radio" className="custom-control-input" checked="" required="" />
-            			<label className="custom-control-label" htmlFor="credit">Carte banquaire</label>
-              		</div>
-              		<div className="custom-control custom-radio">
-                		<input id="paypal" name="paymentMethod" type="radio" className="custom-control-input" required="" />
-                		<label className="custom-control-label" htmlFor="paypal">Paypal</label>
-              		</div>
+
+					  <PaypalButton
+						client={CLIENT}
+						env={'sandbox'}
+						commit={true}
+						currency={'EUR'}
+						total={100}
+						onSuccess={onSuccess}
+						onError={onError}
+						onCancel={onCancel}
+					/>
+
+              		
+              		
             	</div>
+         			
+				<h3>Carte banquaire</h3>
         		<div className="row">
-              		<div className="col-md-6 mb-3">
+				
+					  <div className="col-md-6 mb-3">
+					  
                 		<label htmlFor="cc-name">Propriétaire de la carte</label>
                 		<input type="text" className="form-control" id="cc-name" placeholder="" required="" />
                 		<small className="text-muted">Nom complet écrit sur la carte</small>
@@ -73,16 +83,7 @@ class PaymentForm extends Component {
               		</div>
             	</div>
             	<hr className="mb-4" />
-					<PaypalButton
-						client={CLIENT}
-						env={'sandbox'}
-						commit={true}
-						currency={'EUR'}
-						total={100}
-						onSuccess={onSuccess}
-						onError={onError}
-						onCancel={onCancel}
-					/>
+					
 			</div>
 		);
 	}
