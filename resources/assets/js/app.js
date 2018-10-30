@@ -27,6 +27,7 @@ require('./components/website/reservation/Reservation');
 require('./components/website/visualize-photo/VisualizePhoto');
 require('./components/website/searchResult/SearchResult');
 require('./components/website/about/About');
+require('./components/website/paymentSuccess/PaymentSuccess');
 require('./components/website/home/Home');
 
 // Backoffice

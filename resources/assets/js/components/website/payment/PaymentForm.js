@@ -17,8 +17,9 @@ class PaymentForm extends Component {
 
 	render() {
 		const onSuccess = (payment) =>
-		console.log('Successful payment!', payment);
-  
+		console.log('Payement réussi!', payment);
+		window.location.replace("/paymentsuccess");
+
 	  const onError = (error) =>
 		console.log('Erroneous payment OR failed to load script!', error);
   

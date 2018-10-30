@@ -21,6 +21,11 @@ class PageController extends Controller
         return view('index', ['name' => 'aboutComponent']);
     }
 
+    public function paymentSuccess()
+    {
+        return view('index', ['name' => 'paymentSuccessComponent']);
+    }
+
     public function detailActivity($id)
     {
         return view('index', ['name' => 'detailActivityComponent']);
