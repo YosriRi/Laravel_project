@@ -26,6 +26,10 @@ Route::get('/a-propos', 'PageController@about');
 
 Route::get('/detail-activite/{id}', 'PageController@detailActivity');
 
+Route::get('/paymentsuccess', 'PageController@paymentSuccess');
+
+Route::get('/detailActivity/{id}', 'PageController@detailActivity');
+
 Route::get('/profil/{id}', 'PageController@profile');
 
 Route::get('/panier/{id}', 'PageController@cart');

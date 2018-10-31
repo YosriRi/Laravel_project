@@ -4343,3 +4343,18 @@ img.sliderImg {
     margin: auto;
     width: 25%;
 }
+
+.successpage{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.successpage a{
+    color: rgb(47, 47, 47);
+    font-size: 14px;
+}
+
+.successpage a:hover{
+    color: rgb(195, 165, 83);
+    font-size: 14px;
+}
