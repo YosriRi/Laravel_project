@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Comment from './Comment';
+import { FaAccessibleIcon } from 'react-icons/fa';
 
 export default class Content extends Component {
 	constructor(props) {
@@ -46,7 +47,7 @@ export default class Content extends Component {
 		}
 		return (
 			<div className="col-lg-8">
-				<h1 className="mt-4">{activity.name}</h1>
+				<h1 className="mt-4">{activity.name} {activity.handicap ? (<FaAccessibleIcon />) : ( '' )}</h1>
 				<p className="lead">
 					Catégorie :
 					<a href="#">Air</a>

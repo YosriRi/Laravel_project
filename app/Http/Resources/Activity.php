@@ -40,6 +40,7 @@ class Activity extends JsonResource
             'start'             => $this->start,
             'end'               => $this->end,
             'number_of_persons' => $this->number_of_persons,
+            'handicap'          => $this->handicap,
             'category'          => new CategoryResource(Category::find($this->id_category)),
             'type'              => new TypeResource(Type::find($this->id_type)),
             'city'              => new CityResource(City::find($this->id_city)),

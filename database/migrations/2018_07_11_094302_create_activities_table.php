@@ -29,6 +29,7 @@ class CreateActivitiesTable extends Migration
             $table->datetime('start');
             $table->datetime('end');
             $table->integer('number_of_persons');
+            $table->boolean('handicap');
             $table->timestamps();
 
             $table->foreign('id_category')

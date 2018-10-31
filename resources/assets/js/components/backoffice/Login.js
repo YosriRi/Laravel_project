@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 var randtoken = require('rand-token');
+import ShowAlert from './ShowAlert';
 
 export default class Login extends Component {
 	constructor(props) {
@@ -9,7 +10,10 @@ export default class Login extends Component {
 
         this.state = {
             email: '',
-            password: ''
+            password: '',
+            showAlert: false,
+            msg: '',
+            color: ''
         };
     }
     
@@ -37,10 +41,13 @@ export default class Login extends Component {
             if (res !== undefined) {
                 localStorage.setItem('adminToken', randtoken.generate(16));
                 localStorage.setItem('admin', JSON.stringify(res));
-                alert("Connexion réussi");
                 window.location.replace("/backoffice");
             } else {
-                alert('L\'admin n\'existe pas');
+                this.setState({
+                    showAlert: true,
+                    msg: "L'utilisateur n'existe pas",
+                    color: 'danger'
+                });
             }
         })
         .catch((error) => {
@@ -49,8 +56,13 @@ export default class Login extends Component {
     }
 
 	render() {
+        let showAlert;
+        if (this.state.showAlert) {
+            showAlert = <ShowAlert text={this.state.msg} color={this.state.color} />
+        }
 		return (
 			<div>
+                {showAlert}
                 <div className="container">
                     <div className="row">
                         <div className="col-sm-9 col-md-7 col-lg-5 mx-auto">

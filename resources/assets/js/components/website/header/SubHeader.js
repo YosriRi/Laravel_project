@@ -44,7 +44,7 @@ export default class SubHeader extends Component {
 								<a className="nav-link" href="/#soufflerie">Nouveauté ! Soufflerie</a>
 							</li>
 							<li className="nav-item">
-								<a className="nav-link" href="/about">A propos</a>
+								<a className="nav-link" href="/a-propos">A propos</a>
 							</li>
 							<li className="nav-item">
 								<a className="nav-link" href="/#contact">Contact</a>

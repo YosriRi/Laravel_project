@@ -28,6 +28,7 @@ require('./components/website/visualize-photo/VisualizePhoto');
 require('./components/website/searchResult/SearchResult');
 require('./components/website/about/About');
 require('./components/website/home/Home');
+require('./components/website/cgu/Cgu');
 
 // Backoffice
 require('./components/backoffice/App');

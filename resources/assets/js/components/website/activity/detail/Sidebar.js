@@ -8,10 +8,10 @@ export default class Sidebar extends Component {
     }
 
     render() {
-        const token = localStorage.getItem('userToken');
+		const token = localStorage.getItem('userToken');
         let reservationButton;
         if (token !== null) {
-            reservationButton = <Reservation/>;
+            reservationButton = <Reservation />;
         } else {
 			reservationButton = 'Pour réserver, veuillez vous connecter';
 		}
@@ -64,12 +64,10 @@ export default class Sidebar extends Component {
 				<div className="card my-4">
 					<h5 className="card-header">Réservation</h5>
 				    <div className="card-body">
-                        {reservationButton}
+						{reservationButton}
 			        </div>
 				</div>
 			</div>
         );
     }
 }
-
-// ajouter bouton offrir cadeau 

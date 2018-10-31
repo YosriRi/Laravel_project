@@ -14,23 +14,23 @@
 // Website
 Route::get('/', 'PageController@index');
 
-Route::get('/login', 'AuthController@login');
+Route::get('/connexion', 'AuthController@login');
 
-Route::get('/register', 'AuthController@register');
+Route::get('/inscription', 'AuthController@register');
 
-Route::get('/activity', 'PageController@searchResult');
+Route::get('/activites', 'PageController@searchResult');
 
 Route::get('/gallery', 'PageController@gallery');
 
-Route::get('/about', 'PageController@about');
+Route::get('/a-propos', 'PageController@about');
 
-Route::get('/detailActivity/{id}', 'PageController@detailActivity');
+Route::get('/detail-activite/{id}', 'PageController@detailActivity');
 
-Route::get('/profile/{id}', 'PageController@profile');
+Route::get('/profil/{id}', 'PageController@profile');
 
-Route::get('/cart/{id}', 'PageController@cart');
+Route::get('/panier/{id}', 'PageController@cart');
 
-Route::get('/all', 'PageController@all');
+Route::get('/cgu', 'PageController@cgu');
 
 // Backoffice
 Route::get('/backoffice', 'BackPageController@index');

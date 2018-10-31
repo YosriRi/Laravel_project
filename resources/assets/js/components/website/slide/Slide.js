@@ -35,7 +35,7 @@ export default class Slider extends Component {
 								<input type="text" placeholder="Rechercher une activité" required />
 								<button type="submit">Rechercher</button>
 							</form>
-							<a href="/activity" className="btn btn-primary btn-sm" role="button" aria-pressed="true">Toutes Nos activités</a>
+							<a href="/activites" className="btn btn-primary btn-sm" role="button" aria-pressed="true">Toutes Nos activités</a>
 						</div>
 					</div>
 				</div>

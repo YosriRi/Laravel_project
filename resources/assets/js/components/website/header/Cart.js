@@ -20,7 +20,7 @@ export default class Cart extends Component {
 	render() {
 		return (
 			<li className="nav-item">
-				<a className="nav-link" href={'/cart/' + this.state.user.id}>
+				<a className="nav-link" href={'/panier/' + this.state.user.id}>
 					<i className="fas fa-shopping-cart"></i>
 				</a>
 			</li>

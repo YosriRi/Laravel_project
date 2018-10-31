@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import TextTruncate from 'react-text-truncate';
+import { FaAccessibleIcon } from 'react-icons/fa';
+
 export default class ListActivities extends Component {
 	constructor(props) {
 		super(props);
@@ -28,18 +30,18 @@ export default class ListActivities extends Component {
                         <div className="card z-depth-1">
                             <div className="view overlay">
                                 <img src={activity.image1_location} className="card-img-top" alt="narrower" />
-                                <a href={'/detailActivity/' + activity.id}>
+                                <a href={'/detail-activite/' + activity.id}>
                                     <div className="mask rgba-white-slight waves-effect waves-light"></div>
                                 </a>
                             </div>
                             <div className=" card-body card-body-cascade">
-                                <h5 className="card-title">{activity.name}</h5>
+                                <h5 className="card-title">{activity.name} {activity.handicap ? (<FaAccessibleIcon />) : ( '' )}</h5>
                                 <h6>{activity.amount} €</h6>
                                 <TextTruncate
                                     line={4}
                                     truncateText=" … "
                                     text={activity.description}
-                                    textTruncateChild={<a className="btn btn-primary " href={'/detailActivity/' + activity.id}>Détail</a>}
+                                    textTruncateChild={<a className="btn btn-primary " href={'/detail-activite/' + activity.id}>Détail</a>}
                                 />
                             </div>
                         </div>

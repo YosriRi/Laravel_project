@@ -23,7 +23,7 @@ export default class Field extends Component {
                                     <img src="images/ab1.jpg" alt="" />
                                 </div>
                             	<div className="single_terrain_img_overlay all_overlay">
-                                    <a href="">
+                                    <a href="/activites?id_categorie=3">
                                         <h2>Air</h2>
                                     </a>
                                 </div>
@@ -37,7 +37,7 @@ export default class Field extends Component {
                                     <img src="images/ab2.jpg" alt="" />
                                 </div>
                                 <div className="single_terrain_img_overlay all_overlay">
-                                    <a href="">
+                                    <a href="/activites?id_categorie=1">
                                         <h2>Eau</h2>
                                     </a>
                                 </div>
@@ -52,7 +52,7 @@ export default class Field extends Component {
                                     <img src="images/ab3.jpg" alt="" />
                                 </div>
                                 <div className="single_terrain_img_overlay all_overlay">
-                                    <a href="">
+                                    <a href="/activites?id_categorie=2">
                                         <h2>Terre</h2>
                                     </a>
                                 </div>

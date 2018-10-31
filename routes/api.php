@@ -2,16 +2,18 @@
 
 use Illuminate\Http\Request;
 
-/**
-* Doesn't need to be logged in to do these actions
-*/
-
 Route::post('login', 'UserController@login');
 Route::post('loginAdmin', 'AdminController@login');
 Route::post('register', 'UserController@register');
 
+/**
+* Activities
+*/
 Route::get('activities', 'ActivityController@index');
 Route::get('activities/{id}', 'ActivityController@show');
+Route::post('activities', 'ActivityController@store');
+Route::put('activities/{id}', 'ActivityController@update');
+Route::delete('activities/{id}', 'ActivityController@destroy');
 
 Route::get('categories', 'CategoryController@index');
 Route::get('categories/{id}', 'CategoryController@show');
@@ -51,13 +53,6 @@ Route::group(['middleware' => ['jwt.verify']], function() {
 	Route::post('userInfos', 'UserInfoController@store');
 	Route::put('userInfos/{id}', 'UserInfoController@update');
 	Route::delete('userInfos/{id}', 'UserInfoController@destroy');
-
-	/**
-	* Activities
-	*/
-	Route::post('activities', 'ActivityController@store');
-	Route::put('activities/{id}', 'ActivityController@update');
-	Route::delete('activities/{id}', 'ActivityController@destroy');
 
 	/**
 	* Categories

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import PaypalButton from './PaypalButton';
+import 'react-notifications/lib/notifications.css';
+import {NotificationContainer, NotificationManager} from 'react-notifications';
 
 	const CLIENT = {
 		sandbox: 'AU1vo9rmu63CqURJnN0hCQn_X5KtyFzsFlks2Y3QFIx5reb2-dWb2RQ-DQ1UXMntUcrI5HMaCkuHBwFB'
@@ -16,74 +18,39 @@ class PaymentForm extends Component {
 	}
 
 	render() {
-		const onSuccess = (payment) =>
-		console.log('Successful payment!', payment);
+		const onSuccess = (payment) => {
+			console.log('Successful payment!', payment);
+			NotificationManager.success('Message de succès', 'Paiement accepté');
+		}
   
-	  const onError = (error) =>
-		console.log('Erroneous payment OR failed to load script!', error);
+	  	const onError = (error) => {
+			console.log('Erroneous payment OR failed to load script!', error);
+			NotificationManager.error('Message d\'erreur', 'Il y a eu un problème lors du paiement');
+		}
   
-	  const onCancel = (data) =>
-		console.log('Cancelled payment!', data);
+	  	const onCancel = (data) => {
+			console.log('Cancelled payment!', data);
+			NotificationManager.info('Paiement annulé');
+		}
+
+		const total = localStorage.getItem('totalCart');
 
 		return (
 			<div>
-
 				<h4 className="mb-3">Payment</h4>
             	<div className="d-block my-3">
-
-					  <PaypalButton
+					<PaypalButton
 						client={CLIENT}
 						env={'sandbox'}
 						commit={true}
 						currency={'EUR'}
-						total={100}
+						total={total}
 						onSuccess={onSuccess}
 						onError={onError}
 						onCancel={onCancel}
 					/>
-
-              		
-              		
             	</div>
-         			
-				<h3>Carte banquaire</h3>
-        		<div className="row">
-				
-					  <div className="col-md-6 mb-3">
-					  
-                		<label htmlFor="cc-name">Propriétaire de la carte</label>
-                		<input type="text" className="form-control" id="cc-name" placeholder="" required="" />
-                		<small className="text-muted">Nom complet écrit sur la carte</small>
-                		<div className="invalid-feedback">
-                  			Nom valide est nécessaire.
-            			</div>
-              		</div>
-              		<div className="col-md-6 mb-3">
-                		<label htmlFor="cc-number">Numéro de la carte</label>
-            			<input type="text" className="form-control" id="cc-number" placeholder="" required="" />
-                		<div className="invalid-feedback">
-                  			Numéro de carte valide est nécessaire.
-            			</div>
-              		</div>
-        		</div>
-            	<div className="row">
-              		<div className="col-md-3 mb-3">
-                		<label htmlFor="cc-expiration">Expiration</label>
-                		<input type="text" className="form-control" id="cc-expiration" placeholder="" required="" />
-                		<div className="invalid-feedback">
-                  			Date d'expiration valide est nécessaire.
-                		</div>
-              		</div>
-              		<div className="col-md-3 mb-3">
-                		<label htmlFor="cc-expiration">CVV</label>
-                		<input type="text" className="form-control" id="cc-cvv" placeholder="" required="" />
-                		<div className="invalid-feedback">
-                  			Code de sécurité valide est nécessaire.
-                		</div>
-              		</div>
-            	</div>
-            	<hr className="mb-4" />
-					
+				<NotificationContainer/>
 			</div>
 		);
 	}

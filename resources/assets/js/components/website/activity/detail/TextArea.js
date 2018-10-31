@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import 'react-notifications/lib/notifications.css';
+import {NotificationContainer, NotificationManager} from 'react-notifications';
 
 export default class Activity extends Component {
 	constructor(props) {
@@ -34,10 +36,11 @@ export default class Activity extends Component {
             token: this.state.token
         })
         .then((res) => {
+            NotificationManager.success('Message de succès', 'Ajout réussi');
             location.reload();
         })
         .catch(function (error) {
-            alert('Erreur lors de l\'ajout du commentaire');
+            NotificationManager.error('Message d\'erreur', 'Erreur lors de l\'ajout du commentaire');
         });
     }
 
@@ -51,6 +54,7 @@ export default class Activity extends Component {
                     </FormGroup>
                     <Button color="success" onClick={this.addComment.bind(this)}>Valider</Button>
                 </div>
+                <NotificationContainer/>
             </div>
 		);
 	}

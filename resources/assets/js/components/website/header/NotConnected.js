@@ -10,13 +10,13 @@ export default class NotConnected extends Component {
 		return (
 			<ul className="authentification">
 				<li>
-					<a href="/login">Login</a>
+					<a href="/connexion">Connexion</a>
 				</li>
 				<li>
 					<p>|</p>
 				</li>
 				<li>
-					<a href="/register">Register</a>
+					<a href="/inscription">Inscription</a>
 				</li>
 			</ul>
 		);

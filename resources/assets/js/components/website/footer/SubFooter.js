@@ -49,6 +49,9 @@ export default class SubFooter extends Component {
                     		<p>
                         		<a href="#!">Aide</a>
                     		</p>
+							<p>
+                        		<a href="/cgu">CGU</a>
+                    		</p>
                 		</div>
                 		<hr className="w-100 clearfix d-md-none" />
                 		<div className="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">

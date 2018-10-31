@@ -5,6 +5,8 @@ import DatePicker from 'react-datepicker';
 import moment from 'moment';
 import 'react-datepicker/dist/react-datepicker.css';
 moment.locale('fr');
+import 'react-notifications/lib/notifications.css';
+import {NotificationContainer, NotificationManager} from 'react-notifications';
 
 export default class Reservation extends Component {
 	constructor(props) {
@@ -54,11 +56,11 @@ export default class Reservation extends Component {
             token: this.state.token
         })
         .then(function (res) {
-            alert('Ajout réussi');
+            NotificationManager.success('Message de succès', 'Ajout réussi');
             currentComponent.toggle();
         })
         .catch(function (error) {
-            alert('Problème lors de l\'ajout')
+            NotificationManager.error('Message d\'erreur', 'Problème lors de l\'ajout');
         });
     }
 
@@ -97,6 +99,7 @@ export default class Reservation extends Component {
                         <Button color="secondary" onClick={this.toggle}>Annuler</Button>
                     </ModalFooter>
                 </Modal>
+                <NotificationContainer/>
             </div>
 		);
 	}

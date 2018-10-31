@@ -41,8 +41,8 @@ class PageController extends Controller
         return view('index', ['name' => 'paymentComponent']);
     }
 
-    public function all()
+    public function cgu()
     {
-        return view('allComponent');
+        return view('index', ['name' => 'cguComponent']);
     }
 }

@@ -14,7 +14,7 @@ class ActivityTableSeeder extends Seeder
         // Lance la génération de données en précisant le nombre à générer
         $Activity = [
             [
-                'id_category' 		=> 1,
+                'id_category' 		=> 3,
                 'id_type' 			=> 1,
                 'id_city' 			=> 2,
                 'id_region' 		=> 1,
@@ -28,9 +28,10 @@ class ActivityTableSeeder extends Seeder
                 'start' 			=> now(),
                 'end' 				=> now(),
                 'number_of_persons' => 2,
+                'handicap' => true,
             ],
             [
-                'id_category' 		=> 1,
+                'id_category' 		=> 3,
                 'id_type' 			=> 2,
                 'id_city' 			=> 2,
                 'id_region' 		=> 1,
@@ -44,9 +45,10 @@ class ActivityTableSeeder extends Seeder
                 'start' 			=> now(),
                 'end' 				=> now(),
                 'number_of_persons' => 1,
+                'handicap' => false,
             ],
             [
-                'id_category' 		=> 1,
+                'id_category' 		=> 3,
                 'id_type' 			=> 3,
                 'id_city' 			=> 3,
                 'id_region' 		=> 1,
@@ -60,9 +62,10 @@ class ActivityTableSeeder extends Seeder
                 'start' 			=> now(),
                 'end' 				=> now(),
                 'number_of_persons' => 1,
+                'handicap' => false,
             ],
             [
-                'id_category' 		=> 2,
+                'id_category' 		=> 1,
                 'id_type' 			=> 4,
                 'id_city' 			=> 4,
                 'id_region' 		=> 1,
@@ -76,9 +79,10 @@ class ActivityTableSeeder extends Seeder
                 'start' 			=> now(),
                 'end' 				=> now(),
                 'number_of_persons' => 2,
+                'handicap' => true,
             ],
             [
-                'id_category' 		=> 2,
+                'id_category' 		=> 1,
                 'id_type' 			=> 5,
                 'id_city' 			=> 4,
                 'id_region' 		=> 1,
@@ -92,9 +96,10 @@ class ActivityTableSeeder extends Seeder
                 'start' 			=> now(),
                 'end' 				=> now(),
                 'number_of_persons' => 1,
+                'handicap' => false,
             ],
             [
-                'id_category' 		=> 2,
+                'id_category' 		=> 1,
                 'id_type' 			=> 5,
                 'id_city' 			=> 2,
                 'id_region' 		=> 1,
@@ -108,9 +113,10 @@ class ActivityTableSeeder extends Seeder
                 'start' 			=> now(),
                 'end' 				=> now(),
                 'number_of_persons' => 1,
+                'handicap' => false,
             ],
             [
-                'id_category' 		=> 2,
+                'id_category' 		=> 1,
                 'id_type' 			=> 2,
                 'id_city' 			=> 4,
                 'id_region' 		=> 1,
@@ -124,9 +130,10 @@ class ActivityTableSeeder extends Seeder
                 'start' 			=> now(),
                 'end' 				=> now(),
                 'number_of_persons' => 1,
+                'handicap' => false,
             ],
             [
-                'id_category' 		=> 3,
+                'id_category' 		=> 2,
                 'id_type' 			=> 2,
                 'id_city' 			=> 3,
                 'id_region' 		=> 1,
@@ -140,6 +147,7 @@ class ActivityTableSeeder extends Seeder
                 'start' 			=> now(),
                 'end' 				=> now(),
                 'number_of_persons' => 1,
+                'handicap' => false,
             ],
             [
                 'id_category' 		=> 4,
@@ -156,6 +164,7 @@ class ActivityTableSeeder extends Seeder
                 'start' 			=> now(),
                 'end' 				=> now(),
                 'number_of_persons' => 1,
+                'handicap' => true,
             ]
         ];
         DB::table('activities')->insert($Activity);

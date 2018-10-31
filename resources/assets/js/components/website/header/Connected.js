@@ -20,7 +20,6 @@ export default class Connected extends Component {
 	logout(event) {
 		event.preventDefault();
 		localStorage.clear();
-		alert('Déconnexion réussi');
         window.location.replace("/");
 	}
 
@@ -29,7 +28,7 @@ export default class Connected extends Component {
 		return (
 			<ul className="authentification">
 				<li>
-					<a href={'/profile/' + user.id}>{user.firstname + ' ' + user.lastname}</a>
+					<a href={'/profil/' + user.id}>{user.firstname + ' ' + user.lastname}</a>
 				</li>
 				<li>
 					<p>|</p>

@@ -10,7 +10,8 @@ class Admin extends Model
     	'firstname',
     	'lastname',
     	'email',
-    	'password',
+        'password',
+        'handicap',
 	];
 
 	/**

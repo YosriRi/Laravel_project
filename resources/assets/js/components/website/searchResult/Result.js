@@ -4,17 +4,27 @@ import ListActivities from './ListActivities';
 
 export default class Result extends Component {
 	constructor(props) {
-		super(props);
+        super(props);
+        const urlString = window.location.href;
+        var url = new URL(urlString);
+        var id = url.searchParams.get("id_categorie");
 
         this.state = {
-            activities: []
+            activities: [],
+            id_categorie: id
         };
 	}
 
     componentDidMount() {
         let currentComponent = this;
+        let url;
+        if (this.state.id_categorie !== null) {
+            url = '/api/activities?id_category=' + this.state.id_categorie;
+        } else {
+            url = '/api/activities';
+        }
 
-        axios.get('/api/activities')
+        axios.get(url)
         .then(function (res) {
             const result = res.data.data;
             currentComponent.setState({

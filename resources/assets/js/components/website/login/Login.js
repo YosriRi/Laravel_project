@@ -1,5 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import ReactDOM from 'react-dom';
+import 'react-notifications/lib/notifications.css';
+import {NotificationContainer, NotificationManager} from 'react-notifications';
 
 export default class Login extends Component {
 	constructor(props) {
@@ -7,7 +9,8 @@ export default class Login extends Component {
 	}
 
     handleSubmit(event) {
-        event.preventDefault();
+		event.preventDefault();
+		const currentComponent = this;
         const target = event.target;
 
         const email             = target.inputEmailLogin.value;
@@ -18,14 +21,14 @@ export default class Login extends Component {
             password: password
         })
         .then(res => {
-            localStorage.setItem('userToken', res.data.token);
-            alert("Connexion réussi");
+			localStorage.setItem('userToken', res.data.token);
+			NotificationManager.success('Message de succès', 'Connexion réussi');
             window.location.replace("/");
         })
         .catch(function (error) {
-            alert('Utilisateur n\'existe pas');
+			NotificationManager.error('Message d\'erreur', 'L\'utilisateur n\'existe pas');
         });
-    }
+	}
 
 	render() {
 		return (
@@ -54,6 +57,7 @@ export default class Login extends Component {
         				</div>
       				</div>
     			</div>
+				<NotificationContainer/>
 			</div>
 		);
 	}
